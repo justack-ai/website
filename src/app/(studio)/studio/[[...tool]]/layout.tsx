@@ -14,10 +14,27 @@
  * limitations under the License.
  */
 
-const config = {
-  plugins: {
-    "@tailwindcss/postcss": {},
-  },
+export const metadata = {
+  title: "Sanity Studio | justack.ai",
 };
 
-export default config;
+export default function StudioLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      id="sanity-studio"
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 100,
+        background: "#fff",
+        fontFamily: "system-ui, -apple-system, sans-serif",
+      }}
+    >
+      {children}
+    </div>
+  );
+}

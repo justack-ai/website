@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# justack.ai
+
+Open source tools for access to justice. Built by [Humilitas Group Limited](https://justack.ai).
+
+justack.ai provides legal information, triage, and navigation tools to help people understand and exercise their legal rights. It is not a law firm and does not provide legal advice or legal services.
 
 ## Getting Started
 
-First, run the development server:
+This is a [Next.js](https://nextjs.org) project.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## License
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is licensed under the [Apache License, Version 2.0](LICENSE).
+
+See also:
+- [NOTICE](NOTICE) — attribution and copyright
+- [RESPONSIBLE-USE.md](RESPONSIBLE-USE.md) — additional use restrictions
+
+## Contributing
+
+We welcome contributions. All contributions must include a DCO sign-off. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+## Disclaimer
+
+justack.ai is a product of Humilitas Group Limited, a technology company. It is not a law firm. It does not provide legal advice, legal representation, or legal services. The tools and information provided by justack.ai are for general informational and educational purposes only and do not constitute legal advice. If you need legal advice, consult a qualified lawyer in your jurisdiction.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)

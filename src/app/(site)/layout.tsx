@@ -14,10 +14,23 @@
  * limitations under the License.
  */
 
-const config = {
-  plugins: {
-    "@tailwindcss/postcss": {},
-  },
-};
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
-export default config;
+export default function SiteLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <>
+      <div className="gradient-mesh" />
+      <div className="noise" />
+      <div className="relative z-[2]">
+        <Nav />
+        {children}
+        <Footer />
+      </div>
+    </>
+  );
+}
