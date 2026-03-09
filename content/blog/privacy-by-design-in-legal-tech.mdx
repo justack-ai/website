@@ -1,0 +1,80 @@
+{/*
+ * Copyright 2026 Humilitas Group Limited
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */}
+
+---
+title: "Privacy by Design in Legal Tech"
+date: "2026-03-05"
+excerpt: "Legal data is among the most sensitive information that exists. Building AI tools that handle it requires privacy as architecture, not afterthought."
+category: "legal-tech"
+---
+
+## The Sensitivity Problem
+
+When a person describes a legal problem to an AI tool, they are often disclosing the most sensitive information in their life. Employment disputes involve income, health conditions, and workplace conflicts. Family law matters involve children, abuse, and financial vulnerability. Immigration questions involve status, country of origin, and fear of persecution.
+
+This is not ordinary user data. It is information that, if mishandled, can cause direct and serious harm. It can affect employment, custody, immigration status, and personal safety. The stakes are categorically different from a mishandled shopping preference or a leaked email address.
+
+**Any technology that handles legal information must treat privacy as a structural requirement, not a feature.**
+
+## What Privacy by Design Means
+
+The concept of Privacy by Design (PbD) was developed by Dr. Ann Cavoukian, former Information and Privacy Commissioner of Ontario, and has since been adopted as a foundational principle in privacy legislation worldwide. Its core premise is that privacy must be embedded into the design and architecture of systems from the outset — not bolted on after the fact.
+
+PbD rests on seven foundational principles. Three are particularly relevant to legal technology:
+
+**Proactive, not reactive.** Privacy protections must be built before data is collected, not after a breach occurs. For legal AI tools, this means deciding what data is necessary before building the feature that collects it.
+
+**Privacy as the default.** The most privacy-protective setting must be the default. Users should not have to opt out of data collection. They should have to opt in. For legal tools, this means no data collection without explicit, informed consent — and meaningful functionality even without it.
+
+**Data minimization.** Collect only what is necessary for the specific purpose. Legal AI tools that vacuum up entire conversation histories, device identifiers, and behavioural data in order to "improve the product" are violating this principle. If a tool needs the user's legal question to generate a response, it needs the legal question. It does not need the user's location, browsing history, or device fingerprint.
+
+## The Canadian Privacy Framework
+
+Canada's federal privacy legislation, the **Personal Information Protection and Electronic Documents Act (PIPEDA)**, governs the collection, use, and disclosure of personal information in the course of commercial activity. PIPEDA's ten fair information principles — including consent, limiting collection, and limiting use — align closely with Privacy by Design.
+
+At the provincial level, British Columbia's **Personal Information Protection Act (PIPA)** and Alberta's **Personal Information Protection Act (PIPA)** provide substantially similar protections. Quebec's **Law 25** (an Act to modernize legislative provisions as regards the protection of personal information) introduced additional requirements including privacy impact assessments and privacy-by-default obligations.
+
+Legal technology operating in Canada must comply with these frameworks. But compliance is a floor, not a ceiling. For tools handling legal information, the sensitivity of the data demands protections that exceed minimum statutory requirements.
+
+## What This Looks Like in Practice
+
+At justack.ai, privacy by design shapes technical decisions at every level:
+
+**Encryption.** Data in transit is encrypted using TLS. Data at rest is encrypted. This is table stakes, not a differentiator. Any legal technology that does not encrypt data in both states is negligent.
+
+**Minimal data collection.** Our open source tools are designed to function with the minimum data necessary. Where possible, processing occurs locally. Where data must be transmitted, it is limited to what the specific function requires.
+
+**No surveillance analytics.** Many technology platforms use invasive analytics — tracking mouse movements, scroll depth, session recordings, cross-site tracking — to optimize engagement. Legal tools should not do this. When a person is researching their legal rights, they should not be surveilled. We use privacy-respecting analytics that measure aggregate usage patterns without tracking individual behaviour.
+
+**User control.** Users can access, correct, and delete their data. This is required by PIPEDA, but the implementation matters. "You can delete your data by emailing us and waiting 30 business days" is not meaningful control. Immediate, self-service data management is the standard we hold ourselves to.
+
+**Transparency.** Our privacy practices are documented in plain language. Our code is open source, which means our data handling can be independently verified. Privacy policies written in impenetrable legalese, for a legal technology platform, would be a particular irony.
+
+## The AI-Specific Challenge
+
+Large language models introduce privacy challenges that traditional software does not face. Training data, prompt injection, model memorization, and the opacity of neural networks all create risks that must be addressed explicitly.
+
+The critical questions for any legal AI tool are: Is user data used to train models? Can the model reproduce user inputs? Who has access to conversation logs? Are prompts and responses stored, and if so, where and for how long?
+
+These are not hypothetical concerns. They are design decisions that must be made deliberately and disclosed transparently.
+
+## Privacy as Access
+
+There is a tendency to frame privacy and access to justice as competing values — as though protecting privacy necessarily limits the reach of legal technology. This is a false trade-off.
+
+People who need legal help are often in vulnerable situations. They are more likely to be harmed by privacy violations, not less. A person researching their rights after workplace harassment should not have to worry that their search history will be sold to data brokers. A person exploring immigration options should not have to wonder whether their queries will be shared with government agencies.
+
+**Privacy protection is not an obstacle to access to justice. It is a precondition for it.**

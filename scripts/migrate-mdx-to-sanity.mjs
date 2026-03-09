@@ -201,6 +201,8 @@ const categoryToTags = {
   "personal-story": ["personal-story", "a2jai"],
   "a2j-policy": ["a2j-policy", "a2jai"],
   "legal-tech": ["legal-tech", "open-source"],
+  "open-source": ["open-source", "a2jai"],
+  "vision": ["vision", "a2jai", "legal-tech"],
 };
 
 async function migrate() {
@@ -222,7 +224,7 @@ async function migrate() {
       slug: { _type: "slug", current: slug },
       publishedAt: new Date(frontmatter.date).toISOString(),
       excerpt: frontmatter.excerpt,
-      author: "Matthew Bryant",
+      author: "Michael Bryant",
       tags,
       status: "published",
       body: portableText,

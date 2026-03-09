@@ -1,0 +1,76 @@
+{/*
+ * Copyright 2026 Humilitas Group Limited
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */}
+
+---
+title: "How AI Triage Works Without Practicing Law"
+date: "2026-03-04"
+excerpt: "There is a clear line between classifying a legal situation and advising on it. Here is how AI triage stays on the right side."
+category: "legal-tech"
+---
+
+## The Line
+
+Every Canadian law society draws a distinction between legal information and legal advice. Legal information is general: "In Ontario, the standard notice period for terminating a month-to-month tenancy is 60 days." Legal advice is specific: "You should give your landlord notice by March 15th and here is how to draft it."
+
+The first is publishing. The second is practicing law.
+
+AI triage operates firmly in the first category. It classifies situations. It does not advise on them.
+
+## What Triage Actually Does
+
+When someone describes a legal problem — "my landlord is refusing to fix the heat" — the system performs a sequence of structured operations:
+
+**Classification.** The input is mapped against a taxonomy of legal issue types. In this case: residential tenancy, maintenance and repair obligations. This is categorization, not counsel.
+
+**Jurisdiction detection.** Based on location data, the system identifies which provincial or territorial framework applies. Different provinces have different residential tenancy statutes. The system routes accordingly.
+
+**Severity assessment.** The system assigns a confidence score to its classification and flags factors that suggest urgency — health and safety concerns, imminent deadlines, potential homelessness. These flags are mechanical, not judgmental.
+
+**Resource matching.** Based on the classification and jurisdiction, the system surfaces relevant public legal information: applicable statutes, tribunal processes, legal aid eligibility criteria, and duty counsel availability.
+
+At no point does the system say "you should do X." It says "based on what you described, here is what category this falls into, and here are the resources that exist for that category."
+
+## Confidence Scores and Escalation
+
+Not every situation is straightforward. A tenant's complaint might involve overlapping issues — maintenance failures, retaliatory eviction threats, and rent arrears. The system handles ambiguity through confidence scoring.
+
+Each classification carries a confidence value between 0 and 1. When the score falls below a defined threshold — typically 0.7 — the system does not guess. It escalates. Escalation means flagging the matter for human review, recommending the user speak with a lawyer or legal aid worker, or both.
+
+**Low confidence is not a failure state. It is a safety mechanism.** The system is designed to know what it does not know.
+
+High-severity flags — references to violence, child welfare concerns, imminent eviction — trigger immediate escalation regardless of confidence score. These bypass the normal triage flow entirely.
+
+## Guardrails
+
+The Navigator, justack.ai's core triage product currently in development, implements several categories of guardrails:
+
+**Output constraints.** The system cannot generate text that includes phrases characteristic of legal advice: "you should," "I recommend," "your best option is." These are filtered at the generation layer.
+
+**Scope limits.** The system operates within defined legal domains. If a query falls outside its trained scope — criminal law, immigration, family law where it has not been validated — it declines to classify and refers the user to appropriate services.
+
+**Audit logging.** Every triage interaction is logged with its classification, confidence score, and output. This creates an auditable record that can be reviewed for quality and compliance.
+
+**Disclosure.** Every interaction begins with a clear statement: this tool provides legal information and navigational guidance, not legal advice. justack.ai is not a law firm and is not acting as your lawyer.
+
+## Why This Matters
+
+The unauthorized practice of law (UPL) provisions exist for good reason. Legal advice requires professional judgment, contextual understanding, and accountability. AI does not have these qualities and should not pretend to.
+
+But UPL rules were not designed to prevent the public from accessing information about the legal system. They were designed to prevent unqualified people from holding themselves out as lawyers. There is a wide space between "no help at all" and "full legal representation," and most people who cannot afford a lawyer are getting the former.
+
+AI triage occupies the middle ground. It is a sorting mechanism — a way to help people understand what kind of problem they have, what system deals with that problem, and where to go next. This is the work that intake workers, librarians, and court navigators do every day. The technology does not replace them. It extends their reach.
+
+**Classification is not counsel. Triage is not advice. And providing navigational guidance to someone lost in the legal system is not practicing law.**

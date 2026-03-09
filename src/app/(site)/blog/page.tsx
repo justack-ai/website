@@ -38,6 +38,8 @@ const tagColors: Record<string, string> = {
   "legal-tech": "text-purple-400 bg-purple-500/15 border-purple-500/30",
   "personal-story": "text-teal-400 bg-teal-500/15 border-teal-500/30",
   "open-source": "text-blue-400 bg-blue-500/15 border-blue-500/30",
+  "vision": "text-amber-400 bg-amber-500/15 border-amber-500/30",
+  "a2jai": "text-violet-400 bg-violet-500/15 border-violet-500/30",
 };
 
 const defaultTagColor = "text-white/50 bg-white/5 border-white/10";

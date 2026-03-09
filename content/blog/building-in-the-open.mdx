@@ -1,0 +1,75 @@
+{/*
+ * Copyright 2026 Humilitas Group Limited
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */}
+
+---
+title: "Building in the Open: Why We Chose Apache 2.0"
+date: "2026-03-08"
+excerpt: "Choosing an open source license is a statement of values. Here is why Apache 2.0 is the right fit for access-to-justice infrastructure."
+category: "open-source"
+---
+
+## The Decision
+
+When we decided to open source the core of justack.ai, the license choice was not a technicality. It was a design decision with long-term consequences for who can use this technology, how they can use it, and whether the ecosystem we want to build is actually possible.
+
+We chose **Apache 2.0**. Here is why.
+
+## The Options We Considered
+
+There are four licenses that come up in virtually every open source licensing conversation:
+
+**MIT.** The simplest permissive license. Anyone can do anything with the code, with almost no conditions. The risk: no patent protection. A contributor could submit code and later assert patent claims against users of that code. For a project operating in the legal domain — where institutional users need certainty — this was a meaningful gap.
+
+**GPL (v2 or v3).** The most prominent copyleft license. Anyone can use and modify the code, but derivative works must also be open source under the GPL. This is philosophically appealing. In practice, it creates barriers for the exact institutions we want to reach. Legal aid organizations, government agencies, and law schools often have procurement policies that restrict or prohibit GPL-licensed dependencies. Copyleft requirements introduce compliance overhead that resource-constrained organizations cannot absorb.
+
+**Business Source License (BSL).** A time-delayed open source model: the code is source-available but not truly open source until a defined period passes (typically 3-4 years), after which it converts to a permissive license. Companies like MariaDB and HashiCorp have used this model. It protects commercial interests effectively. But it is not open source — not by the OSI definition, and not in the way that matters for building public infrastructure.
+
+**Apache 2.0.** Permissive, like MIT, but with an explicit patent grant. Contributors automatically grant users a license to any patents embodied in their contributions. It also includes a patent retaliation clause: if someone sues a project user for patent infringement related to the project, their patent license terminates. This creates a defensive shield around the ecosystem.
+
+## Why Apache 2.0 Wins for Access to Justice
+
+Three factors made the decision clear.
+
+**Institutional adoption.** Legal aid organizations, court systems, university research labs, and government agencies are the primary audience for justack.ai's open source tools. These institutions need licenses their procurement and legal teams will approve without extended review. Apache 2.0 is one of the most widely approved open source licenses in institutional settings. The Apache Software Foundation has decades of institutional credibility.
+
+**Patent safety.** AI systems increasingly involve patentable methods. The patent grant in Apache 2.0 means that organizations deploying justack.ai tools do not need to worry about latent patent claims from contributors. For institutions serving vulnerable populations, this certainty is not optional.
+
+**Ecosystem building.** We want other developers, researchers, and organizations to build on this work. Apache 2.0 imposes minimal friction. There is no copyleft obligation, no license compatibility headaches, no requirement to open source derivative works. If a legal aid organization in Manitoba wants to fork our triage engine and customize it for their intake process, they can. If a law school wants to use our classification models in proprietary research software, they can. The license gets out of the way.
+
+## The Dual Model
+
+Open source alone does not pay salaries. The sustainability question is real, and ignoring it is how open source projects die.
+
+justack.ai operates on a dual model:
+
+- **Open source core.** The foundational tools — triage engines, classification models, legal data pipelines — are Apache 2.0 licensed and freely available.
+- **Commercial products.** The Navigator, Consult Connect, and professional tools built on the open source core are commercial offerings. Revenue from these products funds both the company and the continued development of the open source layer.
+
+This is not a new pattern. **Hugging Face** built one of the most important AI ecosystems in the world using a similar approach: open models and datasets at the foundation, commercial inference and deployment services on top. The open layer created the community. The commercial layer made it sustainable.
+
+The key constraint is that the open source layer must be genuinely useful on its own — not a crippled version of the commercial product. If the free tools are not valuable, the community will not form. If the community does not form, the ecosystem does not exist. And if the ecosystem does not exist, the mission fails.
+
+## What This Means in Practice
+
+For **legal aid organizations**: you can deploy, modify, and integrate justack.ai's open source tools without licensing fees, copyleft obligations, or patent risk.
+
+For **researchers**: you can study, benchmark, and build on the codebase without restrictions on publication or methodology.
+
+For **developers**: you can contribute to the project knowing your contributions are protected by the patent grant, and you can use the code in your own projects — commercial or otherwise — without constraint.
+
+For **the access-to-justice community**: the infrastructure is public. If Humilitas Group Limited ceases to exist tomorrow, the code remains. The models remain. The work continues.
+
+**That is what building in the open means.** Not just publishing code, but choosing a license that ensures the code remains useful, accessible, and safe for the people and institutions that need it most.

@@ -1,0 +1,90 @@
+{/*
+ * Copyright 2026 Humilitas Group Limited
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */}
+
+---
+title: "From Intake to Insight: How the Navigator Works"
+date: "2026-03-06"
+excerpt: "A walkthrough of how the Navigator moves from a user's first description of their problem to structured guidance and, where needed, a connection to a lawyer."
+category: "legal-tech"
+---
+
+## The Problem the Navigator Solves
+
+Most people with a legal problem do not know they have a legal problem. They know they have a problem — an eviction notice, a workplace dispute, an insurance claim denial — but they do not know what area of law governs it, which tribunal or court handles it, what their options are, or where to start.
+
+The Navigator is justack.ai's core product, currently in development. It is designed to take someone from "I have a problem" to "I understand what kind of problem this is and what my next steps are." It provides navigational guidance — not legal advice.
+
+## The Five Stages
+
+The Navigator operates through five sequential stages. Each one narrows the scope and increases the specificity of the guidance.
+
+### Stage 1: Structured Intake
+
+The process begins with a guided conversation. The user describes their situation in plain language. The system asks targeted follow-up questions to capture the key facts: What happened? When? Where are you located? Are there deadlines you are aware of?
+
+This is not a freeform chatbot. The intake is structured to gather the minimum information needed for accurate classification. It mirrors the intake process used by legal aid organizations and community legal clinics — but available at any hour, without a waitlist.
+
+### Stage 2: Classification
+
+Once the intake is complete, the system classifies the legal issue. Classification maps the user's situation to a defined taxonomy: residential tenancy, employment standards, consumer protection, small claims, and so on.
+
+Classification also identifies sub-issues. A tenant's situation might involve both a maintenance complaint and a retaliatory notice to vacate. The system captures both, along with a confidence score for each classification.
+
+Where confidence is low or the situation is ambiguous, the system flags it for human review rather than proceeding with uncertain guidance.
+
+### Stage 3: Eligibility Assessment
+
+With the issue classified and the jurisdiction identified, the system evaluates what resources are available. This includes:
+
+- **Legal aid eligibility.** Based on general income thresholds and issue type, the system indicates whether the user may qualify for legal aid in their province.
+- **Tribunal or court identification.** The system identifies which body has jurisdiction — a residential tenancy board, a human rights tribunal, small claims court — and provides basic procedural information.
+- **Deadline detection.** Many legal processes have limitation periods or filing deadlines. The system flags known deadlines based on the issue type and jurisdiction.
+
+This stage is informational. It tells the user what exists, not what to do.
+
+### Stage 4: Guidance Generation
+
+The system generates a structured summary: here is what category your problem falls into, here are the relevant legal frameworks, here are the resources available to you, and here are the timelines you should be aware of.
+
+The output is plain language. It includes links to relevant statutes, tribunal websites, legal aid intake forms, and community legal clinics where applicable.
+
+**The guidance is navigational.** It orients the user within the legal system. It does not tell them what decision to make.
+
+### Stage 5: Lawyer Handoff
+
+For users who need more than navigational guidance — and many will — the Navigator facilitates a connection to a licensed legal professional. The structured intake and classification data can be shared (with the user's consent) so the lawyer receives a pre-organized summary of the situation rather than starting from scratch.
+
+This reduces the lawyer's intake time and lowers the cost of the initial consultation. It benefits both parties.
+
+## Three Tiers
+
+The Navigator is designed to serve users at different levels of need and means:
+
+**Free Triage ($0).** Basic classification and resource matching. Identifies what kind of legal issue the user has and points them toward public resources. Available to everyone.
+
+**Navigator ($49–$149).** Full structured intake, detailed guidance generation, eligibility assessment, and deadline flagging. Designed for people who need more than a directory listing but less than a lawyer.
+
+**Consult Connect (flat-fee services).** For users who need professional help, the system facilitates connections to lawyers offering flat-fee services for defined-scope matters — document review, demand letters, tribunal representation. Pricing is transparent and fixed.
+
+The free tier funds nothing. The paid tiers fund both the commercial operation and the continued development of the open source tools that underpin the platform.
+
+## What the Navigator Is Not
+
+The Navigator is not a lawyer. It is not a substitute for a lawyer. It does not provide legal advice, predict outcomes, or recommend strategies.
+
+It is a sorting and orientation tool. It exists because the gap between "no help" and "full legal representation" is vast, and millions of Canadians fall into it every year. The Navigator does not close that gap. But it builds a bridge across part of it.
+
+> The Navigator is currently in development. For updates, follow the project on GitHub or subscribe to the justack.ai newsletter.

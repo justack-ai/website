@@ -29,7 +29,7 @@ const routeCards = [
       <polyline points="10,12 6,18 10,24"/><polyline points="26,12 30,18 26,24"/><line x1="20" y1="8" x2="16" y2="28"/>
     </svg>
   )},
-  { title: "I&#39;m a Lawyer", path: "/tools", color: "#3b82f6", rotate: "rotateY(-3deg) rotateX(1deg)", translateY: "12px", icon: (
+  { title: "I\u2019m a Lawyer", path: "/tools", color: "#3b82f6", rotate: "rotateY(-3deg) rotateX(1deg)", translateY: "12px", icon: (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <line x1="18" y1="4" x2="18" y2="14"/><line x1="10" y1="14" x2="26" y2="14"/><line x1="10" y1="14" x2="7" y2="22"/><line x1="26" y1="14" x2="29" y2="22"/>
       <path d="M4 22 Q7 28 10 22"/><path d="M26 22 Q29 28 32 22"/><rect x="14" y="24" width="8" height="2" rx="1"/><line x1="18" y1="14" x2="18" y2="24"/>
