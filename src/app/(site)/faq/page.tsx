@@ -27,7 +27,7 @@ const faqs = [
     questions: [
       {
         q: "What is justack.ai?",
-        a: "justack.ai is an access-to-justice technology platform built by Humilitas Group Limited. We build open source tools that help people understand their legal rights, determine whether they need a lawyer, and connect with legal services at transparent, flat-fee pricing.",
+        a: "justack.ai is an access-to-justice technology platform built by Humilitas Group Limited. We build open source tools that help people understand their legal rights, determine whether they need a lawyer, and connect with legal services.",
       },
       {
         q: "Is justack.ai a law firm?",

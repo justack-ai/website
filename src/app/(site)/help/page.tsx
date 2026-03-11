@@ -89,7 +89,7 @@ const issueAreas = [
 const steps = [
   { num: "1", title: "Describe Your Situation", desc: "Tell us what's happening in plain language. No legal jargon required." },
   { num: "2", title: "Get a Clear Assessment", desc: "Our Navigator classifies your situation and identifies what you can handle yourself vs. what needs a lawyer." },
-  { num: "3", title: "Choose Your Path", desc: "DIY with checklists and templates, purchase enhanced guidance, or connect with a lawyer at transparent flat-fee pricing." },
+  { num: "3", title: "Choose Your Path", desc: "DIY with checklists and templates, purchase enhanced guidance, or connect with a lawyer." },
 ];
 
 export default function HelpPage() {

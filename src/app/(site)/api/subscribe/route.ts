@@ -15,25 +15,7 @@
  */
 
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
-
-const SUBSCRIBERS_FILE = path.join(process.cwd(), "subscribers.json");
-
-function getSubscribers(): string[] {
-  try {
-    if (fs.existsSync(SUBSCRIBERS_FILE)) {
-      return JSON.parse(fs.readFileSync(SUBSCRIBERS_FILE, "utf-8"));
-    }
-  } catch {
-    // If file is corrupted, start fresh
-  }
-  return [];
-}
-
-function saveSubscribers(subscribers: string[]) {
-  fs.writeFileSync(SUBSCRIBERS_FILE, JSON.stringify(subscribers, null, 2));
-}
+import { Resend } from "resend";
 
 export async function POST(request: NextRequest) {
   try {
@@ -47,25 +29,31 @@ export async function POST(request: NextRequest) {
     }
 
     const normalizedEmail = email.toLowerCase().trim();
-    const subscribers = getSubscribers();
 
-    if (subscribers.includes(normalizedEmail)) {
+    if (!process.env.RESEND_API_KEY) {
+      console.error("RESEND_API_KEY is not configured");
       return NextResponse.json(
-        { message: "Already subscribed" },
-        { status: 200 }
+        { error: "Email service not configured" },
+        { status: 503 }
       );
     }
 
-    subscribers.push(normalizedEmail);
-    saveSubscribers(subscribers);
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    // Add contact to Resend audience
+    await resend.contacts.create({
+      email: normalizedEmail,
+      audienceId: process.env.RESEND_AUDIENCE_ID || "",
+    });
 
     return NextResponse.json(
       { message: "Successfully subscribed" },
       { status: 200 }
     );
-  } catch {
+  } catch (error) {
+    console.error("Subscribe error:", error);
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: "Failed to subscribe. Please try again." },
       { status: 500 }
     );
   }
