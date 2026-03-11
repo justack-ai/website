@@ -60,7 +60,7 @@ const faqs = [
       },
       {
         q: "How much do the tools cost?",
-        a: "Basic triage is free. The Navigator product (when available) will be priced between $49 and $149 for a full guidance report. Flat-fee legal services, which involve a licensed lawyer, are priced transparently per service — see our For Lawyers page for the current catalogue.",
+        a: "Basic triage is free. The Navigator product (when available) will be priced between $49 and $149 for a full guidance report. When you need a licensed lawyer, the Navigator will connect you with one from our network.",
       },
     ],
   },
@@ -69,7 +69,7 @@ const faqs = [
     questions: [
       {
         q: "Is justack.ai open source?",
-        a: "Our core tools are open source under the Apache 2.0 licence — the most permissive widely-used open source licence. Commercial products like the Navigator and flat-fee delivery tools are proprietary. The open-source side serves the mission; the commercial side funds it.",
+        a: "Our core tools are open source under the Apache 2.0 licence — the most permissive widely-used open source licence. Commercial products like the Navigator are proprietary. The open-source side serves the mission; the commercial side funds it.",
       },
       {
         q: "Can I use the code for my own project?",
@@ -91,23 +91,6 @@ const faqs = [
       {
         q: "Is my legal information confidential?",
         a: "We take data security seriously. All transmissions are encrypted. If you use our navigation tools, the information you provide is processed to generate guidance and is not shared with third parties without your explicit consent. However, no solicitor-client privilege attaches to information shared with justack.ai, as we are not a law firm.",
-      },
-    ],
-  },
-  {
-    category: "Flat-Fee Services",
-    questions: [
-      {
-        q: "What are flat-fee legal services?",
-        a: "Flat-fee services are legal services priced at a fixed amount for a defined scope of work. You know exactly what you are getting and what it costs before you commit. No billable hours. No surprises.",
-      },
-      {
-        q: "Who delivers the legal services?",
-        a: "All flat-fee legal services are delivered by licensed lawyers. AI assists with research, drafting, and review, but all final legal deliverables are reviewed and approved by a qualified lawyer. Technology supports efficiency — it does not replace professional judgment.",
-      },
-      {
-        q: "Where are flat-fee services available?",
-        a: "Currently in Ontario and British Columbia. We plan to expand to additional jurisdictions over time.",
       },
     ],
   },

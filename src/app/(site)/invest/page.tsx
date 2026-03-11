@@ -41,8 +41,8 @@ const tiers = [
     color: "#7c3aed",
   },
   {
-    name: "Consult Connect (Flat-Fee Services)",
-    desc: "Direct booking into defined-scope, flat-fee legal services with transparent pricing. Pre-prepared case summaries reduce friction for both sides.",
+    name: "Lawyer Connect",
+    desc: "AI-prepared case summaries and direct connection to licensed lawyers in our network. Technology handles triage and intake; lawyers deliver professional judgment.",
     color: "#3b82f6",
   },
 ];
@@ -119,7 +119,7 @@ export default function InvestPage() {
           ))}
         </div>
         <p className="text-sm font-light text-white/40 mt-6 leading-relaxed">
-          Tier 1 creates the funnel. Tier 2 generates product revenue. Tier 3 connects to legal services revenue. The open-source layer ensures the mission extends beyond any single revenue stream.
+          Tier 1 creates the funnel. Tier 2 generates product revenue. Tier 3 connects people to lawyers. The open-source layer ensures the mission extends beyond any single revenue stream.
         </p>
       </section>
 
@@ -131,7 +131,7 @@ export default function InvestPage() {
         <div className="grid gap-4">
           {[
             { name: "justack.ai", desc: "Platform under active development with manifesto, blog, and core architecture. Built on Next.js and Vercel." },
-            { name: "Flat-Fee Services", desc: "Structured menu of defined-scope, flat-fee legal services across six practice areas — available in Ontario and British Columbia." },
+            { name: "Lawyer Network", desc: "Growing network of licensed lawyers across six practice areas in Ontario and British Columbia." },
             { name: "Navigator", desc: "'Do I Need a Lawyer?' consumer navigation tool — in active development. AI-powered triage, guided intake, and guidance reports." },
             { name: "AI Ops Pipeline", desc: "Content generation infrastructure with SlateAgent, PRDraftAgent, QualityGateAgent, and multi-model inference router." },
           ].map((item) => (
@@ -149,7 +149,7 @@ export default function InvestPage() {
       <section className="mb-16">
         <h2 className="text-2xl font-semibold tracking-tight mb-4">The Open Source Commitment</h2>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
-          A2Jai maintains a structural commitment to open source. Public tools are released under the Apache 2.0 licence. Commercial products — the Navigator, flat-fee service delivery tools — sustain the enterprise. The infrastructure is designed to be reusable by legal aid organizations, academic researchers, and other developers.
+          A2Jai maintains a structural commitment to open source. Public tools are released under the Apache 2.0 licence. Commercial products — the Navigator and lawyer connection tools — sustain the enterprise. The infrastructure is designed to be reusable by legal aid organizations, academic researchers, and other developers.
         </p>
         <blockquote className="border-l-2 border-purple-500/40 pl-6 py-2">
           <p className="text-base font-light text-white/50 italic">
@@ -178,7 +178,7 @@ export default function InvestPage() {
         <h2 className="text-2xl font-semibold tracking-tight mb-6">Roadmap</h2>
         <div className="grid gap-4">
           {[
-            { phase: "Now", title: "Foundation", items: ["Platform live with manifesto, blog, core architecture", "Flat-fee services menu structured in Ontario and British Columbia", "Navigator product in active development", "Architecture specification and AI prompt framework complete"] },
+            { phase: "Now", title: "Foundation", items: ["Platform live with manifesto, blog, core architecture", "Lawyer network building in Ontario and British Columbia", "Navigator product in active development", "Architecture specification and AI prompt framework complete"] },
             { phase: "Next", title: "Product Launch", items: ["Navigator MVP: guided intake, AI triage, guidance, lawyer handoff", "Pilot with limited cohort for quality validation", "Payment integration for product purchase and service booking", "Legal compliance review and law society alignment"] },
             { phase: "Later", title: "Scale", items: ["Expanded jurisdiction coverage", "Template library across all service categories", "Attorney marketplace beyond in-house services", "Open-source community growth and third-party integrations"] },
           ].map((r) => (
