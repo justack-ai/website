@@ -125,7 +125,7 @@ export default function BuildPage() {
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="text-base font-semibold tracking-tight">{repo.name}</h3>
                     {repo.soon && (
-                      <span className="text-[9px] font-semibold tracking-[2px] uppercase text-purple-400 bg-purple-500/15 border border-purple-500/30 rounded-full px-2.5 py-0.5">
+                      <span className="text-[11px] font-semibold tracking-[2px] uppercase text-purple-400 bg-purple-500/15 border border-purple-500/30 rounded-full px-2.5 py-0.5">
                         Coming Soon
                       </span>
                     )}

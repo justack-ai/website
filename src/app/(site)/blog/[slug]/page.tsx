@@ -153,7 +153,7 @@ export default async function BlogPostPage({ params }: Props) {
       <header className="mb-12">
         {primaryTag && (
           <span className="text-[11px] font-light tracking-[3px] uppercase text-purple-400 mb-3 block">
-            {primaryTag.replace("-", " ")}
+            {primaryTag.replaceAll("-", " ")}
           </span>
         )}
         <h1 className="text-4xl font-bold tracking-[-1px] mb-4">{post.title}</h1>

@@ -68,7 +68,7 @@ export default async function BlogPage() {
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className={`text-[10px] font-semibold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full border ${tagColors[primaryTag] || defaultTagColor}`}>
-                  {primaryTag.replace("-", " ")}
+                  {primaryTag.replaceAll("-", " ")}
                 </span>
                 <span className="text-xs font-light text-white/30">
                   {new Date(post.publishedAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}

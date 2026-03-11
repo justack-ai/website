@@ -45,7 +45,7 @@ export default function EmailCapture() {
   }
 
   return (
-    <section className="py-20 px-[60px] text-center">
+    <section className="py-20 px-6 md:px-[60px] text-center">
       <h3 className="text-[28px] font-semibold tracking-tight mb-3">Join the Movement</h3>
       <p className="text-sm font-light text-white/40 mb-9 tracking-wide">
         Be first to know when we launch each phase.

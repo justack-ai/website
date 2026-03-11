@@ -214,7 +214,7 @@ export default function InvestPage() {
             <a href="mailto:michael@justack.ai" className="inline-block px-6 py-3 bg-gradient-to-br from-[#7c3aed] to-[#0d9488] text-white text-sm font-semibold rounded-xl hover:opacity-90 transition-opacity no-underline">
               michael@justack.ai
             </a>
-            <a href="https://linkedin.com/in/michaelbryant" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-white/[0.08] border border-white/[0.15] text-white text-sm font-semibold rounded-xl hover:bg-white/[0.12] transition-colors no-underline">
+            <a href="https://linkedin.com/in/mjbryant66" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-white/[0.08] border border-white/[0.15] text-white text-sm font-semibold rounded-xl hover:bg-white/[0.12] transition-colors no-underline">
               LinkedIn
             </a>
           </div>

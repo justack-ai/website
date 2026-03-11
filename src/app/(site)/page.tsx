@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="text-center px-[60px] py-20 relative min-h-[600px] flex flex-col items-center justify-center">
+      <section className="text-center px-6 md:px-[60px] py-20 relative min-h-[600px] flex flex-col items-center justify-center">
         {/* Particles */}
         <div className="absolute inset-0 pointer-events-none z-0">
           {[
@@ -85,7 +85,7 @@ export default function Home() {
         <WireframeCourthouse />
 
         <h1
-          className="relative z-[1] text-[72px] font-bold leading-[1.1] tracking-[-2px] max-w-[900px] mb-6"
+          className="relative z-[1] text-[40px] md:text-[72px] font-bold leading-[1.1] tracking-[-2px] max-w-[900px] mb-6"
           style={{ textShadow: "0 0 60px rgba(139, 92, 246, 0.3), 0 0 120px rgba(13, 148, 136, 0.15), 0 8px 32px rgba(0,0,0,0.8)" }}
         >
           They deserve better<br />than nothing.
@@ -98,16 +98,16 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* Audience Routing */}
-      <section className="py-[60px] px-[60px] pb-20 relative">
-        <h2 className="text-center text-sm font-light tracking-[4px] uppercase text-white/35 mb-[60px]">
+      <section className="py-[60px] px-6 md:px-[60px] pb-20 relative">
+        <h2 className="text-center text-sm md:text-base font-light tracking-[4px] uppercase text-white/45 mb-[60px]">
           Where do you fit in?
         </h2>
-        <div className="flex flex-wrap justify-center gap-6 max-w-[1100px] mx-auto" style={{ perspective: "1000px" }}>
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-[1100px] mx-auto" style={{ perspective: "1000px" }}>
           {routeCards.map((card) => (
             <Link
               key={card.path}
               href={card.path}
-              className="glass p-9 px-8 w-[200px] text-center cursor-pointer relative overflow-hidden no-underline text-white transition-transform duration-400 hover:scale-105"
+              className="glass p-6 md:p-9 px-6 md:px-8 w-[calc(50%-8px)] md:w-[200px] text-center cursor-pointer relative overflow-hidden no-underline text-white transition-transform duration-400 hover:scale-105"
               style={{ transform: `translateY(${card.translateY}) ${card.rotate}` }}
             >
               <div
@@ -131,26 +131,28 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* Timeline */}
-      <section className="py-[100px] px-[60px] relative">
+      <section className="py-[60px] md:py-[100px] px-6 md:px-[60px] relative overflow-hidden">
         <h2 className="text-center text-5xl font-bold tracking-[-1.5px] mb-3" style={{ textShadow: "0 0 40px rgba(139, 92, 246, 0.3)" }}>
           The Plan
         </h2>
         <p className="text-center text-sm font-light text-white/40 tracking-[3px] uppercase mb-20">
           A2Jai Phased Rollout
         </p>
-        <div className="flex items-start justify-center max-w-[1200px] mx-auto relative px-10">
-          <div className="absolute top-[52px] left-20 right-20 h-0.5 z-0" style={{ background: "linear-gradient(90deg, #7c3aed, #6366f1, #0d9488, #06b6d4, #3b82f6)", boxShadow: "0 0 12px rgba(139, 92, 246, 0.4), 0 0 24px rgba(13, 148, 136, 0.2)" }} />
+        <div className="flex flex-col md:flex-row items-start justify-center max-w-[1200px] mx-auto relative px-4 md:px-10 gap-6 md:gap-0">
+          <div className="hidden md:block absolute top-[52px] left-20 right-20 h-0.5 z-0" style={{ background: "linear-gradient(90deg, #7c3aed, #6366f1, #0d9488, #06b6d4, #3b82f6)", boxShadow: "0 0 12px rgba(139, 92, 246, 0.4), 0 0 24px rgba(13, 148, 136, 0.2)" }} />
           {timelineNodes.map((node) => (
-            <div key={node.phase} className="flex-1 flex flex-col items-center text-center relative z-[1] px-2">
-              <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-5 bg-white/[0.06] backdrop-blur-[12px] border ${node.active ? "border-[rgba(139,92,246,0.6)]" : "border-white/[0.12]"}`} style={node.active ? { boxShadow: "0 0 24px rgba(139, 92, 246, 0.4), 0 0 48px rgba(139, 92, 246, 0.2)" } : {}}>
+            <div key={node.phase} className="flex-1 flex flex-row md:flex-col items-center md:items-center text-left md:text-center relative z-[1] px-2 gap-4 md:gap-0">
+              <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shrink-0 md:mb-5 bg-white/[0.06] backdrop-blur-[12px] border ${node.active ? "border-[rgba(139,92,246,0.6)]" : "border-white/[0.12]"}`} style={node.active ? { boxShadow: "0 0 24px rgba(139, 92, 246, 0.4), 0 0 48px rgba(139, 92, 246, 0.2)" } : {}}>
                 <div className={`w-3 h-3 rounded-full ${node.active ? "bg-purple-400 shadow-[0_0_12px_rgba(168,85,247,0.6)]" : "bg-white/30"}`} />
               </div>
-              <span className={`text-[11px] font-light tracking-[2px] uppercase mb-2 ${node.active ? "text-purple-400" : "text-white/35"}`}>{node.phase}</span>
-              <span className={`text-lg font-semibold tracking-tight mb-2.5 ${node.active ? "text-white" : "text-white/50"}`}>{node.title}</span>
-              <span className="text-xs font-light text-white/40 leading-relaxed max-w-[160px]">{node.desc}</span>
-              {node.active && (
-                <span className="inline-block text-[9px] font-semibold tracking-[2px] uppercase text-purple-400 bg-purple-500/15 border border-purple-500/30 rounded-full px-3 py-0.5 mt-3">Current</span>
-              )}
+              <div className="flex flex-col">
+                <span className={`text-xs md:text-[11px] font-light tracking-[2px] uppercase mb-1 md:mb-2 ${node.active ? "text-purple-400" : "text-white/35"}`}>{node.phase}</span>
+                <span className={`text-base md:text-lg font-semibold tracking-tight mb-1 md:mb-2.5 ${node.active ? "text-white" : "text-white/50"}`}>{node.title}</span>
+                <span className="text-xs font-light text-white/40 leading-relaxed max-w-[200px] md:max-w-[160px]">{node.desc}</span>
+                {node.active && (
+                  <span className="inline-block self-start md:self-center text-[10px] md:text-[9px] font-semibold tracking-[2px] uppercase text-purple-400 bg-purple-500/15 border border-purple-500/30 rounded-full px-3 py-0.5 mt-2 md:mt-3">Current</span>
+                )}
+              </div>
             </div>
           ))}
         </div>
@@ -159,12 +161,12 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* Manifesto Teaser */}
-      <section className="py-[120px] px-[60px] text-center relative">
+      <section className="py-16 md:py-[120px] px-6 md:px-[60px] text-center relative">
         <div className="max-w-[800px] mx-auto relative">
           <div className="absolute text-[200px] font-bold text-white/[0.015] -top-10 -left-[60px] tracking-[-8px] pointer-events-none -z-[1]">A2J</div>
           <p className="text-xl font-light tracking-[6px] uppercase text-white/30 mb-5">The A2Jai Manifesto</p>
-          <p className="text-[64px] font-bold tracking-[-2px] leading-[1.05] manifesto-gradient mb-4">Access to justice is not a feature.</p>
-          <p className="text-[64px] font-light tracking-[-2px] leading-[1.05] text-white/15 mb-8">It is the product.</p>
+          <p className="text-[36px] md:text-[64px] font-bold tracking-[-2px] leading-[1.05] manifesto-gradient mb-4">Access to justice is not a feature.</p>
+          <p className="text-[36px] md:text-[64px] font-light tracking-[-2px] leading-[1.05] text-white/15 mb-8">It is the product.</p>
           <p className="text-base font-light text-white/35 tracking-wide leading-[1.8] max-w-[500px] mx-auto">
             We believe that technology should close the justice gap, not widen it. Every tool we build starts with the people the system forgot.
           </p>

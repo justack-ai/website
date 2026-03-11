@@ -277,19 +277,19 @@ export default function A2JaiPage() {
     <>
       <SectionNav activeSection={activeSection} />
 
-      <main className="max-w-[820px] mx-auto px-8 py-20">
+      <main className="max-w-[820px] mx-auto px-6 md:px-8 py-20 overflow-hidden">
         {/* Header */}
         <div className="text-center mb-32 relative">
           {/* Background glow */}
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] rounded-full opacity-20 blur-[100px] -z-[1]"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] md:w-[500px] h-[180px] md:h-[300px] rounded-full opacity-20 blur-[100px] -z-[1]"
             style={{ background: "radial-gradient(circle, rgba(139,92,246,0.4), transparent 70%)" }}
           />
           <p className="text-sm font-light tracking-[6px] uppercase text-white/30 mb-6">
             The Manifesto
           </p>
           <h1
-            className="text-7xl font-bold tracking-[-3px] leading-[1.05] manifesto-gradient mb-6"
+            className="text-5xl md:text-7xl font-bold tracking-[-3px] leading-[1.05] manifesto-gradient mb-6"
             style={{ textShadow: "0 0 80px rgba(139,92,246,0.2)" }}
           >
             A2Jai
@@ -379,14 +379,14 @@ export default function A2JaiPage() {
         <div className="text-center mt-32 mb-20 relative">
           {/* Background glow */}
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full opacity-15 blur-[120px] -z-[1]"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] md:h-[400px] rounded-full opacity-15 blur-[120px] -z-[1]"
             style={{ background: "radial-gradient(circle, rgba(139,92,246,0.5), rgba(13,148,136,0.3), transparent 70%)" }}
           />
 
           <div className="section-divider mb-16" />
 
           <p
-            className="text-[56px] font-bold tracking-[-2px] leading-[1.05] manifesto-gradient mb-6"
+            className="text-[32px] md:text-[56px] font-bold tracking-[-2px] leading-[1.05] manifesto-gradient mb-6"
             style={{ textShadow: "0 0 80px rgba(139,92,246,0.3), 0 0 160px rgba(13,148,136,0.1)" }}
           >
             They deserve better<br />than nothing.
