@@ -28,7 +28,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "justack.ai — Open Source Legal Help Tools",
   description:
-    "They deserve better than nothing. A2Jai · Open Source Legal Help Tools — Access to justice infrastructure powered by technology and open source.",
+    "We deserve better than nothing. A2Jai · Open Source Legal Help Tools — Legal info you can afford — in seconds.",
   keywords: [
     "access to justice",
     "legal tech",

@@ -88,7 +88,7 @@ export default function Home() {
           className="relative z-[1] text-[40px] md:text-[72px] font-bold leading-[1.1] tracking-[-2px] max-w-[900px] mb-6"
           style={{ textShadow: "0 0 60px rgba(139, 92, 246, 0.3), 0 0 120px rgba(13, 148, 136, 0.15), 0 8px 32px rgba(0,0,0,0.8)" }}
         >
-          They deserve better<br />than nothing.
+          We deserve better<br />than nothing.
         </h1>
         <p className="relative z-[1] text-lg font-light text-white/50 tracking-[2px] uppercase mt-4">
           Open Source Legal Help Tools
