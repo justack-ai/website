@@ -48,7 +48,7 @@ const faqs = [
     questions: [
       {
         q: "What is the Navigator?",
-        a: "The Navigator is an AI-powered legal navigation tool that helps you answer the question 'Do I need a lawyer?' It guides you through a structured intake, classifies your situation, and provides clear guidance on what you can handle yourself versus what requires professional help. It is currently in active development.",
+        a: "The Navigator is a processor-powered legal navigation tool that helps you answer the question 'Do I need a lawyer?' It guides you through a structured intake, classifies your situation, and provides clear guidance on what you can handle yourself versus what requires professional help. It is currently in active development.",
       },
       {
         q: "Does the Navigator give legal advice?",
@@ -69,11 +69,11 @@ const faqs = [
     questions: [
       {
         q: "Is justack.ai open source?",
-        a: "Our core tools are open source under the Apache 2.0 licence — the most permissive widely-used open source licence. Commercial products like the Navigator are proprietary. The open-source side serves the mission; the commercial side funds it.",
+        a: "Our core tools are open source under the MPL-2.0 (Mozilla Public License) — an OSI-approved open source licence. Modifications to our files must be shared back, but you can build proprietary extensions in separate files. Commercial products like the Navigator are proprietary. The open-source side serves the mission; the commercial side funds it.",
       },
       {
         q: "Can I use the code for my own project?",
-        a: "Yes. Apache 2.0 permits use, modification, and distribution for any purpose, including commercial use. See the LICENSE file in each repository for details, and our Responsible Use policy for ethical use expectations.",
+        a: "Yes. MPL-2.0 permits use, modification, and distribution for any purpose, including commercial use. Modifications to existing files must remain under MPL-2.0, but new files can use any license. See the LICENSE file in each repository for details, and our Responsible Use policy for ethical use expectations.",
       },
       {
         q: "How can I contribute?",

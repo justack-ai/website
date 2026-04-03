@@ -40,7 +40,7 @@ export default function ToolsPage() {
       <section className="mb-16">
         <h2 className="text-2xl font-semibold tracking-tight mb-4">What We Are Building</h2>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
-          The Navigator is an AI-powered legal navigation tool that helps people determine whether they need a lawyer, understand their options, and connect with the right professional. It is currently in active development.
+          The Navigator is a processor-powered legal navigation tool that helps people determine whether they need a lawyer, understand their options, and connect with the right professional. It is currently in active development.
         </p>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
           When a person needs professional help, the Navigator will connect them with a lawyer in our network. AI handles triage, intake preparation, and case summary generation — so lawyers receive well-organized matters from day one.

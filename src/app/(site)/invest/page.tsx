@@ -132,7 +132,7 @@ export default function InvestPage() {
           {[
             { name: "justack.ai", desc: "Platform under active development with manifesto, blog, and core architecture. Built on Next.js and Vercel." },
             { name: "Lawyer Network", desc: "Growing network of licensed lawyers across six practice areas in Ontario and British Columbia." },
-            { name: "Navigator", desc: "'Do I Need a Lawyer?' consumer navigation tool — in active development. AI-powered triage, guided intake, and guidance reports." },
+            { name: "Navigator", desc: "'Do I Need a Lawyer?' consumer navigation tool — in active development. Processor-powered triage, guided intake, and guidance reports." },
             { name: "AI Ops Pipeline", desc: "Content generation infrastructure with SlateAgent, PRDraftAgent, QualityGateAgent, and multi-model inference router." },
           ].map((item) => (
             <div key={item.name} className="glass p-5">
@@ -149,7 +149,7 @@ export default function InvestPage() {
       <section className="mb-16">
         <h2 className="text-2xl font-semibold tracking-tight mb-4">The Open Source Commitment</h2>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
-          A2Jai maintains a structural commitment to open source. Public tools are released under the Apache 2.0 licence. Commercial products — the Navigator and lawyer connection tools — sustain the enterprise. The infrastructure is designed to be reusable by legal aid organizations, academic researchers, and other developers.
+          A2Jai maintains a structural commitment to open source. Public tools are released under the MPL-2.0 (Mozilla Public License). Commercial products — the Navigator and lawyer connection tools — sustain the enterprise. The infrastructure is designed to be reusable by legal aid organizations, academic researchers, and other developers.
         </p>
         <blockquote className="border-l-2 border-purple-500/40 pl-6 py-2">
           <p className="text-base font-light text-white/50 italic">

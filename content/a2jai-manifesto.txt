@@ -39,12 +39,12 @@ This is not a futuristic novelty. It is the return of the accessible court, impr
 
 
 A2Jai: The Project
-A2Jai is building AI-powered legal technology â€” both commercial and open-source â€” designed to disrupt the access-to-justice crisis from both ends of the market.
+A2Jai is building processor-powered legal technology â€” both commercial and open-source â€” designed to disrupt the access-to-justice crisis from both ends of the market.
 For lawyers: tools that augment practice, reduce overhead, and create efficiencies that make affordable representation economically viable.
 For consumers: products that provide legal information, knowledge, and guided assistance at a price point and accessibility level that the current system cannot match.
-For the ecosystem: open-source models that permit developers, legal academics, and technologists to build on A2Jai's infrastructure, extending access beyond what any single company can achieve.
+For the ecosystem: open-source tools that permit developers, legal academics, and technologists to build on A2Jai's infrastructure, extending access beyond what any single company can achieve.
 The commercial side funds the mission. The open-source side fulfils it.
-A2Jai is committed to maintaining that duality by design. The open-source infrastructure is not a phase to be outgrown. It is a structural commitment â€” because the access-to-justice crisis will not be solved by any single company, and the tools to address it should not be locked behind a paywall. The commercial products sustain the enterprise; the open-source models ensure that the mission outlives any business decision.
+A2Jai is committed to maintaining that duality by design. The open-source infrastructure is not a phase to be outgrown. It is a structural commitment â€” because the access-to-justice crisis will not be solved by any single company, and the tools to address it should not be locked behind a paywall. The commercial products sustain the enterprise; the open-source tools ensure that the mission outlives any business decision.
 
 
 Who Is Behind This

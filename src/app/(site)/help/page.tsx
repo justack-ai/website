@@ -155,7 +155,7 @@ export default function HelpPage() {
       <section className="mb-16">
         <h2 className="text-2xl font-semibold tracking-tight mb-4">The Navigator</h2>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
-          We are building an AI-powered legal navigation tool — the <strong className="text-white/80">Navigator</strong> — that guides you through a structured intake, classifies your situation, and produces clear guidance on what you can do yourself versus what requires professional help.
+          We are building a processor-powered legal navigation tool — the <strong className="text-white/80">Navigator</strong> — that guides you through a structured intake, classifies your situation, and produces clear guidance on what you can do yourself versus what requires professional help.
         </p>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
           The Navigator does not provide legal advice. It provides <strong className="text-white/80">navigational guidance</strong> — helping you understand your rights, your options, and the appropriate level of professional help you need. Every output includes a clear disclaimer and a path to a licensed lawyer.

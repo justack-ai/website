@@ -20,7 +20,7 @@ import EmailCapture from "@/components/EmailCapture";
 
 export const metadata: Metadata = {
   title: "Build with Us | justack.ai",
-  description: "justack.ai is open source. Contribute to access-to-justice tools built on Apache 2.0. Join the community.",
+  description: "justack.ai is open source. Contribute to access-to-justice tools built on MPL-2.0 (Mozilla Public License). Join the community.",
 };
 
 const repos = [
@@ -28,14 +28,14 @@ const repos = [
     name: "justack-ai/website",
     desc: "This website — the justack.ai platform. Next.js, React, Sanity CMS, Tailwind CSS.",
     lang: "TypeScript",
-    license: "Apache 2.0",
+    license: "MPL-2.0",
     color: "#3178c6",
   },
   {
     name: "justack-ai/navigator",
     desc: "The 'Do I Need a Lawyer?' consumer navigation tool. AI-powered legal triage and guidance.",
     lang: "TypeScript",
-    license: "Apache 2.0",
+    license: "MPL-2.0",
     color: "#3178c6",
     soon: true,
   },
@@ -43,7 +43,7 @@ const repos = [
     name: "justack-ai/intake-schemas",
     desc: "Structured intake schemas for legal issue classification. Reusable by legal aid orgs and researchers.",
     lang: "JSON / TypeScript",
-    license: "Apache 2.0",
+    license: "MPL-2.0",
     color: "#0d9488",
     soon: true,
   },
@@ -51,7 +51,7 @@ const repos = [
     name: "justack-ai/triage-classifier",
     desc: "Legal issue triage classifier. Maps user input to case categories, urgency, and jurisdiction.",
     lang: "Python / TypeScript",
-    license: "Apache 2.0",
+    license: "MPL-2.0",
     color: "#3572A5",
     soon: true,
   },
@@ -59,8 +59,8 @@ const repos = [
 
 const principles = [
   {
-    title: "Apache 2.0 Licensed",
-    desc: "Our core tools are open source under the most permissive widely-used license. Use, modify, and distribute freely.",
+    title: "MPL-2.0 Licensed",
+    desc: "Our core tools are open source under the Mozilla Public License. Modifications shared back, new files can use any license.",
   },
   {
     title: "Built for Reuse",
@@ -193,7 +193,7 @@ export default function BuildPage() {
               ["Styling", "Tailwind CSS"],
               ["AI", "Claude + DeepSeek"],
               ["Hosting", "Vercel"],
-              ["License", "Apache 2.0"],
+              ["License", "MPL-2.0"],
             ].map(([label, value]) => (
               <div key={label}>
                 <span className="text-white/30 font-light text-xs tracking-[1px] uppercase block mb-0.5">{label}</span>
