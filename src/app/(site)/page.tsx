@@ -39,11 +39,11 @@ const routeCards = [
 ];
 
 const timelineNodes = [
-  { phase: "Phase 1", title: "Foundation", desc: "Landing + A2Jai + Blog", active: true },
-  { phase: "Phase 2", title: "Community", desc: "GitHub repos + /build" },
-  { phase: "Phase 3", title: "Tools Beta", desc: "/help housing + /tools demo" },
-  { phase: "Phase 4", title: "Public Launch", desc: "Full /help + /invest + pricing" },
-  { phase: "Phase 5", title: "Scale", desc: "Community, bounties, partnerships, API" },
+  { phase: "Phase 1", title: "Live Now", desc: "RenterShield, Termtool", active: true },
+  { phase: "Phase 2", title: "Criminal Law", desc: "Charter Delay Calculator, Bail Tools" },
+  { phase: "Phase 3", title: "Employment", desc: "Severance Calculator, ESA Calculator" },
+  { phase: "Phase 4", title: "Family + Platform", desc: "Financial Statements, Court Forms" },
+  { phase: "Phase 5", title: "API + MCP", desc: "Programmatic access, AI agent integration" },
 ];
 
 export default function Home() {
@@ -79,10 +79,10 @@ export default function Home() {
           className="relative z-[1] text-[40px] md:text-[72px] font-bold leading-[1.1] tracking-[-2px] max-w-[900px] mb-6"
           style={{ textShadow: "0 0 60px rgba(139, 92, 246, 0.3), 0 0 120px rgba(13, 148, 136, 0.15), 0 8px 32px rgba(0,0,0,0.8)" }}
         >
-          We deserve better<br />than nothing.
+          Open source legal tools.<br />API and MCP forward.
         </h1>
         <p className="relative z-[1] text-lg font-light text-white/50 tracking-[2px] uppercase mt-4">
-          Open Source Legal Help Tools
+          AI-First Access to Justice
         </p>
       </section>
 
@@ -137,7 +137,7 @@ export default function Home() {
           The Plan
         </h2>
         <p className="text-center text-sm font-light text-white/40 tracking-[3px] uppercase mb-20">
-          A2Jai Phased Rollout
+          Build Sequence
         </p>
         <div className="flex flex-col md:flex-row items-start justify-center max-w-[1200px] mx-auto relative px-4 md:px-10 gap-6 md:gap-0">
           <div className="hidden md:block absolute top-[52px] left-20 right-20 h-0.5 z-0" style={{ background: "linear-gradient(90deg, #7c3aed, #6366f1, #0d9488, #06b6d4, #3b82f6)", boxShadow: "0 0 12px rgba(139, 92, 246, 0.4), 0 0 24px rgba(13, 148, 136, 0.2)" }} />
@@ -161,17 +161,11 @@ export default function Home() {
 
       <div className="section-divider" />
 
-      {/* Manifesto Teaser */}
-      <section className="py-16 md:py-[120px] px-6 md:px-[60px] text-center relative">
-        <div className="max-w-[800px] mx-auto relative">
-          <div className="absolute text-[200px] font-bold text-white/[0.015] -top-10 -left-[60px] tracking-[-8px] pointer-events-none -z-[1]">A2J</div>
-          <p className="text-xl font-light tracking-[6px] uppercase text-white/30 mb-5">The A2Jai Manifesto</p>
-          <p className="text-[36px] md:text-[64px] font-bold tracking-[-2px] leading-[1.05] manifesto-gradient mb-4">Access to justice is not a feature.</p>
-          <p className="text-[36px] md:text-[64px] font-light tracking-[-2px] leading-[1.05] text-white/15 mb-8">It is the product.</p>
-          <p className="text-base font-light text-white/35 tracking-wide leading-[1.8] max-w-[500px] mx-auto">
-            We believe that technology should close the justice gap, not widen it. Every tool we build starts with the people the system forgot.
-          </p>
-        </div>
+      {/* Manifesto Link */}
+      <section className="py-12 md:py-16 px-6 md:px-[60px] text-center">
+        <Link href="/a2jai" className="text-sm font-light tracking-[4px] uppercase text-white/30 hover:text-white/50 transition-colors">
+          Read the A2Jai Manifesto →
+        </Link>
       </section>
 
       <div className="section-divider" />

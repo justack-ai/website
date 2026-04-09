@@ -79,23 +79,6 @@ export const liveTools: RoadmapTool[] = [
     href: "https://apps.shopify.com/termtool",
     external: true,
   },
-  {
-    name: "Box45Calculator",
-    slug: "box45calculator",
-    description: "Canadian tax Box 45 calculator for bookkeepers. Built for T4/T5 slip preparation season.",
-    status: "live",
-    practiceArea: "consumer",
-    href: "https://box45calculator.ca",
-    external: true,
-  },
-  {
-    name: "InstructIT",
-    slug: "instructit",
-    description: "Auditable client instruction capture for lawyers. Structured intake with a defensible record of what the client said.",
-    status: "live",
-    practiceArea: "practitioner",
-    href: "/instructit",
-  },
 ];
 
 export const phase1Tools: RoadmapTool[] = [
@@ -192,6 +175,20 @@ export const phase3Tools: RoadmapTool[] = [
 ];
 
 export const practitionerTools: RoadmapTool[] = [
+  {
+    name: "InstructIT",
+    slug: "instructit",
+    description: "Auditable client instruction capture for lawyers. Structured intake with a defensible record of what the client said.",
+    status: "coming-soon",
+    practiceArea: "practitioner",
+  },
+  {
+    name: "Box45Calculator",
+    slug: "box45calculator",
+    description: "Canadian tax Box 45 calculator for bookkeepers. Built for T4/T5 slip preparation season.",
+    status: "coming-soon",
+    practiceArea: "consumer",
+  },
   {
     name: "Client Intake Kit",
     slug: "client-intake-kit",
