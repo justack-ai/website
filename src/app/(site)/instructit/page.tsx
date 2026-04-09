@@ -19,6 +19,29 @@ const JURISDICTION_LABELS: Record<string, string> = {
 };
 
 export default async function InstructITDashboard() {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    return (
+      <main className="max-w-[800px] mx-auto px-6 md:px-8 py-20">
+        <div className="mb-16">
+          <p className="text-sm font-light tracking-[4px] uppercase text-white/30 mb-4">Practitioner Tools</p>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-[-1.5px] mb-6">InstructIT</h1>
+          <p className="text-lg font-light text-white/50 leading-relaxed max-w-[700px]">
+            Auditable client instruction capture for lawyers. Structured intake with a defensible record of what the client said.
+          </p>
+        </div>
+        <div className="glass p-8">
+          <h2 className="text-xl font-semibold mb-3">Coming Soon</h2>
+          <p className="text-sm font-light text-white/50 leading-relaxed mb-6">
+            InstructIT captures client instructions in a structured, auditable format that creates a defensible record for your file. Built for lawyers who need to document what the client said, when they said it, and what was agreed.
+          </p>
+          <p className="text-sm font-light text-white/40">
+            Interested? <Link href="/roadmap" className="text-purple-400 hover:text-purple-300 transition-colors">Join the roadmap waitlist</Link> to be notified when InstructIT launches.
+          </p>
+        </div>
+      </main>
+    );
+  }
+
   const supabase = await createClient();
 
   const {
@@ -27,18 +50,27 @@ export default async function InstructITDashboard() {
 
   if (!user) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">InstructIT</h1>
-          <p className="text-gray-600 mb-6">Sign in to access your matters.</p>
+      <main className="max-w-[800px] mx-auto px-6 md:px-8 py-20">
+        <div className="mb-16">
+          <p className="text-sm font-light tracking-[4px] uppercase text-white/30 mb-4">Practitioner Tools</p>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-[-1.5px] mb-6">InstructIT</h1>
+          <p className="text-lg font-light text-white/50 leading-relaxed max-w-[700px]">
+            Auditable client instruction capture for lawyers. Structured intake with a defensible record of what the client said.
+          </p>
+        </div>
+        <div className="glass p-8">
+          <h2 className="text-xl font-semibold mb-3">Request Access</h2>
+          <p className="text-sm font-light text-white/50 leading-relaxed mb-6">
+            InstructIT is currently available by request. Sign in to access your matters, or contact us for access.
+          </p>
           <Link
-            href="/auth/login"
-            className="inline-block bg-gray-900 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition-colors"
+            href="/roadmap"
+            className="inline-block text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors"
           >
-            Sign In
+            View the roadmap &rarr;
           </Link>
         </div>
-      </div>
+      </main>
     );
   }
 

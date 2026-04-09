@@ -199,7 +199,7 @@ export const practitionerTools: RoadmapTool[] = [
   {
     name: "Legal Document Classifier",
     slug: "legal-document-classifier",
-    description: "AI-powered document classification with privilege-first defaults. For solo practitioners managing their own files.",
+    description: "Processor-powered document classification with privilege-first defaults. For solo practitioners managing their own files.",
     status: "coming-soon",
     practiceArea: "practitioner",
   },

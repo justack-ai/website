@@ -24,7 +24,7 @@ const repos = [
   },
   {
     name: "justack-ai/navigator",
-    desc: "The 'Do I Need a Lawyer?' consumer navigation tool. AI-powered legal triage and guidance.",
+    desc: "The 'Do I Need a Lawyer?' consumer navigation tool. Processor-powered legal triage and guidance.",
     lang: "TypeScript",
     license: "MPL-2.0",
     color: "#3178c6",
