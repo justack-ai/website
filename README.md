@@ -16,11 +16,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## License
 
-This project is licensed under the [Apache License, Version 2.0](LICENSE).
+This project is licensed under the [Mozilla Public License 2.0 (MPL-2.0)](LICENSE).
 
 See also:
 - [NOTICE](NOTICE) — attribution and copyright
-- [RESPONSIBLE-USE.md](RESPONSIBLE-USE.md) — additional use restrictions
+- [RESPONSIBLE-USE.md](RESPONSIBLE-USE.md) — responsible use values
 
 ## Contributing
 

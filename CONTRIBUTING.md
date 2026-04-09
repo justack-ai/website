@@ -130,7 +130,7 @@ This project uses **TypeScript**, **Next.js 16 App Router**, **Tailwind CSS v4**
 - **TypeScript everywhere.** No `.js` files in `src/`. Use strict types — avoid `any`.
 - **Functional components only.** No class components.
 - **Named exports for pages, default exports for page components** (Next.js convention).
-- **Apache license header** on every new source file. Copy the header from any existing file in `src/`.
+- **MPL-2.0 license header** on every new source file. Copy the header from any existing file in `src/`.
 
 ### File structure
 

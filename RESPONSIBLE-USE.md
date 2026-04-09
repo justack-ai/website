@@ -1,24 +1,24 @@
 # A2Jai Responsible Use Addendum
 
-**Version:** 1.0 (DRAFT — for legal counsel review)
-**Date:** 2026-03-06
-**Applies to:** All A2Jai software distributed under the Apache License, Version 2.0
+**Version:** 1.1 (DRAFT — for legal counsel review)
+**Date:** 2026-04-08
+**Applies to:** All justack.ai software distributed under the Mozilla Public License 2.0
 
 ---
 
-**THIS IS A DRAFT FOR REVIEW BY QUALIFIED LEGAL COUNSEL. It is not a final legal instrument. The enforceability of responsible use addenda in open source licensing is novel and jurisdiction-dependent. Do not adopt this addendum without independent legal review.**
+**THIS IS A DRAFT FOR REVIEW BY QUALIFIED LEGAL COUNSEL. It is not a final legal instrument. The enforceability of responsible use addenda alongside open source licenses is novel and jurisdiction-dependent. Do not adopt this addendum without independent legal review.**
 
 ---
 
-## Addendum to the Apache License, Version 2.0
+## Values-Based Use Guidelines
 
-This Addendum supplements the Apache License, Version 2.0 ("Apache 2.0") under which the accompanying software ("Software") is distributed. All terms, conditions, grants, and permissions of Apache 2.0 remain in full force and effect. Capitalized terms not defined herein have the meanings given to them in Apache 2.0.
+This Addendum supplements the Mozilla Public License 2.0 ("MPL-2.0") under which the accompanying software ("Software") is distributed. The MPL-2.0 governs all permissions, rights, and obligations related to the Software's source code.
 
-This Addendum does not modify, limit, or restrict the permissions granted under Apache 2.0 for any lawful and ethical use of the Software. It establishes additional conditions governing certain prohibited uses.
+This Addendum does not modify, limit, or restrict the permissions granted under the MPL-2.0. It establishes the project's values and expectations regarding the use of the Software. Violation of these guidelines may result in exclusion from the project community, removal of contributor access, and public disclosure of misuse.
 
-## 1. Responsible Use Restrictions
+## 1. Responsible Use Expectations
 
-In addition to the terms of Apache 2.0, You agree that You shall not use, modify, merge, distribute, sublicense, or deploy the Software, or any derivative work thereof, for any of the following purposes:
+The justack.ai project expects that all users of the Software will refrain from the following uses:
 
 ### 1.1 Unauthorized Practice of Law
 
@@ -42,37 +42,31 @@ Use of the Software for any purpose that is designed to or has the primary effec
 
 ## 2. Scope and Interpretation
 
-(a) This Addendum applies only to the specific prohibited uses enumerated in Section 1. All other uses of the Software remain governed solely by Apache 2.0.
+(a) This Addendum is a values statement, not a license restriction. The MPL-2.0 is the sole license governing the Software's source code.
 
-(b) The restrictions in Section 1 are intended to reflect the values and mission of the A2Jai project. They are not intended to limit good-faith use of the Software for legal information, education, research, legal aid, pro bono work, clinical legal education, or any other purpose consistent with advancing access to justice.
+(b) The expectations in Section 1 reflect the values and mission of the A2Jai project. They are not intended to limit good-faith use of the Software for legal information, education, research, legal aid, pro bono work, clinical legal education, or any other purpose consistent with advancing access to justice.
 
-(c) Nothing in this Addendum restricts the right to study, modify, or redistribute the Software's source code, provided that any deployment or use of the Software (whether modified or unmodified) complies with Section 1.
+(c) Nothing in this Addendum restricts the rights granted under the MPL-2.0, including the right to study, modify, and redistribute the Software's source code.
 
-## 3. Remedies
+## 3. Community Enforcement
 
-Any use of the Software in violation of Section 1 shall be deemed a breach of the license terms. Without limiting any other rights or remedies available under applicable law, the Licensor reserves the right to revoke the license granted to any party found to be in material violation of Section 1, upon written notice.
+Users and deployers of the Software who act contrary to these values may be excluded from the project's community spaces, denied contributor access, and publicly identified. The project maintainers reserve the right to make these determinations at their discretion.
 
 ## 4. Severability
 
-If any provision of this Addendum is held to be unenforceable or invalid by a court of competent jurisdiction, that provision shall be modified to the minimum extent necessary to make it enforceable, or if modification is not possible, severed from this Addendum. The remaining provisions shall continue in full force and effect, and the Apache 2.0 license shall remain operative and unaffected.
-
-## 5. Governing Relationship to Apache 2.0
-
-In the event of any conflict between this Addendum and the Apache License, Version 2.0, the terms of Apache 2.0 shall prevail with respect to the grant of permissions, and this Addendum shall prevail with respect to the prohibited uses enumerated in Section 1. This Addendum is not endorsed by, affiliated with, or approved by the Apache Software Foundation.
+If any provision of this Addendum is held to be unenforceable or invalid by a court of competent jurisdiction, that provision shall be severed. The remaining provisions shall continue as a statement of the project's values.
 
 ---
 
 **NOTES FOR LEGAL COUNSEL:**
 
-1. This addendum is modeled on the Responsible AI License (RAIL) approach used by Hugging Face and BigScience. RAIL licenses add use-based restrictions to otherwise permissive grants. This approach is growing in adoption but has not been tested in litigation as of the date of this draft.
+1. This addendum has been restructured from a license restriction (BSL 1.1 addendum) to a values statement that operates alongside the MPL-2.0. The MPL-2.0 is OSI-approved and does not support use-based restrictions. This addendum is therefore framed as community norms rather than license terms.
 
-2. The Open Source Initiative (OSI) does not recognize licenses with use restrictions as "open source" under its Open Source Definition. This addendum, when combined with Apache 2.0, would technically make the license "source-available with ethical restrictions" rather than "open source" under OSI's definition. The founder should decide whether OSI conformity matters for the project's positioning.
+2. The enforcement mechanism is community-based (exclusion, public disclosure) rather than license-based (revocation). This is consistent with how other open source projects enforce codes of conduct and responsible use expectations.
 
-3. Enforcement of use-based restrictions requires monitoring and willingness to litigate. The practical deterrent value may exceed the legal enforceability — the restrictions signal the project's values and create reputational risk for violators, even if litigation is not pursued.
+3. The five prohibited use categories are unchanged from v1.0 and remain tailored to A2Jai's access-to-justice mission.
 
-4. The five prohibited use categories are tailored to A2Jai's access-to-justice mission. Counsel should review whether additional categories are appropriate (e.g., surveillance, discriminatory profiling, military applications) or whether any category is overbroad for the project's actual risk profile.
-
-5. The interaction between Section 5 (Apache 2.0 prevails on permissions, Addendum prevails on prohibited uses) may create ambiguity. Counsel should consider whether a clearer hierarchy or integration structure is preferable.
+4. Counsel should review whether the "public disclosure of misuse" provision in Section 3 creates any defamation or tortious interference risk.
 
 ---
 

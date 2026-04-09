@@ -8,12 +8,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "A2Jai — Restoring Access to Justice in the Age of AI | justack.ai",
+  title: "Legal Dialectic Engine — LDE | justack.ai",
   description:
-    "The A2Jai manifesto. Legal technology to address Canada's access-to-justice crisis — commercial products and open-source tools.",
+    "Tell your story. Get both sides. LDE is A2Jai's neuro-symbolic legal reasoning engine for Canadians who can't afford a lawyer.",
 };
 
-export default function A2JaiLayout({
+export default function LDELayout({
   children,
 }: {
   children: React.ReactNode;

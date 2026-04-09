@@ -49,7 +49,7 @@ Your use of the Platform is also governed by our Privacy Policy, available at ju
 
 ### 6.1 Platform Code
 
-The Platform's source code is licensed under the Apache License 2.0. Your rights and obligations regarding the source code are governed by that license.
+The Platform's source code is licensed under the Mozilla Public License 2.0 (MPL-2.0). Your rights and obligations regarding the source code are governed by that license.
 
 ### 6.2 Outputs
 

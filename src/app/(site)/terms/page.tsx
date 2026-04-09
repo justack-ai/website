@@ -1,17 +1,8 @@
 /*
  * Copyright 2026 Humilitas Group Limited
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
 import type { Metadata } from "next";
@@ -99,7 +90,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-xl font-semibold text-white/90 mb-3">Open Source Code</h2>
           <p>
-            Portions of justack.ai are released as open source software under the Apache License, Version 2.0. Your use of open source code is governed by the applicable license terms, which are available in the relevant repositories at{" "}
+            Portions of justack.ai are released as open source software under the Mozilla Public License 2.0 (MPL-2.0). Your use of open source code is governed by the applicable license terms, which are available in the relevant repositories at{" "}
             <a href="https://github.com/justack-ai" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">github.com/justack-ai</a>. See also our{" "}
             <a href="https://github.com/justack-ai/website/blob/main/RESPONSIBLE-USE.md" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">Responsible Use policy</a>.
           </p>

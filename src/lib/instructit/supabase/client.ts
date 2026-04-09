@@ -5,11 +5,11 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-"use client";
+import { createBrowserClient } from "@supabase/ssr";
 
-import { NextStudio } from "next-sanity/studio";
-import config from "../../../../../sanity.config";
-
-export default function StudioPage() {
-  return <NextStudio config={config} />;
+export function createClient() {
+  return createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
 }
