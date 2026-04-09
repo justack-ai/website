@@ -86,6 +86,16 @@ export default function Home() {
         </p>
       </section>
 
+      {/* Roadmap CTA */}
+      <div className="text-center -mt-6 mb-8 relative z-[1]">
+        <Link
+          href="/roadmap"
+          className="text-sm font-light text-white/30 tracking-[2px] uppercase no-underline hover:text-white/50 transition-colors"
+        >
+          See what we&apos;re building &rarr;
+        </Link>
+      </div>
+
       <div className="section-divider" />
 
       {/* Audience Routing */}

@@ -15,6 +15,7 @@ const navLinks = [
   { href: "/a2jai", label: "A2Jai" },
   { href: "/a2jai/lde", label: "LDE" },
   { href: "/blog", label: "Blog" },
+  { href: "/roadmap", label: "Roadmap" },
   { href: "/about", label: "About" },
 ];
 
