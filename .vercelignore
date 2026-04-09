@@ -1,0 +1,21 @@
+# Hold back unfinished features from Vercel deploy
+# (files exist locally but aren't ready for production)
+
+# Jordan Calculator — pending legal review
+src/app/(site)/jordan/
+src/app/(site)/api/jordan/
+src/components/jordan/
+src/lib/jordan/
+
+# InstructIT Phase 2 — workflow nodes not ready
+src/app/(site)/api/instructit/matters/[id]/nodes/
+src/app/(site)/instructit/[matterId]/workflow/
+src/lib/instructit/configs/
+src/lib/instructit/deadline.ts
+src/lib/instructit/jordan.ts
+
+# Plans and internal docs
+Plans/
+.agent/
+apps/
+scripts/
