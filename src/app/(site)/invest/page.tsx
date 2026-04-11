@@ -6,6 +6,7 @@
  */
 
 import type { Metadata } from "next";
+import Image from "next/image";
 import EmailCapture from "@/components/EmailCapture";
 
 export const metadata: Metadata = {
@@ -72,6 +73,15 @@ export default function InvestPage() {
 
       {/* Problem */}
       <section className="mb-16">
+        <div className="mb-10 rounded-2xl overflow-hidden">
+          <Image
+            src="/images/scenes/justack-scene-02b-gallery.jpg"
+            alt="A courtroom gallery: seven identical biglaw men on one side, four diverse solo practitioners on the other — an imbalance of representation."
+            width={1920}
+            height={823}
+            className="w-full h-auto"
+          />
+        </div>
         <h2 className="text-2xl font-semibold tracking-tight mb-4">The Problem</h2>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
           Each year, 5.4 million Canadians experience a serious legal problem. Of those, only 29% contact a lawyer. Of the lawyer contacts that do occur, 24% result in no help at all, and 41% address only part of the problem.

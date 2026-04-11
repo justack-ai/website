@@ -23,7 +23,7 @@ import EmailCapture from "@/components/EmailCapture";
 export const metadata: Metadata = {
   title: "Roadmap | justack.ai",
   description:
-    "See what justack.ai is building: legal help tools for housing, criminal law, employment, family law, and practitioner workflows. Every tool includes API + MCP access.",
+    "See what justack.ai is building: legal help apps for housing, criminal law, employment, family law, and practitioner workflows. Every tool will ship with API + MCP access.",
 };
 
 function StatusBadge({ status }: { status: RoadmapTool["status"] }) {
@@ -146,10 +146,10 @@ export default function RoadmapPage() {
           </div>
           <div>
             <p className="text-sm font-semibold text-white/80 mb-1">
-              Every tool includes API + MCP access
+              Every tool will include API + MCP access
             </p>
             <p className="text-sm font-light text-white/40 leading-relaxed">
-              Build legal workflows programmatically. All tools available via API and MCP-compatible for AI agent integration.
+              Our commitment: every tool we ship will expose a REST API and an MCP server so people, lawyers, and AI agents can build on top of it programmatically.
             </p>
           </div>
         </div>

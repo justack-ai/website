@@ -6,6 +6,7 @@
  */
 
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import EmailCapture from "@/components/EmailCapture";
 
@@ -87,7 +88,7 @@ export default function HelpPage() {
   return (
     <main className="max-w-[900px] mx-auto px-6 md:px-8 py-20">
       {/* Header */}
-      <div className="mb-20">
+      <div className="mb-12">
         <p className="text-sm font-light tracking-[4px] uppercase text-white/30 mb-4">I Need Legal Help</p>
         <h1 className="text-4xl md:text-5xl font-bold tracking-[-1.5px] mb-6">
           Do I need a lawyer?
@@ -95,6 +96,16 @@ export default function HelpPage() {
         <p className="text-lg font-light text-white/50 leading-relaxed max-w-[700px]">
           That is the question most people cannot afford to ask. justack.ai is building tools to help you answer it — for free or at a fraction of the cost of a consultation.
         </p>
+      </div>
+
+      <div className="mb-20 rounded-2xl overflow-hidden">
+        <Image
+          src="/images/scenes/justack-scene-04-eviction.jpg"
+          alt="A tenant at a kitchen table in soft morning light, holding a formal letter and absorbing bad news."
+          width={1920}
+          height={823}
+          className="w-full h-auto"
+        />
       </div>
 
       {/* How It Works */}

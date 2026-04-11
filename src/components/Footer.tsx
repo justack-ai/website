@@ -10,6 +10,9 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="px-6 md:px-[60px] py-[60px] pb-10 border-t border-white/5">
+      <div className="max-w-[900px] mb-10 text-xs font-light text-white/35 leading-relaxed tracking-wide">
+        justack.ai is not your lawyer or your legal agent. Our products provide help and are no substitute for a lawyer.
+      </div>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         <div>
           <div className="text-lg font-semibold text-white/25 tracking-tight">justack.ai</div>

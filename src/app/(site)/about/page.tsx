@@ -44,7 +44,6 @@ export default function AboutPage() {
           {[
             { title: "Open Source by Default", desc: "Our core tools are open source under the MPL-2.0 (Mozilla Public License). We believe access to justice infrastructure should be public goods." },
             { title: "The Dual Model", desc: "The commercial side funds the mission. The open-source side fulfils it. Commercial products for legal professionals generate the revenue that supports free tools for the public." },
-            { title: "Regulatory Respect", desc: "We work with law societies, not around them. We are clear about the line between legal information and legal advice. We build tools that augment lawyers, not replace them." },
             { title: "Privacy by Design", desc: "Legal problems are among the most sensitive issues people face. Our tools are built with privacy as a foundational principle, not an afterthought." },
           ].map((item) => (
             <div key={item.title} className="glass p-6">

@@ -6,11 +6,11 @@
  */
 
 import Link from "next/link";
-import WireframeCourthouse from "@/components/WireframeCourthouse";
+import Image from "next/image";
 import EmailCapture from "@/components/EmailCapture";
 
 const routeCards = [
-  { title: "I Need Legal Help", path: "/help", color: "#ef4444", rotate: "rotateY(-4deg) rotateX(2deg)", translateY: "0px", icon: (
+  { title: "I Need Legal Help", path: "/roadmap", color: "#ef4444", rotate: "rotateY(-4deg) rotateX(2deg)", translateY: "0px", icon: (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#ef4444" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="18" cy="12" r="6"/><path d="M6 30c0-6.627 5.373-12 12-12s12 5.373 12 12"/><path d="M18 22v4M15 26h6"/>
     </svg>
@@ -20,7 +20,7 @@ const routeCards = [
       <polyline points="10,12 6,18 10,24"/><polyline points="26,12 30,18 26,24"/><line x1="20" y1="8" x2="16" y2="28"/>
     </svg>
   )},
-  { title: "I\u2019m a Lawyer", path: "/tools", color: "#3b82f6", rotate: "rotateY(-3deg) rotateX(1deg)", translateY: "12px", icon: (
+  { title: "I\u2019m a Lawyer", path: "/lwrtools", color: "#3b82f6", rotate: "rotateY(-3deg) rotateX(1deg)", translateY: "12px", icon: (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <line x1="18" y1="4" x2="18" y2="14"/><line x1="10" y1="14" x2="26" y2="14"/><line x1="10" y1="14" x2="7" y2="22"/><line x1="26" y1="14" x2="29" y2="22"/>
       <path d="M4 22 Q7 28 10 22"/><path d="M26 22 Q29 28 32 22"/><rect x="14" y="24" width="8" height="2" rx="1"/><line x1="18" y1="14" x2="18" y2="24"/>
@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="text-center px-6 md:px-[60px] py-20 relative min-h-[600px] flex flex-col items-center justify-center">
+      <section className="px-6 md:px-[60px] py-16 md:py-20 relative min-h-[600px] flex items-center">
         {/* Particles */}
         <div className="absolute inset-0 pointer-events-none z-0">
           {[
@@ -73,17 +73,29 @@ export default function Home() {
           ))}
         </div>
 
-        <WireframeCourthouse />
-
-        <h1
-          className="relative z-[1] text-[40px] md:text-[72px] font-bold leading-[1.1] tracking-[-2px] max-w-[900px] mb-6"
-          style={{ textShadow: "0 0 60px rgba(139, 92, 246, 0.3), 0 0 120px rgba(13, 148, 136, 0.15), 0 8px 32px rgba(0,0,0,0.8)" }}
-        >
-          Open source legal tools.<br />API and MCP forward.
-        </h1>
-        <p className="relative z-[1] text-lg font-light text-white/50 tracking-[2px] uppercase mt-4">
-          AI-First Access to Justice
-        </p>
+        <div className="relative z-[1] w-full max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="text-left">
+            <h1
+              className="text-[40px] md:text-[64px] font-bold leading-[1.05] tracking-[-2px] mb-6"
+              style={{ textShadow: "0 0 60px rgba(139, 92, 246, 0.3), 0 0 120px rgba(13, 148, 136, 0.15), 0 8px 32px rgba(0,0,0,0.8)" }}
+            >
+              Open Source Legal Help Apps
+            </h1>
+            <p className="text-lg font-light text-white/50 tracking-[2px] uppercase">
+              AI-First Access to Justice
+            </p>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden">
+            <Image
+              src="/images/scenes/justack-scene-01-mom-bench.jpg"
+              alt="A mother sits alone on a stone bench outside a courthouse, holding a manila folder — waiting, dignified, unhurried."
+              width={1920}
+              height={823}
+              priority
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
       </section>
 
       {/* Roadmap CTA */}
@@ -119,7 +131,9 @@ export default function Home() {
                 {card.icon}
               </div>
               <h3 className="text-base font-semibold mb-2 tracking-tight">{card.title}</h3>
-              <span className="text-xs font-light text-white/35 tracking-[1px]">{card.path}</span>
+              {card.path !== "/roadmap" && (
+                <span className="text-xs font-light text-white/35 tracking-[1px]">{card.path}</span>
+              )}
               <div
                 className="absolute bottom-0 left-[20%] right-[20%] h-0.5 opacity-40 rounded-sm"
                 style={{ background: `linear-gradient(90deg, transparent, ${card.color}, transparent)` }}

@@ -35,7 +35,7 @@ const sections: {
   {
     label: "Crisis",
     title: "The System as It Stands",
-    image: "/images/manifesto/crisis.webp",
+    image: "/images/scenes/justack-scene-04-eviction.jpg",
     paragraphs: [
       `The legal system in Canada operates, for most people, in one of two modes: dormant or predatory.`,
       `Dormant, in that it is irrelevant to people experiencing unfairness, exploitation, and injustice in their daily lives \u2014 wrongs for which the courts could provide a remedy but cannot, because the system lies inert for the masses. Those gifts are bought and sold, but not for them.`,
@@ -48,7 +48,7 @@ const sections: {
   {
     label: "Economics",
     title: "The Economic Failure",
-    image: "/images/manifesto/economics.webp",
+    image: "/images/scenes/justack-scene-05b-bakery-behind.jpg",
     paragraphs: [
       `The access-to-justice crisis is, at its core, a market failure.`,
       `Legal aid is primarily for criminal law, some family law, and some provinces provide variations on the theme of poverty law, while Ontario has a cluster of legal aid clinics that serve a variety of needs. However, to qualify for legal aid requires household income below a threshold describing genuine poverty. Above that line sits the majority of the population \u2014 unable to qualify for legal aid, unable to afford counsel. For the medium to large corporate client, lawyers are a cost of doing business. For the rest of the democracy, they are an unaffordable curiosity \u2014 a promise unfulfilled.`,
@@ -58,7 +58,6 @@ const sections: {
   {
     label: "Perception",
     title: "The Perception Failure",
-    image: "/images/manifesto/perception.webp",
     paragraphs: [
       `Compounding the economic failure is a failure of information \u2014 and it is just as damaging.`,
       `Most people do not know that some affordable legal help exists in pockets of the system. They assume all lawyers are unaffordable, and most lawyers have done nothing to correct that assumption. This ignorance is itself an access-to-justice failure.`,
@@ -70,7 +69,6 @@ const sections: {
     label: "History",
     title: "What We Lost",
     timelineAfter: true,
-    image: "/images/manifesto/history.webp",
     paragraphs: [
       `It was not always so, it seems.`,
       `Maybe this is ancient historical nostalgia nonsense, but there is plenty of scholarship validating that the lay dicasts of Athens were ordinary citizens deciding cases by the hundreds. The early Justices of the Peace, following the Statute of 1361, were local figures resolving disputes without a professionalized bar. The Courts of Piepowder \u2014 what Blackstone called the most expeditious court of justice known to the law of England \u2014 adjudicated commercial disputes at fairs and markets, on the spot, before merchants could leave town.`,
@@ -82,7 +80,7 @@ const sections: {
   {
     label: "Opportunity",
     title: "The New Opportunity",
-    image: "/images/manifesto/opportunity.webp",
+    image: "/images/scenes/justack-scene-03-papers.jpg",
     paragraphs: [
       `The proliferation of legal tech developments and AI brings three distinct opportunities to democratize legal help.`,
       `Augmentation. AI permits the augmentation of lawyers, creating efficiencies that may eventually be passed to the consumer through lower prices. Corporate in-house counsel are already adopting AI at twice the rate of law firms. At a minimum, the law firm business model will change. Companies will rely on outside counsel less, because they can, at a level of risk and cost that is manageable. Firms that adapt will thrive. Firms that do not will face an existential reckoning.`,
@@ -95,7 +93,7 @@ const sections: {
   {
     label: "Project",
     title: "A2Jai: The Project",
-    image: "/images/manifesto/project.webp",
+    image: "/images/scenes/justack-scene-02b-gallery.jpg",
     paragraphs: [
       `A2Jai is building processor-powered legal technology \u2014 both commercial and open-source \u2014 designed to disrupt the access-to-justice crisis from both ends of the market.`,
       `For lawyers: tools that augment practice, reduce overhead, and create efficiencies that make affordable representation economically viable.`,
@@ -108,7 +106,6 @@ const sections: {
   {
     label: "Author",
     title: "Who Is Behind This",
-    image: "/images/manifesto/author.webp",
     paragraphs: [
       `A2Jai is designed, developed, funded and authored by Michael Bryant \u2014 former Attorney General of Ontario, former CEO of the Canadian Civil Liberties Association, former CEO of Legal Aid BC, and a person who has experienced the justice system from its most privileged corridors to its most unforgiving depths. Charged with two serious criminal offences, represented by Marie Henein, and ultimately the charges were withdrawn by the Special Prosecutor. Bryant has since spent a decade in the spaces where the system\u2019s failures are most visible: homeless shelters, recovery meetings, the Downtown Eastside of Vancouver, and the bail court cells of Brampton.`,
       `That range of experience \u2014 from the pinnacle of the profession to its point of greatest need \u2014 informs every product A2Jai builds.`,
@@ -117,7 +114,7 @@ const sections: {
   {
     label: "Invitation",
     title: "The Invitation",
-    image: "/images/manifesto/invitation.webp",
+    image: "/images/scenes/justack-scene-01-mom-bench.jpg",
     paragraphs: [
       `A2Jai is a personal project designed for a collective. It needs open-source developers, computer scientists, legal technologists, and professionals who understand that the access-to-justice crisis is a market opportunity of extraordinary scale, serving a population that the legal profession has inadvertently abandoned.`,
       `AI will not replace the bar. But it may restore to the masses the practical justice that the bar, inadvertently, priced out of existence.`,
