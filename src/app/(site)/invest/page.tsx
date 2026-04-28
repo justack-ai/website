@@ -10,15 +10,15 @@ import Image from "next/image";
 import EmailCapture from "@/components/EmailCapture";
 
 export const metadata: Metadata = {
-  title: "Invest | justack.ai",
-  description: "The access-to-justice market in Canada represents a multi-billion dollar opportunity. Learn about A2Jai's approach.",
+  title: "The Opportunity | justack.ai",
+  description: "Five billion people lack meaningful access to justice. justack.ai is building open-source legal infrastructure for a global market that has been left on the table for decades.",
 };
 
 const marketStats = [
-  { value: "5.4M", label: "Canadians face a serious legal problem each year" },
-  { value: "78%", label: "receive no professional legal help" },
-  { value: "$15.7B", label: "Canadian legal services market (annual)" },
-  { value: "$5\u2013$7B", label: "estimated underserved consumer market" },
+  { value: "5B", label: "people lack meaningful access to justice (WJP, global)" },
+  { value: "$1T", label: "global legal-services market (estimated, IBA / McKinsey)" },
+  { value: "78%", label: "of people facing legal problems receive no professional help" },
+  { value: "$5\u2013$7B", label: "underserved consumer market in Canada (launch beachhead)" },
 ];
 
 const tiers = [
@@ -44,12 +44,12 @@ export default function InvestPage() {
     <main className="max-w-[900px] mx-auto px-6 md:px-8 py-20">
       {/* Header */}
       <div className="mb-20">
-        <p className="text-sm font-light tracking-[4px] uppercase text-white/30 mb-4">Invest</p>
+        <p className="text-sm font-light tracking-[4px] uppercase text-white/30 mb-4">The Opportunity</p>
         <h1 className="text-4xl md:text-5xl font-bold tracking-[-1.5px] mb-6">
-          The Opportunity
+          Five billion people. One legal system that excludes them.
         </h1>
         <p className="text-lg font-light text-white/50 leading-relaxed max-w-[700px]">
-          The legal system in Canada works for those who can pay. For everyone else, it does not. A2Jai is building the product infrastructure to close that gap — and serve a market that has been left on the table for decades.
+          The legal system, almost everywhere, works for those who can pay. For everyone else, it does not. justack.ai is building open-source product infrastructure to close that gap — globally — and serve a market that has been left on the table for decades. Canada is our launch beachhead. The platform is built to scale jurisdiction by jurisdiction.
         </p>
       </div>
 
@@ -65,7 +65,7 @@ export default function InvestPage() {
           ))}
         </div>
         <p className="text-xs font-light text-white/25 mt-4 text-center">
-          Sources: Canadian Legal Problems Survey via CBA National Magazine; Statistics Canada; Supreme Court of Canada.
+          Sources: World Justice Project (Measuring the Justice Gap); IBA / McKinsey global legal-services market estimates; Canadian Legal Problems Survey via CBA National Magazine.
         </p>
       </section>
 
@@ -84,13 +84,13 @@ export default function InvestPage() {
         </div>
         <h2 className="text-2xl font-semibold tracking-tight mb-4">The Problem</h2>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
-          Each year, 5.4 million Canadians experience a serious legal problem. Of those, only 29% contact a lawyer. Of the lawyer contacts that do occur, 24% result in no help at all, and 41% address only part of the problem.
+          The World Justice Project estimates that more than 5 billion people lack meaningful access to justice. They cannot resolve everyday legal problems — landlord disputes, employment terminations, custody questions, debt collection, government benefits — through the formal system.
         </p>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
-          A million Canadians say they want more legal assistance but do not seek it. The reasons are consistent: cost, confusion about what help is available, and a pervasive belief — often correct — that the system is not designed for them.
+          The reasons are consistent across jurisdictions: cost, complexity, and a pervasive belief — often correct — that the system was not designed for them. Even in wealthy common-law countries, around three quarters of people facing a serious legal issue do not get professional help.
         </p>
         <p className="text-base font-light text-white/60 leading-[1.8]">
-          The Supreme Court of Canada has called this a &ldquo;culture of complacency.&rdquo; The legal profession holds a monopoly over access to the system and, simultaneously, over its inaccessibility.
+          We launch in Canada because the data is well-mapped, the regulatory environment is navigable, and our founder has spent his career inside the Canadian justice system. But the platform, the schema, and the open-source infrastructure are built to travel.
         </p>
       </section>
 

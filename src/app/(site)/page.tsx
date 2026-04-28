@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="px-6 md:px-[60px] py-16 md:py-20 relative min-h-[600px] flex items-center">
+      <section className="px-6 md:px-[60px] py-10 md:py-12 relative flex items-center">
         {/* Particles */}
         <div className="absolute inset-0 pointer-events-none z-0">
           {[
@@ -73,17 +73,14 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="relative z-[1] w-full max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="relative z-[1] w-full max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
           <div className="text-left">
             <h1
-              className="text-[40px] md:text-[64px] font-bold leading-[1.05] tracking-[-2px] mb-6"
+              className="text-[40px] md:text-[64px] font-bold leading-[1.05] tracking-[-2px]"
               style={{ textShadow: "0 0 60px rgba(139, 92, 246, 0.3), 0 0 120px rgba(13, 148, 136, 0.15), 0 8px 32px rgba(0,0,0,0.8)" }}
             >
               Open Source Legal Help Apps
             </h1>
-            <p className="text-lg font-light text-white/50 tracking-[2px] uppercase">
-              AI-First Access to Justice
-            </p>
           </div>
           <div className="relative rounded-2xl overflow-hidden">
             <Image
