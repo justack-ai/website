@@ -26,7 +26,7 @@ const routeCards = [
       <path d="M4 22 Q7 28 10 22"/><path d="M26 22 Q29 28 32 22"/><rect x="14" y="24" width="8" height="2" rx="1"/><line x1="18" y1="14" x2="18" y2="24"/>
     </svg>
   )},
-  { title: "I Want to Invest", path: "/invest", color: "#eab308", rotate: "rotateY(4deg) rotateX(-2deg)", translateY: "-12px", icon: (
+  { title: "The Opportunity", path: "/invest", color: "#eab308", rotate: "rotateY(4deg) rotateX(-2deg)", translateY: "-12px", icon: (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#eab308" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="6,28 6,8"/><polyline points="6,24 14,16 20,20 30,10"/><polyline points="24,10 30,10 30,16"/>
     </svg>
