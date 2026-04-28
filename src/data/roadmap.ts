@@ -13,7 +13,7 @@
  * marketing materials contained in this file.
  */
 
-export type ToolStatus = "live" | "coming-soon" | "in-development";
+export type ToolStatus = "live" | "coming-soon" | "in-development" | "poc";
 
 export type PracticeArea =
   | "housing"
@@ -56,8 +56,9 @@ export const practiceAreaLabels: Record<PracticeArea, string> = {
 
 export const statusConfig: Record<ToolStatus, { label: string; color: string; bg: string }> = {
   live: { label: "Live", color: "#22c55e", bg: "rgba(34, 197, 94, 0.12)" },
-  "coming-soon": { label: "Coming Soon", color: "#eab308", bg: "rgba(234, 179, 8, 0.12)" },
+  poc: { label: "POC", color: "#f59e0b", bg: "rgba(245, 158, 11, 0.14)" },
   "in-development": { label: "In Development", color: "#3b82f6", bg: "rgba(59, 130, 246, 0.12)" },
+  "coming-soon": { label: "Coming Soon", color: "#eab308", bg: "rgba(234, 179, 8, 0.12)" },
 };
 
 export const liveTools: RoadmapTool[] = [
@@ -85,16 +86,18 @@ export const phase1Tools: RoadmapTool[] = [
   {
     name: "Charter Delay Calculator",
     slug: "charter-delay-calculator",
-    description: "Calculates whether a criminal case has exceeded constitutional time limits. For defence counsel and duty counsel.",
-    status: "coming-soon",
+    description: "Calculates whether a criminal case has exceeded constitutional time limits under Jordan. For defence counsel and duty counsel.",
+    status: "in-development",
     practiceArea: "criminal",
   },
   {
-    name: "Bail Conditions Tool",
-    slug: "bail-conditions-tool",
-    description: "Translates court-ordered bail conditions into plain language. For accused persons and sureties.",
-    status: "coming-soon",
+    name: "Bail Cheat Sheet (Counsel)",
+    slug: "bail-cheatsheet",
+    description: "Counsel-facing bail toolkit: onus matrix, Antic ladder, three grounds, local programs. Live POC, no client reliance.",
+    status: "poc",
     practiceArea: "criminal",
+    href: "https://instructit-poc.vercel.app/apps/bail-cheatsheet/",
+    external: true,
   },
   {
     name: "Court Deadline Calculator",
@@ -178,9 +181,29 @@ export const practitionerTools: RoadmapTool[] = [
   {
     name: "InstructIT",
     slug: "instructit",
-    description: "Auditable client instruction capture for lawyers. Structured intake with a defensible record of what the client said.",
-    status: "coming-soon",
+    description: "Auditable client-instruction capture for lawyers. Live POC covers BC family-law settlement schema, Criminal Code s. 606 guilty-plea node tree, and a counsel-facing bail toolkit.",
+    status: "poc",
     practiceArea: "practitioner",
+    href: "https://instructit-poc.vercel.app/apps/",
+    external: true,
+  },
+  {
+    name: "FLA Settlement Schema",
+    slug: "fla-settlement-schema",
+    description: "JSON Schema 2020-12 for BC Family Law Act separation agreements. Structured fields for property, parenting, support, validity. Live POC.",
+    status: "poc",
+    practiceArea: "family",
+    href: "https://instructit-poc.vercel.app/apps/family-law-settlement/",
+    external: true,
+  },
+  {
+    name: "Criminal Guilty-Plea Tool",
+    slug: "criminal-guilty-plea",
+    description: "Section 606 plea-comprehension capture: factual basis, voluntariness, collateral consequences, jurisprudence anchors. Live POC.",
+    status: "poc",
+    practiceArea: "criminal",
+    href: "https://instructit-poc.vercel.app/apps/criminal-guilty-plea/",
+    external: true,
   },
   {
     name: "Box45Calculator",
