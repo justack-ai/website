@@ -8,6 +8,77 @@
 import Link from "next/link";
 import Image from "next/image";
 import EmailCapture from "@/components/EmailCapture";
+import {
+  liveTools,
+  phase1Tools,
+  phase2Tools,
+  phase3Tools,
+  practitionerTools,
+  statusConfig,
+  practiceAreaColors,
+  type RoadmapTool,
+} from "@/data/roadmap";
+
+function HomeAppTile({ tool }: { tool: RoadmapTool }) {
+  const accent = practiceAreaColors[tool.practiceArea];
+  const status = statusConfig[tool.status];
+  const linkable = (tool.status === "live" || tool.status === "poc") && tool.href;
+
+  const body = (
+    <div className="glass p-5 h-full relative overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+      <div
+        className="absolute top-0 right-0 w-32 h-32 rounded-full opacity-10 blur-[40px] -z-[1]"
+        style={{ background: accent }}
+      />
+      <div className="flex items-start justify-between gap-2 mb-2">
+        <h3 className="text-base font-semibold tracking-tight">{tool.name}</h3>
+        <span
+          className="shrink-0 text-[9px] font-semibold tracking-[1.5px] uppercase px-2 py-0.5 rounded-full"
+          style={{ color: status.color, background: status.bg, border: `1px solid ${status.color}33` }}
+        >
+          {status.label}
+        </span>
+      </div>
+      <p className="text-xs font-light text-white/50 leading-relaxed">
+        {tool.description}
+      </p>
+      {linkable && (
+        <span className="inline-block mt-3 text-xs font-medium tracking-wide" style={{ color: accent }}>
+          Open tool &rarr;
+        </span>
+      )}
+    </div>
+  );
+
+  if (linkable && tool.href) {
+    return (
+      <a
+        href={tool.href}
+        target={tool.external ? "_blank" : undefined}
+        rel={tool.external ? "noopener noreferrer" : undefined}
+        className="block no-underline text-white"
+      >
+        {body}
+      </a>
+    );
+  }
+
+  return <Link href={`/roadmap#${tool.slug}`} className="block no-underline text-white">{body}</Link>;
+}
+
+function HomeAppGroup({ label, tools }: { label: string; tools: RoadmapTool[] }) {
+  if (tools.length === 0) return null;
+  return (
+    <div className="mb-10">
+      <p className="text-[11px] font-light tracking-[4px] uppercase text-white/35 mb-4">{label}</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {tools.map((tool) => (
+          <HomeAppTile key={tool.slug} tool={tool} />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 const routeCards = [
   { title: "I Need Legal Help", path: "/roadmap", color: "#ef4444", rotate: "rotateY(-4deg) rotateX(2deg)", translateY: "0px", icon: (
@@ -104,6 +175,22 @@ export default function Home() {
           See what we&apos;re building &rarr;
         </Link>
       </div>
+
+      <div className="section-divider" />
+
+      {/* Apps grid — what is actually shipped */}
+      <section className="px-6 md:px-[60px] pt-12 md:pt-16 pb-8 max-w-[1280px] mx-auto w-full">
+        <HomeAppGroup label="Live Now" tools={liveTools} />
+        <HomeAppGroup label="Practitioner Tools" tools={practitionerTools} />
+        <HomeAppGroup label="Criminal Law" tools={phase1Tools} />
+        <HomeAppGroup label="Employment + Consumer" tools={phase2Tools} />
+        <HomeAppGroup label="Family + Platform" tools={phase3Tools} />
+        <div className="text-center mt-8">
+          <Link href="/roadmap" className="text-sm font-light text-white/35 tracking-[2px] uppercase no-underline hover:text-white/60 transition-colors">
+            Full roadmap &rarr;
+          </Link>
+        </div>
+      </section>
 
       <div className="section-divider" />
 

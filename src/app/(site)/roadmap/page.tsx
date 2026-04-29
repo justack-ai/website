@@ -130,7 +130,7 @@ export default function RoadmapPage() {
           What we&apos;re building
         </h1>
         <p className="text-lg font-light text-white/50 leading-relaxed max-w-[700px]">
-          Legal help tools for people who need them. Open source where possible, affordable where not.
+          Legal help tools for people who need them. Open source by default, under the Mozilla Public License.
         </p>
       </div>
 
