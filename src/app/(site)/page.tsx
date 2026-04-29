@@ -39,7 +39,7 @@ function HomeAppTile({ tool }: { tool: RoadmapTool }) {
           {status.label}
         </span>
       </div>
-      <p className="text-xs font-light text-white/50 leading-relaxed">
+      <p className="text-xs font-normal text-white/[0.78] leading-relaxed">
         {tool.description}
       </p>
       {linkable && (
@@ -70,7 +70,7 @@ function HomeAppGroup({ label, tools }: { label: string; tools: RoadmapTool[] })
   if (tools.length === 0) return null;
   return (
     <div className="mb-10">
-      <p className="text-[11px] font-light tracking-[4px] uppercase text-white/35 mb-4">{label}</p>
+      <p className="text-[12px] font-semibold tracking-[2.5px] uppercase text-violet-400 mb-4">{label}</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {tools.map((tool) => (
           <HomeAppTile key={tool.slug} tool={tool} />
@@ -144,14 +144,58 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="relative z-[1] w-full max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
+        <div className="relative z-[1] w-full max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="text-left">
-            <h1
-              className="text-[40px] md:text-[64px] font-bold leading-[1.05] tracking-[-2px]"
-              style={{ textShadow: "0 0 60px rgba(139, 92, 246, 0.3), 0 0 120px rgba(13, 148, 136, 0.15), 0 8px 32px rgba(0,0,0,0.8)" }}
-            >
-              Open Source Legal Help Apps
+            {/* Eyebrow */}
+            <div className="text-violet-400 text-base md:text-[22px] font-bold uppercase mb-7 md:mb-8 leading-tight" style={{ letterSpacing: "3.5px" }}>
+              <span>OPEN SOURCE</span>
+              <span className="inline-block w-[7px] h-[7px] md:w-[9px] md:h-[9px] rounded-full bg-violet-400 mx-3 md:mx-4 align-middle" />
+              <span>MPL-2.0</span>
+              <span className="inline-block w-[7px] h-[7px] md:w-[9px] md:h-[9px] rounded-full bg-violet-400 mx-3 md:mx-4 align-middle" />
+              <span>BUILT IN CANADA BY </span>
+              <a
+                href="https://mjbryant.ca"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-violet-400 underline decoration-2 underline-offset-4 hover:text-violet-300 transition-colors"
+              >
+                MICHAEL BRYANT
+              </a>
+            </div>
+
+            {/* Headline */}
+            <h1 className="text-[48px] md:text-[88px] lg:text-[108px] font-extrabold leading-[0.98] tracking-[-3.5px] mb-7">
+              Open source legal help apps for{" "}
+              <em className="not-italic text-violet-400 font-extrabold">everyone else.</em>
             </h1>
+
+            {/* Lede */}
+            <p className="text-[17px] md:text-[19px] text-white/[0.78] leading-[1.55] max-w-[560px] mb-3 font-normal">
+              Software the unrepresented can actually use. No retainer. No appointment.
+            </p>
+            <p className="text-[15px] md:text-[16px] text-white/[0.62] leading-[1.55] max-w-[560px] mb-9 font-normal">
+              (And for solo and small firms forgotten by legal tech catering to Big Law &mdash; apps for you too.)
+            </p>
+
+            {/* Four doors */}
+            <div className="grid grid-cols-2 gap-3 max-w-[520px]">
+              <Link href="/roadmap" className="group bg-white/[0.04] border border-white/10 rounded-2xl px-5 py-4 flex items-center justify-between no-underline text-white hover:border-violet-400 hover:bg-white/[0.07] hover:-translate-y-0.5 transition-all">
+                <span className="text-[15px] font-semibold tracking-[-0.2px]">Try a tool</span>
+                <span className="text-violet-400 font-semibold">&rarr;</span>
+              </Link>
+              <Link href="/a2jai" className="group bg-white/[0.04] border border-white/10 rounded-2xl px-5 py-4 flex items-center justify-between no-underline text-white hover:border-violet-400 hover:bg-white/[0.07] hover:-translate-y-0.5 transition-all">
+                <span className="text-[15px] font-semibold tracking-[-0.2px]">Why apps?</span>
+                <span className="text-violet-400 font-semibold">&rarr;</span>
+              </Link>
+              <Link href="/roadmap" className="group bg-white/[0.04] border border-white/10 rounded-2xl px-5 py-4 flex items-center justify-between no-underline text-white hover:border-violet-400 hover:bg-white/[0.07] hover:-translate-y-0.5 transition-all">
+                <span className="text-[15px] font-semibold tracking-[-0.2px]">See the roadmap</span>
+                <span className="text-violet-400 font-semibold">&rarr;</span>
+              </Link>
+              <a href="https://github.com/justack-ai/website" target="_blank" rel="noopener noreferrer" className="group bg-white/[0.04] border border-white/10 rounded-2xl px-5 py-4 flex items-center justify-between no-underline text-white hover:border-violet-400 hover:bg-white/[0.07] hover:-translate-y-0.5 transition-all">
+                <span className="text-[15px] font-semibold tracking-[-0.2px]">View the source</span>
+                <span className="text-violet-400 font-semibold">&rarr;</span>
+              </a>
+            </div>
           </div>
           <div className="relative rounded-2xl overflow-hidden">
             <Image
@@ -167,12 +211,13 @@ export default function Home() {
       </section>
 
       {/* Roadmap CTA */}
-      <div className="text-center -mt-6 mb-8 relative z-[1]">
+      <div className="text-center -mt-2 mb-10 relative z-[1]">
         <Link
           href="/roadmap"
-          className="text-sm font-light text-white/30 tracking-[2px] uppercase no-underline hover:text-white/50 transition-colors"
+          className="inline-flex items-center gap-3 text-white text-[13px] font-semibold tracking-[1.2px] uppercase no-underline border border-violet-400 rounded-full px-7 py-3.5 hover:bg-violet-400 hover:text-[#08080F] transition-colors"
         >
-          See what we&apos;re building &rarr;
+          <span>See what we&apos;re building</span>
+          <span className="text-violet-400 group-hover:text-[#08080F]">&rarr;</span>
         </Link>
       </div>
 
@@ -186,7 +231,7 @@ export default function Home() {
         <HomeAppGroup label="Employment + Consumer" tools={phase2Tools} />
         <HomeAppGroup label="Family + Platform" tools={phase3Tools} />
         <div className="text-center mt-8">
-          <Link href="/roadmap" className="text-sm font-light text-white/35 tracking-[2px] uppercase no-underline hover:text-white/60 transition-colors">
+          <Link href="/roadmap" className="text-sm font-medium text-white/[0.78] tracking-[1.5px] uppercase no-underline hover:text-violet-400 transition-colors">
             Full roadmap &rarr;
           </Link>
         </div>
@@ -196,7 +241,7 @@ export default function Home() {
 
       {/* Audience Routing */}
       <section className="py-[60px] px-6 md:px-[60px] pb-20 relative">
-        <h2 className="text-center text-sm md:text-base font-light tracking-[4px] uppercase text-white/45 mb-[60px]">
+        <h2 className="text-center text-base md:text-lg font-semibold tracking-[2.5px] uppercase text-white mb-[60px]">
           Where do you fit in?
         </h2>
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-[1100px] mx-auto" style={{ perspective: "1000px" }}>
@@ -261,8 +306,8 @@ export default function Home() {
 
       {/* Manifesto Link */}
       <section className="py-12 md:py-16 px-6 md:px-[60px] text-center">
-        <Link href="/a2jai" className="text-sm font-light tracking-[4px] uppercase text-white/30 hover:text-white/50 transition-colors">
-          Read the A2Jai Manifesto →
+        <Link href="/a2jai" className="inline-flex items-center gap-2 text-sm font-semibold tracking-[1.5px] uppercase text-white/[0.78] hover:text-violet-400 transition-colors">
+          Read the A2Jai Manifesto <span className="text-violet-400">&rarr;</span>
         </Link>
       </section>
 
