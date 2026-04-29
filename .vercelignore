@@ -14,6 +14,11 @@ src/lib/instructit/configs/
 src/lib/instructit/deadline.ts
 src/lib/instructit/jordan.ts
 
+# CaseKeeper — work in progress, missing imports cause build to fail
+src/app/(site)/casekeeper/
+src/app/(site)/api/casekeeper/
+src/lib/casekeeper/
+
 # Plans and internal docs
 Plans/
 .agent/
