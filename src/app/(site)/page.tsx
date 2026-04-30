@@ -5,8 +5,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import EmailCapture from "@/components/EmailCapture";
 import {
   liveTools,
@@ -144,14 +144,27 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="relative z-[1] w-full max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="relative z-[1] w-full max-w-[1100px] mx-auto">
           <div className="text-left">
+            {/* Hero image (top band) */}
+            <div className="relative rounded-2xl overflow-hidden mb-10">
+              <Image
+                src="/images/scenes/justack-scene-01-mom-bench.jpg"
+                alt="A mother sits alone on a stone bench outside a courthouse, holding a manila folder — waiting, dignified, unhurried."
+                width={1920}
+                height={823}
+                priority
+                sizes="(min-width: 1100px) 1100px, 100vw"
+                className="w-full h-auto"
+              />
+            </div>
+
             {/* Eyebrow */}
-            <div className="text-violet-400 text-base md:text-[22px] font-bold uppercase mb-7 md:mb-8 leading-tight" style={{ letterSpacing: "3.5px" }}>
+            <div className="text-violet-400 text-[11px] md:text-[13px] font-bold uppercase mb-7 md:mb-8 leading-tight" style={{ letterSpacing: "2.5px" }}>
               <span>OPEN SOURCE</span>
-              <span className="inline-block w-[7px] h-[7px] md:w-[9px] md:h-[9px] rounded-full bg-violet-400 mx-3 md:mx-4 align-middle" />
+              <span className="inline-block w-[4px] h-[4px] md:w-[5px] md:h-[5px] rounded-full bg-violet-400 mx-2 md:mx-2.5 align-middle" />
               <span>MPL-2.0</span>
-              <span className="inline-block w-[7px] h-[7px] md:w-[9px] md:h-[9px] rounded-full bg-violet-400 mx-3 md:mx-4 align-middle" />
+              <span className="inline-block w-[4px] h-[4px] md:w-[5px] md:h-[5px] rounded-full bg-violet-400 mx-2 md:mx-2.5 align-middle" />
               <span>BUILT IN CANADA BY </span>
               <a
                 href="https://mjbryant.ca"
@@ -171,7 +184,7 @@ export default function Home() {
 
             {/* Lede */}
             <p className="text-[17px] md:text-[19px] text-white/[0.78] leading-[1.55] max-w-[560px] mb-3 font-normal">
-              Software the unrepresented can actually use. No retainer. No appointment.
+              Open source software for everyone the legal system forgot. Forkable by clinics, law schools, public-interest orgs. No retainer. No appointment.
             </p>
             <p className="text-[15px] md:text-[16px] text-white/[0.62] leading-[1.55] max-w-[560px] mb-9 font-normal">
               (And for solo and small firms forgotten by legal tech catering to Big Law &mdash; apps for you too.)
@@ -196,16 +209,6 @@ export default function Home() {
                 <span className="text-violet-400 font-semibold">&rarr;</span>
               </a>
             </div>
-          </div>
-          <div className="relative rounded-2xl overflow-hidden">
-            <Image
-              src="/images/scenes/justack-scene-01-mom-bench.jpg"
-              alt="A mother sits alone on a stone bench outside a courthouse, holding a manila folder — waiting, dignified, unhurried."
-              width={1920}
-              height={823}
-              priority
-              className="w-full h-auto"
-            />
           </div>
         </div>
       </section>
