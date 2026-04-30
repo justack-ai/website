@@ -184,7 +184,7 @@ export default function Home() {
 
             {/* Lede */}
             <p className="text-[17px] md:text-[19px] text-white/[0.78] leading-[1.55] max-w-[560px] mb-3 font-normal">
-              Open source software for everyone the legal system forgot. Forkable by clinics, law schools, public-interest orgs. No retainer. No appointment.
+              Open source software for everyone the legal system forgot. Forkable by clinics, law schools, public-interest orgs.
             </p>
             <p className="text-[15px] md:text-[16px] text-white/[0.62] leading-[1.55] max-w-[560px] mb-9 font-normal">
               (And for solo and small firms forgotten by legal tech catering to Big Law &mdash; apps for you too.)
