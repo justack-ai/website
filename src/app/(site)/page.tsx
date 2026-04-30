@@ -191,20 +191,20 @@ export default function Home() {
             </p>
 
             {/* Four doors */}
-            <div className="grid grid-cols-2 gap-3 max-w-[520px]">
-              <Link href="/roadmap" className="group bg-white/[0.04] border border-white/10 rounded-2xl px-5 py-4 flex items-center justify-between no-underline text-white hover:border-violet-400 hover:bg-white/[0.07] hover:-translate-y-0.5 transition-all">
+            <div className="grid grid-cols-2 gap-3 max-w-[520px] mx-auto">
+              <Link href="/roadmap" className="group bg-white/[0.08] border border-white/50 rounded-2xl px-5 py-4 flex items-center justify-between no-underline text-white hover:border-white hover:bg-white/[0.14] hover:-translate-y-0.5 transition-all">
                 <span className="text-[15px] font-semibold tracking-[-0.2px]">Try a tool</span>
                 <span className="text-violet-400 font-semibold">&rarr;</span>
               </Link>
-              <Link href="/a2jai" className="group bg-white/[0.04] border border-white/10 rounded-2xl px-5 py-4 flex items-center justify-between no-underline text-white hover:border-violet-400 hover:bg-white/[0.07] hover:-translate-y-0.5 transition-all">
+              <Link href="/a2jai" className="group bg-white/[0.08] border border-white/50 rounded-2xl px-5 py-4 flex items-center justify-between no-underline text-white hover:border-white hover:bg-white/[0.14] hover:-translate-y-0.5 transition-all">
                 <span className="text-[15px] font-semibold tracking-[-0.2px]">Why apps?</span>
                 <span className="text-violet-400 font-semibold">&rarr;</span>
               </Link>
-              <Link href="/roadmap" className="group bg-white/[0.04] border border-white/10 rounded-2xl px-5 py-4 flex items-center justify-between no-underline text-white hover:border-violet-400 hover:bg-white/[0.07] hover:-translate-y-0.5 transition-all">
+              <Link href="/roadmap" className="group bg-white/[0.08] border border-white/50 rounded-2xl px-5 py-4 flex items-center justify-between no-underline text-white hover:border-white hover:bg-white/[0.14] hover:-translate-y-0.5 transition-all">
                 <span className="text-[15px] font-semibold tracking-[-0.2px]">See the roadmap</span>
                 <span className="text-violet-400 font-semibold">&rarr;</span>
               </Link>
-              <a href="https://github.com/justack-ai/website" target="_blank" rel="noopener noreferrer" className="group bg-white/[0.04] border border-white/10 rounded-2xl px-5 py-4 flex items-center justify-between no-underline text-white hover:border-violet-400 hover:bg-white/[0.07] hover:-translate-y-0.5 transition-all">
+              <a href="https://github.com/justack-ai/website" target="_blank" rel="noopener noreferrer" className="group bg-white/[0.08] border border-white/50 rounded-2xl px-5 py-4 flex items-center justify-between no-underline text-white hover:border-white hover:bg-white/[0.14] hover:-translate-y-0.5 transition-all">
                 <span className="text-[15px] font-semibold tracking-[-0.2px]">View the source</span>
                 <span className="text-violet-400 font-semibold">&rarr;</span>
               </a>

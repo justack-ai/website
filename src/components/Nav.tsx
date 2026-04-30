@@ -36,7 +36,7 @@ export default function Nav() {
           <li key={link.href}>
             <Link
               href={link.href}
-              className="text-white/50 no-underline text-sm font-light tracking-[1px] uppercase hover:text-white transition-colors"
+              className="text-white no-underline text-sm font-medium tracking-[1px] uppercase hover:text-violet-400 transition-colors"
             >
               {link.label}
             </Link>
