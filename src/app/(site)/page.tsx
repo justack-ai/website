@@ -152,7 +152,7 @@ export default function Home() {
                 src="/images/scenes/justack-scene-01-mom-bench.jpg"
                 alt="A mother sits alone on a stone bench outside a courthouse, holding a manila folder — waiting, dignified, unhurried."
                 width={1920}
-                height={823}
+                height={814}
                 priority
                 sizes="(min-width: 1100px) 1100px, 100vw"
                 className="w-full h-auto"
