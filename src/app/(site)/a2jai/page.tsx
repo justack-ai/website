@@ -14,22 +14,11 @@ export const metadata: Metadata = {
     "The A2Jai manifesto: restoring access to justice in the age of AI. By Michael Bryant.",
 };
 
-/* ── Historical timeline data ── */
-const timelineEras = [
-  { year: "5th c. BC", label: "Athens", desc: "Lay dicasts \u2014 citizens deciding cases" },
-  { year: "1361", label: "Justices of the Peace", desc: "Local dispute resolution" },
-  { year: "Medieval", label: "Piepowder Courts", desc: "Justice at fairs and markets" },
-  { year: "19th c.", label: "Professionalization", desc: "Access regulated out of existence" },
-  { year: "20th c.", label: "Legal Aid", desc: "Partial remedy, insufficient reach" },
-  { year: "Now", label: "AI + A2Jai", desc: "Restoring practical justice" },
-];
-
 /* ── All 8 manifesto sections ── */
 const sections: {
   label: string;
   title: string;
   paragraphs: string[];
-  timelineAfter?: boolean;
   image?: string;
 }[] = [
   {
@@ -68,7 +57,6 @@ const sections: {
   {
     label: "History",
     title: "What We Lost",
-    timelineAfter: true,
     paragraphs: [
       `It was not always so, it seems.`,
       `Maybe this is ancient historical nostalgia nonsense, but there is plenty of scholarship validating that the lay dicasts of Athens were ordinary citizens deciding cases by the hundreds. The early Justices of the Peace, following the Statute of 1361, were local figures resolving disputes without a professionalized bar. The Courts of Piepowder \u2014 what Blackstone called the most expeditious court of justice known to the law of England \u2014 adjudicated commercial disputes at fairs and markets, on the spot, before merchants could leave town.`,
@@ -136,55 +124,6 @@ const sectionAccents = [
   "rgba(96, 165, 250, 0.5)",  // Invitation
 ];
 
-/* ── Arc of Access Table ── */
-function ArcOfAccessTable() {
-  return (
-    <div className="my-16">
-      <p className="text-[11px] font-light tracking-[4px] uppercase text-teal-400/60 text-center mb-8">
-        The Arc of Access
-      </p>
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="border-b border-white/10">
-              <th className="text-left py-3 px-4 text-[11px] font-light tracking-[2px] uppercase text-white/30 w-[120px]">
-                Period
-              </th>
-              <th className="text-left py-3 px-4 text-[11px] font-light tracking-[2px] uppercase text-white/30 w-[200px]">
-                Institution
-              </th>
-              <th className="text-left py-3 px-4 text-[11px] font-light tracking-[2px] uppercase text-white/30">
-                Description
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {timelineEras.map((era, i) => {
-              const isLast = i === timelineEras.length - 1;
-              return (
-                <tr
-                  key={i}
-                  className={`border-b border-white/[0.04] ${isLast ? "text-teal-300/80" : "text-white/50"}`}
-                >
-                  <td className={`py-3 px-4 font-light ${isLast ? "text-teal-400/70" : "text-white/30"}`}>
-                    {era.year}
-                  </td>
-                  <td className={`py-3 px-4 font-medium ${isLast ? "text-teal-300/90" : "text-white/60"}`}>
-                    {era.label}
-                  </td>
-                  <td className="py-3 px-4 font-light">
-                    {era.desc}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-}
-
 /* ── Main Page ── */
 export default function A2JaiPage() {
   return (
@@ -249,8 +188,6 @@ export default function A2JaiPage() {
               ))}
             </div>
 
-            {/* Arc of Access table (after History section) */}
-            {section.timelineAfter && <ArcOfAccessTable />}
           </section>
         ))}
       </div>
