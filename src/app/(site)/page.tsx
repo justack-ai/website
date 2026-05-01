@@ -7,6 +7,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import BelowFoldGroups from "@/components/BelowFoldGroups";
 import EmailCapture from "@/components/EmailCapture";
 import {
   liveTools,
@@ -229,10 +230,14 @@ export default function Home() {
       {/* Apps grid — what is actually shipped */}
       <section className="px-6 md:px-[60px] pt-12 md:pt-16 pb-8 max-w-[1280px] mx-auto w-full">
         <HomeAppGroup label="Live Now" tools={liveTools} />
-        <HomeAppGroup label="Practitioner Tools" tools={practitionerTools} />
-        <HomeAppGroup label="Criminal Law" tools={phase1Tools} />
-        <HomeAppGroup label="Employment + Consumer" tools={phase2Tools} />
-        <HomeAppGroup label="Family + Platform" tools={phase3Tools} />
+        <BelowFoldGroups
+          groups={[
+            { label: "Practitioner Tools", tools: practitionerTools },
+            { label: "Criminal Law", tools: phase1Tools },
+            { label: "Employment + Consumer", tools: phase2Tools },
+            { label: "Family + Platform", tools: phase3Tools },
+          ]}
+        />
         <div className="text-center mt-8">
           <Link href="/roadmap" className="text-sm font-medium text-white/[0.78] tracking-[1.5px] uppercase no-underline hover:text-violet-400 transition-colors">
             Full roadmap &rarr;
