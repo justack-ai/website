@@ -179,13 +179,12 @@ export default function Home() {
 
             {/* Headline */}
             <h1 className="text-[48px] md:text-[88px] lg:text-[108px] font-extrabold leading-[0.98] tracking-[-3.5px] mb-7">
-              Open source legal help apps for{" "}
-              <em className="not-italic text-violet-400 font-extrabold">everyone else.</em>
+              <em className="not-italic text-violet-400 font-extrabold">Legal Help Apps.</em>
             </h1>
 
             {/* Lede */}
             <p className="text-[17px] md:text-[19px] text-white/[0.78] leading-[1.55] max-w-[560px] mb-3 font-normal">
-              Open source software for everyone the legal system forgot. Forkable by clinics, law schools, public-interest orgs.
+              Software for everyone the legal system forgot. Free, freemium, and open source &mdash; forkable by clinics, law schools, public-interest orgs.
             </p>
             <p className="text-[15px] md:text-[16px] text-white/[0.62] leading-[1.55] max-w-[560px] mb-9 font-normal">
               (And for solo and small firms forgotten by legal tech catering to Big Law &mdash; apps for you too.)
