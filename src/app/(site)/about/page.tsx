@@ -6,6 +6,7 @@
  */
 
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About | justack.ai",
@@ -31,7 +32,14 @@ export default function AboutPage() {
           Over 80% of Canadians facing legal problems cannot afford a lawyer. Legal aid has been hollowed out. Courts are overwhelmed. The people who need justice most are the people the system serves least.
         </p>
         <p className="text-base font-light text-white/60 leading-[1.8]">
-          We believe technology can close the justice gap — not by replacing lawyers, but by reaching the people lawyers never reach. Every tool we build starts with the people the system forgot.
+          We believe technology can close the justice gap — not by replacing lawyers, but by reaching the people lawyers never reach. Read our Manifesto{" "}
+          <Link
+            href="/a2jai"
+            className="text-[#a78bfa] underline underline-offset-2 decoration-[#a78bfa]/40 hover:decoration-[#a78bfa] hover:text-white transition-colors"
+          >
+            here
+          </Link>
+          .
         </p>
       </section>
 

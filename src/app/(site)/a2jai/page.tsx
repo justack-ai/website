@@ -7,6 +7,7 @@
 
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "A2Jai — Restoring Access to Justice | justack.ai",
@@ -195,9 +196,18 @@ export default function A2JaiPage() {
       {/* Closing */}
       <div className="text-center mt-24 mb-12">
         <div className="w-16 h-[1px] mx-auto mb-12" style={{ background: "linear-gradient(90deg, transparent, rgba(139,92,246,0.3), transparent)" }} />
-        <p className="text-sm font-light text-white/20 tracking-[3px] uppercase">
+        <p className="text-sm font-light text-white/60 tracking-[3px] uppercase">
           That is the project. That is A2Jai.
         </p>
+        <div className="mt-16">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-sm font-light tracking-[2px] uppercase text-white/70 hover:text-white no-underline transition-colors border-b border-white/20 hover:border-white/60 pb-1"
+          >
+            Continue reading on the Blog
+            <span aria-hidden className="text-white/50">&rarr;</span>
+          </Link>
+        </div>
       </div>
     </main>
   );

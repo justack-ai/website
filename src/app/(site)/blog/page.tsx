@@ -49,6 +49,25 @@ export default async function BlogPage() {
       </div>
 
       <div className="space-y-8">
+        {/* Pinned manifesto — lives outside the Sanity loop on purpose so it stays first. */}
+        <Link
+          href="/a2jai"
+          className="block glass p-8 hover:scale-[1.01] transition-transform no-underline text-white"
+        >
+          <div className="flex items-center gap-3 mb-3">
+            <span className={`text-[10px] font-semibold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full border ${tagColors["a2jai"]}`}>
+              manifesto
+            </span>
+            <span className="text-xs font-light text-white/30">Pinned</span>
+          </div>
+          <h2 className="text-2xl font-semibold tracking-tight mb-2">
+            A2Jai — Restoring Access to Justice in the Age of AI
+          </h2>
+          <p className="text-sm font-light text-white/50 leading-relaxed">
+            The founding manifesto of justack.ai. Why the legal system fails most of the population, what the era of AI makes newly possible, and the project we are building to close the gap.
+          </p>
+        </Link>
+
         {posts.map((post) => {
           const primaryTag = post.tags?.[0] || "general";
           return (
@@ -72,8 +91,8 @@ export default async function BlogPage() {
         })}
 
         {posts.length === 0 && (
-          <div className="text-center py-20">
-            <p className="text-white/30 font-light">No posts yet. Coming soon.</p>
+          <div className="text-center py-12">
+            <p className="text-white/30 font-light">More posts coming soon.</p>
           </div>
         )}
       </div>
