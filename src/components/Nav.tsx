@@ -12,6 +12,7 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "/a2jai", label: "A2Jai" },
+  { href: "/foundation", label: "Foundation" },
   { href: "/a2jai/lde", label: "LDE" },
   { href: "/blog", label: "Blog" },
   { href: "/roadmap", label: "Roadmap" },
