@@ -6,44 +6,37 @@
  */
 
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Justack Foundation | justack.ai",
   description:
-    "Justack Foundation is an Ontario not-for-profit corporation supporting research, education, and development on access-to-justice technology for public good.",
+    "The Justack Foundation exists to improve access to justice through practical legal technology, public legal education, and applied research.",
 };
-
-const pillars = [
-  {
-    title: "Research",
-    body: "We support open research on how legal artificial intelligence actually serves the people the legal system structurally fails to reach. That includes evaluation benchmarks for access-to-justice tools, methodology papers on legal-AI safety in self-represented contexts, and applied studies on what works in front-line public legal services.",
-  },
-  {
-    title: "Education",
-    body: "We support public legal education and training that meets people where they are. That includes plain-language explainers, training materials for community legal workers, and curricula on the responsible use of AI in legal help — for non-lawyers and lawyers alike.",
-  },
-  {
-    title: "Development",
-    body: "We support the development of open-source legaltech infrastructure released under permissive licences, so that any access-to-justice initiative — public, private, or non-profit — can build on a shared base. The Foundation does not sell software; it strengthens the public commons that legal-aid programs, clinics, and self-help projects can draw from.",
-  },
-];
 
 const directors = [
   {
-    name: "David Valentin",
+    name: "Alex Peel",
     title: "Director",
-    body: "David Valentin is a pollster and strategist at Liaison Strategies. He contributes experience in public-opinion research and campaign strategy to the Foundation's research and education work.",
+    body: [
+      "Alex Peel is a senior access-to-justice executive with nearly two decades of experience at Legal Aid BC. Her work has focused on public legal education, legal publications, service design, and the practical delivery of legal information to people who need it.",
+      "She brings a rare combination of institutional knowledge and user-centred judgment to the Foundation's work. Her career has been shaped by the operational realities of legal aid: how people actually seek help, where legal information breaks down, and what makes legal services usable for communities facing barriers to justice.",
+    ],
   },
   {
     name: "Paul Brookes",
     title: "Director",
-    body: "Paul Brookes is President of Metropolis Media. He contributes experience in communications and media strategy to the Foundation's public-facing work.",
+    body: [
+      "Paul Brookes has worked in internet and e-commerce product development for more than 25 years. He is the founder of Metropolis Media and has built digital products, platforms, and online experiences across a period of major technological change.",
+      "His background gives the Foundation direct expertise in product strategy, digital execution, and user experience. He also served for three years on the Ontario Justice of the Peace Appointments Committee, bringing experience at the intersection of civic institutions, appointments, and public confidence in justice administration. He holds a degree from Toronto Metropolitan University.",
+    ],
   },
   {
-    name: "Alex Peel",
+    name: "David Valentin",
     title: "Director",
-    body: "Alex Peel is Manager of Public Legal Education at Legal Aid BC. He contributes experience in public legal education and legal-aid service delivery to the Foundation's education and research work.",
+    body: [
+      "David Valentin is an award-winning activist, entrepreneur, and public-affairs strategist. He co-founded one of Canada's leading public sentiment, research, and political intelligence firms, helping organizations understand how people think, decide, and respond to public issues.",
+      "His work sits at the intersection of civic engagement, public opinion research, strategy, and democratic participation. He brings to the Foundation a sophisticated understanding of public trust, communications, and the ways legal and institutional systems are experienced by the people they are meant to serve.",
+    ],
   },
 ];
 
@@ -55,89 +48,119 @@ export default function FoundationPage() {
         <p className="text-sm font-light tracking-[4px] uppercase text-white/30 mb-4">
           Not-for-profit
         </p>
-        <h1 className="text-5xl font-bold tracking-[-1.5px] mb-6">
+        <h1 className="text-5xl font-bold tracking-[-1.5px] mb-8">
           Justack Foundation
         </h1>
-        <p className="text-lg font-light text-white/50 leading-relaxed">
-          An Ontario not-for-profit corporation supporting research, education,
-          and development on access-to-justice technology for public good.
+        <p className="text-lg font-light text-white/75 leading-[1.7] mb-6">
+          The Justack Foundation exists to improve access to justice through
+          practical legal technology, public legal education, and applied
+          research.
+        </p>
+        <p className="text-base font-light text-white/60 leading-[1.8]">
+          Our work is grounded in a simple premise: access to justice is not
+          only a legal problem. It is also a design problem, a technology
+          problem, and a public-service problem.
         </p>
       </div>
 
-      {/* Purpose */}
+      {/* Hero illustration — Option A: flat vector / UI style */}
+      <div className="mb-16 -mx-4 md:-mx-12">
+        <img
+          src="/foundation/illo-A.png"
+          alt="A bridge of glowing digital nodes connecting a classical courthouse pillar to a community of people"
+          className="w-full h-auto"
+        />
+      </div>
+
+      <div className="section-divider mb-16" />
+
+      {/* Our Work */}
       <section className="mb-16">
-        <h2 className="text-2xl font-semibold tracking-tight mb-4">
-          Our Purpose
+        <h2 className="text-2xl font-semibold tracking-tight mb-6">
+          Our Work
         </h2>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
-          Most Canadians who face a legal problem do not get a lawyer. Legal aid
-          is rationed. Courts are backlogged. The people who need justice most
-          are the people the system serves least. Closing that gap will take
-          more than law reform. It will take infrastructure — open, public,
-          maintained over decades, and built specifically for the people the
-          legal system has never reached.
+          The Foundation supports initiatives that help people understand their
+          rights, navigate legal processes, and obtain practical assistance
+          before legal problems become more serious.
         </p>
         <p className="text-base font-light text-white/60 leading-[1.8]">
-          Justack Foundation exists to support the research, education, and
-          development that build that infrastructure. The Foundation is the
-          mission-aligned not-for-profit alongside the{" "}
-          <Link
-            href="/a2jai"
-            className="text-[#a78bfa] underline underline-offset-2 decoration-[#a78bfa]/40 hover:decoration-[#a78bfa] hover:text-white transition-colors"
-          >
-            justack.ai
-          </Link>{" "}
-          access-to-justice platform — institutionally separate from the
-          platform's commercial operator, with its own board, its own books, and
-          its own public-interest mission.
+          This includes public-facing legal information, access-to-justice
+          technology, research on legal system barriers, and partnerships with
+          organizations working directly with communities that are underserved
+          by the current system.
+        </p>
+      </section>
+
+      {/* Secondary illustration — Option B: 3D isometric / tech style */}
+      <div className="mb-16 -mx-4 md:-mx-12">
+        <img
+          src="/foundation/illo-B.png"
+          alt="An isometric digital bridge of wireframe cubes connecting a stylized law building to a cluster of community nodes"
+          className="w-full h-auto"
+        />
+      </div>
+
+      <div className="section-divider mb-16" />
+
+      {/* Why It Matters */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-semibold tracking-tight mb-6">
+          Why It Matters
+        </h2>
+        <p className="text-base font-light text-white/60 leading-[1.8]">
+          Access to justice is often discussed in institutional terms: courts,
+          lawyers, tribunals, funding, and reform. Those issues matter. But for
+          most people, the problem is more immediate. They need to know what
+          their problem is, what their options are, what steps to take, and
+          where to get help.
         </p>
       </section>
 
       <div className="section-divider mb-16" />
 
-      {/* Three pillars */}
+      {/* Our Approach */}
       <section className="mb-16">
-        <h2 className="text-2xl font-semibold tracking-tight mb-2">
-          What We Do
+        <h2 className="text-2xl font-semibold tracking-tight mb-6">
+          Our Approach
         </h2>
-        <p className="text-sm font-light text-white/40 leading-relaxed mb-8">
-          Three pillars — research, education, and development — all directed
-          at access to justice and the public-good use of legal technology.
+        <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
+          The Foundation's approach is practical, evidence-informed, and
+          collaborative.
         </p>
-        <div className="grid gap-8">
-          {pillars.map((item) => (
-            <div key={item.title} className="glass p-6">
-              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-sm font-light text-white/55 leading-relaxed">
-                {item.body}
-              </p>
-            </div>
-          ))}
-        </div>
+        <p className="text-base font-light text-white/60 leading-[1.8]">
+          We focus on projects that can be tested, improved, and deployed. We
+          are interested in tools that help real users, not demonstrations of
+          technology for its own sake. We work from the premise that legal
+          information must be accurate, accessible, and designed around the
+          needs of the person using it.
+        </p>
       </section>
 
       <div className="section-divider mb-16" />
 
       {/* Board of Directors */}
       <section className="mb-16">
-        <h2 className="text-2xl font-semibold tracking-tight mb-2">
+        <h2 className="text-2xl font-semibold tracking-tight mb-8">
           Board of Directors
         </h2>
-        <p className="text-sm font-light text-white/40 leading-relaxed mb-8">
-          Three first directors, arm's-length from each other and from the
-          Foundation's executive, providing independent governance for the
-          Foundation's work as an Ontario not-for-profit corporation.
-        </p>
         <div className="grid gap-8">
           {directors.map((d) => (
             <div key={d.name} className="glass p-6">
               <h3 className="text-lg font-semibold mb-1">{d.name}</h3>
-              <p className="text-xs font-light tracking-[2px] uppercase text-white/40 mb-3">
+              <p className="text-xs font-light tracking-[2px] uppercase text-white/40 mb-4">
                 {d.title}
               </p>
-              <p className="text-sm font-light text-white/55 leading-relaxed">
-                {d.body}
-              </p>
+              {d.body.map((para, i) => (
+                <p
+                  key={i}
+                  className={`text-sm font-light text-white/55 leading-relaxed ${
+                    i < d.body.length - 1 ? "mb-3" : ""
+                  }`}
+                >
+                  {para}
+                </p>
+              ))}
             </div>
           ))}
         </div>
@@ -147,63 +170,40 @@ export default function FoundationPage() {
 
       {/* Executive Director */}
       <section className="mb-16">
-        <h2 className="text-2xl font-semibold tracking-tight mb-2">
+        <h2 className="text-2xl font-semibold tracking-tight mb-8">
           Executive Director
         </h2>
-        <p className="text-sm font-light text-white/40 leading-relaxed mb-8">
-          Day-to-day leadership of the Foundation's research, education, and
-          development work.
-        </p>
         <div className="glass p-6">
-          <h3 className="text-lg font-semibold mb-1">Michael Bryant</h3>
-          <p className="text-xs font-light tracking-[2px] uppercase text-white/40 mb-3">
-            Executive Director
-          </p>
+          <h3 className="text-lg font-semibold mb-4">Hon. Michael Bryant</h3>
           <p className="text-sm font-light text-white/55 leading-relaxed">
-            Michael Bryant is the former Attorney General of Ontario
-            (2003&ndash;2007) and former Minister of Aboriginal Affairs. He has
-            served as Chief Executive Officer of the Canadian Civil Liberties
-            Association and of Legal Aid BC, and he is the founder of the
-            justack.ai access-to-justice platform. As Executive Director he is
-            responsible to the board for the Foundation's research, education,
-            and development programs. He does not sit on the board.
+            Our ED has served as Executive Director and General Counsel of one
+            of Canada&apos;s most established legal charities, Canadian Civil
+            Liberties Association, and of the Canadian Civil Liberties
+            Education Trust; and as CEO of Legal Aid BC. He also served on the
+            boards of multiple charities in Canada, and taught law at
+            universities in Canada and the UK. Bryant served as 35th Attorney
+            General of Ontario and has been working in justice infrastructure
+            systems for over twenty-five years.
           </p>
         </div>
       </section>
 
       <div className="section-divider mb-16" />
 
-      {/* Status & Contact */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-semibold tracking-tight mb-4">
-          Status
+      {/* Contact / Get Involved */}
+      <section>
+        <h2 className="text-2xl font-semibold tracking-tight mb-6">
+          Contact / Get Involved
         </h2>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
-          Justack Foundation is incorporated as an Ontario not-for-profit
-          corporation under the Ontario Not-for-Profit Corporations Act, with
-          Ontario Corporation Number{" "}
-          <span className="text-white/80">1001617779</span>. The Foundation
-          intends to apply to the Canada Revenue Agency for registration as a
-          charity. We are not yet a registered charity, and nothing on this
-          page should be read as a representation of charitable status. If
-          registered, the Foundation will publish its charitable registration
-          number on this page.
+          The Foundation welcomes conversations with legal organizations,
+          community groups, researchers, funders, and technologists interested
+          in improving access to justice.
         </p>
-        <p className="text-base font-light text-white/60 leading-[1.8]">
-          The Foundation does not currently solicit donations from the public.
-          Peer organizations, prospective collaborators, and institutional
-          contacts are welcome to get in touch.
-        </p>
-      </section>
-
-      {/* Contact */}
-      <section>
-        <h2 className="text-2xl font-semibold tracking-tight mb-4">
-          Get in Touch
-        </h2>
-        <p className="text-base font-light text-white/60 leading-[1.8] mb-6">
-          For institutional inquiries about research collaborations, education
-          partnerships, or the Foundation's work.
+        <p className="text-base font-light text-white/60 leading-[1.8] mb-8">
+          We are particularly interested in projects that combine legal
+          expertise with practical deployment: tools, research, or partnerships
+          that can help people understand and act on their legal rights.
         </p>
         <a
           href="mailto:foundation@justack.ai"

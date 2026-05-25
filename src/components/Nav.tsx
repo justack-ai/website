@@ -11,12 +11,11 @@ import { useState } from "react";
 import Link from "next/link";
 
 const navLinks = [
+  { href: "/about", label: "About" },
   { href: "/a2jai", label: "A2Jai" },
-  { href: "/foundation", label: "Foundation" },
+  { href: "/roadmap", label: "Roadmap" },
   { href: "/a2jai/lde", label: "LDE" },
   { href: "/blog", label: "Blog" },
-  { href: "/roadmap", label: "Roadmap" },
-  { href: "/about", label: "About" },
 ];
 
 export default function Nav() {
@@ -32,7 +31,7 @@ export default function Nav() {
       </Link>
 
       {/* Desktop links */}
-      <ul className="hidden md:flex gap-8 list-none">
+      <ul className="hidden md:flex items-center gap-8 list-none">
         {navLinks.map((link) => (
           <li key={link.href}>
             <Link
@@ -52,6 +51,16 @@ export default function Nav() {
           >
             GitHub
           </a>
+        </li>
+        {/* Visual separator — Foundation is a distinct entity from justack.ai */}
+        <li aria-hidden="true" className="h-4 w-px bg-white/20" />
+        <li>
+          <Link
+            href="/foundation"
+            className="text-[#a78bfa] no-underline text-sm font-semibold tracking-[1px] uppercase hover:text-white transition-colors"
+          >
+            Foundation
+          </Link>
         </li>
       </ul>
 
@@ -111,6 +120,15 @@ export default function Nav() {
             >
               GitHub
             </a>
+            {/* Horizontal separator for Foundation */}
+            <div className="my-2 h-px bg-white/15" aria-hidden="true" />
+            <Link
+              href="/foundation"
+              onClick={() => setOpen(false)}
+              className="block py-3 px-2 text-[#a78bfa] no-underline text-base font-semibold tracking-[1px] uppercase hover:text-white transition-colors"
+            >
+              Foundation
+            </Link>
           </div>
         </div>
       )}
