@@ -6,6 +6,7 @@
  */
 
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Justack Foundation | justack.ai",
@@ -63,11 +64,15 @@ export default function FoundationPage() {
         </p>
       </div>
 
-      {/* Hero illustration — Option A: flat vector / UI style */}
-      <div className="mb-16 -mx-4 md:-mx-12">
-        <img
-          src="/foundation/illo-A.png"
-          alt="A bridge of glowing digital nodes connecting a classical courthouse pillar to a community of people"
+      {/* Hero illustration — arrival, walking into justice */}
+      <div className="relative rounded-2xl overflow-hidden mb-16">
+        <Image
+          src="/foundation/scene-courthouse-steps.jpg"
+          alt="A woman in a sage trench coat carrying a folder walks up the stone steps of a small civic courthouse, one hand on the rail, toward a heavy door slightly open with warm light spilling out."
+          width={1484}
+          height={572}
+          priority
+          sizes="(min-width: 800px) 800px, 100vw"
           className="w-full h-auto"
         />
       </div>
@@ -92,11 +97,14 @@ export default function FoundationPage() {
         </p>
       </section>
 
-      {/* Secondary illustration — Option B: 3D isometric / tech style */}
-      <div className="mb-16 -mx-4 md:-mx-12">
-        <img
-          src="/foundation/illo-B.png"
-          alt="An isometric digital bridge of wireframe cubes connecting a stylized law building to a cluster of community nodes"
+      {/* Our Work illustration — community workshop */}
+      <div className="relative rounded-2xl overflow-hidden mb-16">
+        <Image
+          src="/foundation/scene-workshop.jpg"
+          alt="Five diverse adults sit around a wooden table in a sunlit community-centre library while a community legal worker leans in to point at a document — books, papers, and tea between them."
+          width={1584}
+          height={672}
+          sizes="(min-width: 800px) 800px, 100vw"
           className="w-full h-auto"
         />
       </div>
@@ -136,6 +144,18 @@ export default function FoundationPage() {
           needs of the person using it.
         </p>
       </section>
+
+      {/* Our Approach illustration — civic help desk */}
+      <div className="relative rounded-2xl overflow-hidden mb-16">
+        <Image
+          src="/foundation/scene-help-desk.jpg"
+          alt="A help-desk worker in a dusty-pink blouse leans across a wooden counter, pointing toward a stack of pamphlets, while a man holding a manila folder listens with relief."
+          width={1484}
+          height={572}
+          sizes="(min-width: 800px) 800px, 100vw"
+          className="w-full h-auto"
+        />
+      </div>
 
       <div className="section-divider mb-16" />
 
