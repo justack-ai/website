@@ -1,0 +1,29 @@
+{
+  "issue_id": "direct_indictment_clock",
+  "issue_label": "Direct Indictment — Effect on Clock",
+  "issue_category": "clock",
+  "default_jurisdiction": "FED",
+  "default_authority": [
+    {
+      "citation": "R v Jordan, 2016 SCC 27",
+      "court": "SCC",
+      "jurisdiction": "FED",
+      "year": 2016,
+      "paragraph_refs": ["para 46"],
+      "principle": "The clock runs from the date the charge is laid. Direct indictment bypasses the preliminary inquiry but does not reset the clock; elapsed time from the original charge date continues to count toward the ceiling.",
+      "effective_date": "2016-07-08",
+      "superseded_by": null
+    }
+  ],
+  "default_confidence_tier": 2,
+  "jurisdiction_variants": [],
+  "pending_authority": [],
+  "computed_stability_score": 0.9,
+  "last_reviewed_date": "2026-03-21",
+  "reviewed_by": "PAI",
+  "created_date": "2026-03-21",
+  "version": 1,
+  "requires_counsel_review": false,
+  "liberty_interest_sensitive": true,
+  "notes": "Michael to confirm clock effect on direct indictment before build. The ceiling applicable after DI is OSCJ (30 months) since the matter proceeds to superior court."
+}

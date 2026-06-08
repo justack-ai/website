@@ -1,0 +1,54 @@
+{
+  "law_id": "fed-04",
+  "law": "Security Certificate regime, IRPA ss. 77-85 (pre-Charkaoui)",
+  "tier": "MTM-L",
+  "mtm_l": 0,
+  "faithfulness": 1,
+  "excess": 0,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "purposes": [
+    "To enable the detention and deportation of non-citizens considered security threats",
+    "based on classified evidence not disclosed to the named individual"
+  ],
+  "provisions": [
+    {
+      "id": "s. 77(1)",
+      "text": "The Minister and the Minister of Public Safety and Emergency Preparedness shall sign a certificate stating that a permanent resident or a foreign national is inadmissible on grounds of security, violating human or international rights, serious criminality or organized criminality and shall refer the certificate to the Federal Court. (from training data)"
+    },
+    {
+      "id": "s. 80(1)",
+      "text": "A foreign national who is named in a certificate shall be detained. (from training data)"
+    },
+    {
+      "id": "s. 78(h)",
+      "text": "The judge shall ensure the confidentiality of the information on which the certificate is based and of any other evidence by hearing the matter in the absence of the public and of the permanent resident or foreign national and their counsel if, in the opinion of the judge, its disclosure would be injurious to national security or to the safety of any person. (from training data)"
+    },
+    {
+      "id": "s. 81",
+      "text": "If the judge determines that the certificate is reasonable, the certificate is conclusive proof of the matters referred to in it and the judge shall make a determination that the person named in the certificate is inadmissible, which results in a removal order that is in force. (from training data)"
+    }
+  ],
+  "serves_matrix": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "derivation": "MTM-Literal derivation\n  m = |purposes| = 2\n  n = |provisions| = 4\n  purposes served by ≥1 provision = 2/2\n  → F (Faithfulness) = 2/2 = 1.0000\n  provisions serving no purpose = 0/4\n  → X (Excess)       = 0/4 = 0.0000\n  α = 0.5, β = 0.5\n  MTM-L = 100 · [α · (1 − F) + β · X]\n        = 100 · [0.5 · (1 − 1.0000) + 0.5 · 0.0000]\n        = 100 · [0.0000 + 0.0000]\n        = 0.00",
+  "scored_at": "2026-04-18T01:51:32.068Z",
+  "model": "gemini-2.5-pro",
+  "version": "v1.0"
+}

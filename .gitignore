@@ -46,3 +46,10 @@ next-env.d.ts
 # PAI system files
 .claude/
 MEMORY/
+.agent/
+
+# internal strategy / planning docs — NOT for the public repo
+/Plans/
+/JFactor-Strategy-Review-PAI.md
+/scripts/__pycache__/
+/scripts/daily_pm_email.py

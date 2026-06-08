@@ -1,0 +1,29 @@
+{
+  "issue_id": "covid_deductibility_alberta",
+  "issue_label": "COVID-19 Delay Deductibility — Alberta (Broader Standard)",
+  "issue_category": "deduction_exceptional",
+  "default_jurisdiction": "AB",
+  "default_authority": [
+    {
+      "citation": "R v Boyko, 2022 ABPC 27",
+      "court": "OTHER_PROV",
+      "jurisdiction": "AB",
+      "year": 2022,
+      "paragraph_refs": [],
+      "principle": "COVID delay deductible for the entire period from original trial date to rescheduled trial end, without requiring an articulable link between each sub-period and specific pandemic events. More generous deduction than Ontario's articulable-link standard.",
+      "effective_date": "2022-01-01",
+      "superseded_by": null
+    }
+  ],
+  "default_confidence_tier": 3,
+  "jurisdiction_variants": [],
+  "pending_authority": [],
+  "computed_stability_score": 0.6,
+  "last_reviewed_date": "2026-03-21",
+  "reviewed_by": "PAI",
+  "created_date": "2026-03-21",
+  "version": 1,
+  "requires_counsel_review": false,
+  "liberty_interest_sensitive": true,
+  "notes": "Alberta standard is more generous than Ontario. When jurisdiction = AB and COVID sub-type selected, engine applies Boyko broad deduction but flags as Tier 3. Boyko is a provincial court decision; appellate confirmation pending. Michael to assess reliability of Boyko as precedent."
+}

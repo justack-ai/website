@@ -1,0 +1,46 @@
+{
+  "law_id": "muni-02",
+  "law": "Vancouver Street and Traffic Bylaw #2849 (camping/tent provisions)",
+  "tier": "MTM-L",
+  "mtm_l": 0,
+  "faithfulness": 1,
+  "excess": 0,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "purposes": [
+    "To regulate use of streets and public property for traffic safety",
+    "To regulate use of streets and public property for public order"
+  ],
+  "provisions": [
+    {
+      "id": "s. 69A(1)",
+      "text": "A person must not place, erect, or maintain a temporary shelter on any street. (from training data)"
+    },
+    {
+      "id": "s. 70",
+      "text": "A person must not obstruct a street. (from training data)"
+    },
+    {
+      "id": "s. 71A",
+      "text": "A person must not place or keep on any street any matter or thing so as to obstruct the street or create a nuisance. (from training data)"
+    }
+  ],
+  "serves_matrix": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "derivation": "MTM-Literal derivation\n  m = |purposes| = 2\n  n = |provisions| = 3\n  purposes served by ≥1 provision = 2/2\n  → F (Faithfulness) = 2/2 = 1.0000\n  provisions serving no purpose = 0/3\n  → X (Excess)       = 0/3 = 0.0000\n  α = 0.5, β = 0.5\n  MTM-L = 100 · [α · (1 − F) + β · X]\n        = 100 · [0.5 · (1 − 1.0000) + 0.5 · 0.0000]\n        = 100 · [0.0000 + 0.0000]\n        = 0.00",
+  "scored_at": "2026-04-18T01:53:22.053Z",
+  "model": "gemini-2.5-pro",
+  "version": "v1.0"
+}

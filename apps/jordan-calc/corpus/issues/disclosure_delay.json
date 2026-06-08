@@ -1,0 +1,39 @@
+{
+  "issue_id": "disclosure_delay",
+  "issue_label": "Disclosure Delay — Stinchcombe Interaction",
+  "issue_category": "attribution",
+  "default_jurisdiction": "FED",
+  "default_authority": [
+    {
+      "citation": "R v Pyrek, 2017 ONCA 476",
+      "court": "CA",
+      "jurisdiction": "ON",
+      "year": 2017,
+      "paragraph_refs": [],
+      "principle": "Adjournments caused by late Crown disclosure are not defence delay. The Crown's Stinchcombe obligation means that delay attributable to the Crown's failure to provide timely disclosure is Crown/institutional delay.",
+      "effective_date": "2017-01-01",
+      "superseded_by": null
+    },
+    {
+      "citation": "R v Anderson, 2025 ONCA 172",
+      "court": "CA",
+      "jurisdiction": "ON",
+      "year": 2025,
+      "paragraph_refs": [],
+      "principle": "Defence failure to diligently seek disclosure can convert what would otherwise be Crown delay into defence delay. The defence has an obligation to actively pursue disclosure; passive waiting does not preserve the Crown-delay characterization.",
+      "effective_date": "2025-01-01",
+      "superseded_by": null
+    }
+  ],
+  "default_confidence_tier": 3,
+  "jurisdiction_variants": [],
+  "pending_authority": [],
+  "computed_stability_score": 0.6,
+  "last_reviewed_date": "2026-03-21",
+  "reviewed_by": "PAI",
+  "created_date": "2026-03-21",
+  "version": 1,
+  "requires_counsel_review": false,
+  "liberty_interest_sensitive": true,
+  "notes": "Input model must capture: (a) late Crown disclosure causing adjournment (Crown/institutional attribution); (b) defence failure to diligently seek disclosure (converts to defence delay per Anderson). Both are Tier 3. The Pyrek/Anderson interaction means disclosure delay is fact-specific and cannot be mechanically attributed without user input on diligence."
+}

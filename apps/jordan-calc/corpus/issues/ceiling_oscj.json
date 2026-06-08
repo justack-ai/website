@@ -1,0 +1,38 @@
+{
+  "issue_id": "ceiling_oscj",
+  "issue_label": "Presumptive Ceiling — Ontario Superior Court of Justice",
+  "issue_category": "ceiling",
+  "default_jurisdiction": "FED",
+  "default_authority": [
+    {
+      "citation": "R v Jordan, 2016 SCC 27",
+      "court": "SCC",
+      "jurisdiction": "FED",
+      "year": 2016,
+      "paragraph_refs": ["para 46", "para 49"],
+      "principle": "The presumptive ceiling for proceedings in superior court (with or without preliminary inquiry) is 30 months from the date the charge is laid to the actual or anticipated end of trial. Preliminary inquiry time counts within the ceiling.",
+      "effective_date": "2016-07-08",
+      "superseded_by": null
+    },
+    {
+      "citation": "R v KGK, 2020 SCC 7",
+      "court": "SCC",
+      "jurisdiction": "FED",
+      "year": 2020,
+      "paragraph_refs": ["para 1", "para 33"],
+      "principle": "The ceiling applies to the anticipated end of trial, not to the end of proceedings (e.g., sentencing).",
+      "effective_date": "2020-03-06",
+      "superseded_by": null
+    }
+  ],
+  "default_confidence_tier": 2,
+  "jurisdiction_variants": [],
+  "pending_authority": [],
+  "computed_stability_score": 1.0,
+  "last_reviewed_date": "2026-03-21",
+  "reviewed_by": "PAI",
+  "created_date": "2026-03-21",
+  "version": 1,
+  "requires_counsel_review": false,
+  "liberty_interest_sensitive": true
+}

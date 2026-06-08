@@ -1,0 +1,59 @@
+{
+  "issue_id": "covid_deductibility_ontario",
+  "issue_label": "COVID-19 Delay Deductibility — Ontario (Articulable Link Standard)",
+  "issue_category": "deduction_exceptional",
+  "default_jurisdiction": "ON",
+  "default_authority": [
+    {
+      "citation": "R v Kirkopoulos, 2022 ONCA (para 45)",
+      "court": "CA",
+      "jurisdiction": "ON",
+      "year": 2022,
+      "paragraph_refs": ["para 45"],
+      "principle": "There is no rule that all periods of delay during the COVID-19 pandemic should be attributed to exceptional circumstances. The Crown must establish an articulable link between the specific delay period and the pandemic.",
+      "effective_date": "2022-01-01",
+      "superseded_by": null
+    },
+    {
+      "citation": "R v Jones, ONCA (para 55)",
+      "court": "CA",
+      "jurisdiction": "ON",
+      "year": 2022,
+      "paragraph_refs": ["para 55"],
+      "principle": "Delay must be attributable to the pandemic in some articulable sense. A general assertion of pandemic disruption is insufficient.",
+      "effective_date": "2022-01-01",
+      "superseded_by": null
+    },
+    {
+      "citation": "R v Kovacs, ONCA (para 14)",
+      "court": "CA",
+      "jurisdiction": "ON",
+      "year": 2022,
+      "paragraph_refs": ["para 14"],
+      "principle": "Same articulable link standard confirmed.",
+      "effective_date": "2022-01-01",
+      "superseded_by": null
+    },
+    {
+      "citation": "R v Qureshi, 2026 ONCA 20",
+      "court": "CA",
+      "jurisdiction": "ON",
+      "year": 2026,
+      "paragraph_refs": [],
+      "principle": "Articulable link standard reiterated as of 2026. Post-2021 pandemic-attributed delay faces heightened evidentiary burden as courts move further from acute closures.",
+      "effective_date": "2026-01-01",
+      "superseded_by": null
+    }
+  ],
+  "default_confidence_tier": 3,
+  "jurisdiction_variants": [],
+  "pending_authority": [],
+  "computed_stability_score": 0.55,
+  "last_reviewed_date": "2026-03-21",
+  "reviewed_by": "PAI",
+  "created_date": "2026-03-21",
+  "version": 1,
+  "requires_counsel_review": false,
+  "liberty_interest_sensitive": true,
+  "notes": "App must require user to specify: (a) specific period, (b) articulable link text field, (c) jurisdiction confirmation. Post-2021 Ontario COVID claims must display heightened evidentiary burden warning. COVID is a sub-type of discrete exceptional circumstances — not a parallel deduction stream."
+}

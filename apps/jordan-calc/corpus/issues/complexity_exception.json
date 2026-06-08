@@ -1,0 +1,54 @@
+{
+  "issue_id": "complexity_exception",
+  "issue_label": "Particularly Complex Case — Exceptional Circumstance",
+  "issue_category": "deduction_exceptional",
+  "default_jurisdiction": "FED",
+  "default_authority": [
+    {
+      "citation": "R v Jordan, 2016 SCC 27",
+      "court": "SCC",
+      "jurisdiction": "FED",
+      "year": 2016,
+      "paragraph_refs": ["para 77", "para 78", "para 79"],
+      "principle": "A particularly complex case may justify delay beyond the ceiling. Complexity must be assessed against the nature of the proceedings; voluminous disclosure, multiple co-accused, complex expert evidence, or extensive pre-trial applications may qualify. The Crown bears the burden.",
+      "effective_date": "2016-07-08",
+      "superseded_by": null
+    },
+    {
+      "citation": "R v Vrbanic, 2026 SCC 19",
+      "court": "SCC",
+      "jurisdiction": "FED",
+      "year": 2026,
+      "paragraph_refs": ["para 81", "para 97"],
+      "principle": "The complexity exception is decided in two stages. Threshold: the Crown must prove the case is particularly complex (complexity is never presumed and is not merely above average) and that the Crown took reasonable steps to proactively mitigate complexity-driven delay. Justification: the court then asks whether the overall complexity reasonably justifies the net delay. The Jordan framework is flexible enough to accommodate increasingly complex cases, so more cases may engage the exception; 'particularly complex' does not mean 'rare'. Defence non-cooperation while others cooperate can support a finding of Crown reasonableness.",
+      "effective_date": "2026-05-29",
+      "superseded_by": null
+    }
+  ],
+  "default_confidence_tier": 3,
+  "jurisdiction_variants": [],
+  "pending_authority": [
+    {
+      "case_name": "R v Vrbanic",
+      "scc_file": "41741",
+      "issue": "Whether complexity should be evaluated 'within the context of the case as a whole'; AG BC intervened arguing Jordan framework is 'an anomaly' and urging 'greater remedial flexibility'",
+      "hearing_date": "2025-12-04",
+      "status": "decided",
+      "potential_impact": "Crown appeal allowed; stay set aside (reasons 2026-05-29). The complexity exception was expanded: a two-stage test, complexity not presumed and not merely above-average, more cases may engage it. Now controlling — see default_authority.",
+      "impact_direction": "expand_deduction",
+      "added_date": "2026-03-21",
+      "last_checked": "2026-06-08",
+      "resolved_date": "2026-05-29",
+      "resolution_note": "Decided as R v Vrbanic, 2026 SCC 19. Holdings folded into default_authority. Verified via CanLII citation + published case comment + gc.ai; full reasons not yet read line-by-line — pending Michael review.",
+      "verified": true
+    }
+  ],
+  "computed_stability_score": 0.7,
+  "last_reviewed_date": "2026-06-08",
+  "reviewed_by": "PAI",
+  "created_date": "2026-03-21",
+  "version": 2,
+  "requires_counsel_review": false,
+  "liberty_interest_sensitive": true,
+  "notes": "Settled by R v Vrbanic, 2026 SCC 19 (2026-05-29): two-stage complexity test; 'particularly complex' does not mean 'rare'; the Jordan framework accommodates increasingly complex cases. The amber 'Law May Change' banner for Vrbanic can be retired. Tier 3 because application remains fact-specific and liberty-sensitive, not because the law is unsettled."
+}

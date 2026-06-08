@@ -1,0 +1,29 @@
+{
+  "issue_id": "re_election_ceiling",
+  "issue_label": "Ceiling Change on Re-Election",
+  "issue_category": "ceiling",
+  "default_jurisdiction": "FED",
+  "default_authority": [
+    {
+      "citation": "R v Jordan, 2016 SCC 27",
+      "court": "SCC",
+      "jurisdiction": "FED",
+      "year": 2016,
+      "paragraph_refs": ["para 46"],
+      "principle": "The applicable ceiling is determined by the court level at which trial is held. On re-election, the ceiling changes to that applicable to the new court level; time elapsed prior to re-election counts toward the new ceiling.",
+      "effective_date": "2016-07-08",
+      "superseded_by": null
+    }
+  ],
+  "default_confidence_tier": 2,
+  "jurisdiction_variants": [],
+  "pending_authority": [],
+  "computed_stability_score": 0.85,
+  "last_reviewed_date": "2026-03-21",
+  "reviewed_by": "PAI",
+  "created_date": "2026-03-21",
+  "version": 1,
+  "requires_counsel_review": false,
+  "liberty_interest_sensitive": true,
+  "notes": "Re-election OCJ→OSCJ: ceiling becomes 30 months. Re-election OSCJ→OCJ: ceiling becomes 18 months. Re-election followed by mistrial and retrial: ceiling at retrial is unresolved — flag as Tier 5. Michael to confirm ceiling-change logic on review."
+}

@@ -1,0 +1,46 @@
+{
+  "law_id": "prov-03",
+  "law": "Critical Infrastructure Defence Act, SA 2020, c C-32.7 (Alberta)",
+  "tier": "MTM-L",
+  "mtm_l": 0,
+  "faithfulness": 1,
+  "excess": 0,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "purposes": [
+    "To protect essential infrastructure such as pipelines and railways from damage",
+    "To protect essential infrastructure such as pipelines and railways from unauthorized entry"
+  ],
+  "provisions": [
+    {
+      "id": "s.2(1)",
+      "text": "A person must not wilfully enter on any essential infrastructure without lawful right, justification or excuse. (from training data)"
+    },
+    {
+      "id": "s.2(2)",
+      "text": "A person must not wilfully damage or destroy any essential infrastructure. (from training data)"
+    },
+    {
+      "id": "s.5",
+      "text": "A peace officer may arrest, without warrant, any person whom the peace officer finds committing an offence under this Act. (from training data)"
+    }
+  ],
+  "serves_matrix": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "derivation": "MTM-Literal derivation\n  m = |purposes| = 2\n  n = |provisions| = 3\n  purposes served by ≥1 provision = 2/2\n  → F (Faithfulness) = 2/2 = 1.0000\n  provisions serving no purpose = 0/3\n  → X (Excess)       = 0/3 = 0.0000\n  α = 0.5, β = 0.5\n  MTM-L = 100 · [α · (1 − F) + β · X]\n        = 100 · [0.5 · (1 − 1.0000) + 0.5 · 0.0000]\n        = 100 · [0.0000 + 0.0000]\n        = 0.00",
+  "scored_at": "2026-04-18T01:52:32.383Z",
+  "model": "gemini-2.5-pro",
+  "version": "v1.0"
+}

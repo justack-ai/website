@@ -1,0 +1,49 @@
+{
+  "issue_id": "change_of_counsel",
+  "issue_label": "Change of Counsel — Delay Attribution",
+  "issue_category": "attribution",
+  "default_jurisdiction": "FED",
+  "default_authority": [
+    {
+      "citation": "R v Rahi, 2023 ONSC 905",
+      "court": "OTHER_SUPER",
+      "jurisdiction": "ON",
+      "year": 2023,
+      "paragraph_refs": ["para 19"],
+      "principle": "Even involuntary withdrawal of counsel counts as defence delay. An accused's lawyer is an extension of the accused; the terms 'the defence' and 'the accused' are interchangeable in the s. 11(b) framework.",
+      "effective_date": "2023-02-07",
+      "superseded_by": null
+    }
+  ],
+  "default_confidence_tier": 2,
+  "jurisdiction_variants": [
+    {
+      "jurisdiction": "SK",
+      "variance_description": "In R v Pastuch (2022 SKCA 109), the Saskatchewan Court of Appeal treated Legal Aid's systemic mishandling of a file as a discrete exceptional circumstance rather than defence delay. This exception has not been adopted outside Saskatchewan but has not been rejected elsewhere.",
+      "controlling_authority": [
+        {
+          "citation": "R v Pastuch, 2022 SKCA 109",
+          "court": "CA",
+          "jurisdiction": "SK",
+          "year": 2022,
+          "paragraph_refs": [],
+          "principle": "Legal Aid's systemic failure to process a file may be treated as a discrete exceptional circumstance rather than defence delay, depending on the facts.",
+          "effective_date": "2022-09-29",
+          "superseded_by": null
+        }
+      ],
+      "confidence_tier": 3,
+      "stability_score": 0.6,
+      "notes": "Pastuch exception is Saskatchewan only. App must capture cause-of-change field (voluntary / involuntary / legal-aid-failure) so Saskatchewan cases with Legal Aid failure can trigger this variant."
+    }
+  ],
+  "pending_authority": [],
+  "computed_stability_score": 0.75,
+  "last_reviewed_date": "2026-03-21",
+  "reviewed_by": "PAI",
+  "created_date": "2026-03-21",
+  "version": 1,
+  "requires_counsel_review": false,
+  "liberty_interest_sensitive": true,
+  "notes": "Input model must capture: voluntary / involuntary / legal-aid-failure as cause of change. Legal Aid failure in SK triggers Tier 3 via Pastuch variant."
+}

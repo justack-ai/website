@@ -1,0 +1,137 @@
+[
+  {
+    "id": "fed-01",
+    "law": "Access to Information Act, RSC 1985, c A-1",
+    "mtm_l": 12.5,
+    "F": 1,
+    "X": 0.25,
+    "m": 1,
+    "n": 4
+  },
+  {
+    "id": "fed-02",
+    "law": "Anti-Terrorism Act, 2015 (Bill C-51), SC 2015, c 20",
+    "mtm_l": 0,
+    "F": 1,
+    "X": 0,
+    "m": 2,
+    "n": 4
+  },
+  {
+    "id": "fed-03",
+    "law": "Section 13, Canadian Human Rights Act, RSC 1985, c H-6 (pre-repeal)",
+    "mtm_l": 0,
+    "F": 1,
+    "X": 0,
+    "m": 1,
+    "n": 3
+  },
+  {
+    "id": "fed-04",
+    "law": "Security Certificate regime, IRPA ss. 77-85 (pre-Charkaoui)",
+    "mtm_l": 0,
+    "F": 1,
+    "X": 0,
+    "m": 2,
+    "n": 4
+  },
+  {
+    "id": "fed-05",
+    "law": "Criminal Code s.95 mandatory minimum for prohibited firearm possession (pre-Nur)",
+    "mtm_l": 16.67,
+    "F": 1,
+    "X": 0.3333,
+    "m": 1,
+    "n": 3
+  },
+  {
+    "id": "prov-01",
+    "law": "Ontario Safe Streets Act, SO 1999, c 8",
+    "mtm_l": 0,
+    "F": 1,
+    "X": 0,
+    "m": 2,
+    "n": 3
+  },
+  {
+    "id": "prov-02",
+    "law": "Act respecting the Laicity of the State (Quebec Bill 21), SQ 2019, c 12",
+    "mtm_l": 0,
+    "F": 1,
+    "X": 0,
+    "m": 2,
+    "n": 3
+  },
+  {
+    "id": "prov-03",
+    "law": "Critical Infrastructure Defence Act, SA 2020, c C-32.7 (Alberta)",
+    "mtm_l": 0,
+    "F": 1,
+    "X": 0,
+    "m": 1,
+    "n": 3
+  },
+  {
+    "id": "prov-04",
+    "law": "Civil Forfeiture Act, SBC 2005, c 29 (BC — unexplained wealth order provisions)",
+    "mtm_l": 0,
+    "F": 1,
+    "X": 0,
+    "m": 1,
+    "n": 3
+  },
+  {
+    "id": "prov-05",
+    "law": "Ontario Not-for-Profit Corporations Act, 2010, SO 2010, c 15 (ONCA)",
+    "mtm_l": 0,
+    "F": 1,
+    "X": 0,
+    "m": 2,
+    "n": 3
+  },
+  {
+    "id": "muni-01",
+    "law": "Toronto Parks Bylaw, Toronto Municipal Code Ch. 608 (encampment enforcement)",
+    "mtm_l": 0,
+    "F": 1,
+    "X": 0,
+    "m": 2,
+    "n": 3
+  },
+  {
+    "id": "muni-02",
+    "law": "Vancouver Street and Traffic Bylaw #2849 (camping/tent provisions)",
+    "mtm_l": 0,
+    "F": 1,
+    "X": 0,
+    "m": 2,
+    "n": 3
+  },
+  {
+    "id": "muni-03",
+    "law": "Montreal Bylaw P-6 (protest regulation), CO Montreal 2012 (pre-strike)",
+    "mtm_l": 0,
+    "F": 1,
+    "X": 0,
+    "m": 3,
+    "n": 3
+  },
+  {
+    "id": "muni-04",
+    "law": "Calgary Streets Bylaw 20M88 (aggressive solicitation provisions)",
+    "mtm_l": 0,
+    "F": 1,
+    "X": 0,
+    "m": 2,
+    "n": 3
+  },
+  {
+    "id": "muni-05",
+    "law": "Vancouver Noise Control Bylaw #6555",
+    "mtm_l": 0,
+    "F": 1,
+    "X": 0,
+    "m": 1,
+    "n": 3
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "law_id": "fed-05",
+  "law": "Criminal Code s.95 mandatory minimum for prohibited firearm possession (pre-Nur)",
+  "tier": "MTM-L",
+  "mtm_l": 16.67,
+  "faithfulness": 1,
+  "excess": 0.3333,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "purposes": [
+    "To deter illegal possession of prohibited or restricted firearms by imposing a three-year mandatory minimum sentence on first offence (five years on second)."
+  ],
+  "provisions": [
+    {
+      "id": "s. 95(1)",
+      "text": "Every person commits an offence who possesses a loaded prohibited or restricted firearm, or an unloaded prohibited or restricted firearm together with readily accessible ammunition, without being the holder of a licence and registration certificate. (from training data)"
+    },
+    {
+      "id": "s. 95(2)(a)",
+      "text": "Every person who commits an offence under subsection (1) is guilty of an indictable offence and liable to a minimum punishment of imprisonment for a term of three years for a first offence, and five years for a second or subsequent offence. (from training data)"
+    },
+    {
+      "id": "s. 109(1)",
+      "text": "Where a person is convicted of an indictable offence in the commission of which violence against a person was used, threatened or attempted and for which the person may be sentenced to imprisonment for ten years or more, the court that sentences the person shall make an order prohibiting the person from possessing any firearm. (from training data)"
+    }
+  ],
+  "serves_matrix": [
+    [
+      1
+    ],
+    [
+      1
+    ],
+    [
+      0
+    ]
+  ],
+  "derivation": "MTM-Literal derivation\n  m = |purposes| = 1\n  n = |provisions| = 3\n  purposes served by ≥1 provision = 1/1\n  → F (Faithfulness) = 1/1 = 1.0000\n  provisions serving no purpose = 1/3\n  → X (Excess)       = 1/3 = 0.3333\n  α = 0.5, β = 0.5\n  MTM-L = 100 · [α · (1 − F) + β · X]\n        = 100 · [0.5 · (1 − 1.0000) + 0.5 · 0.3333]\n        = 100 · [0.0000 + 0.1667]\n        = 16.67",
+  "scored_at": "2026-04-18T01:51:49.820Z",
+  "model": "gemini-2.5-pro",
+  "version": "v1.0"
+}

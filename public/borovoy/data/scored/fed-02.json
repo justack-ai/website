@@ -1,0 +1,54 @@
+{
+  "law_id": "fed-02",
+  "law": "Anti-Terrorism Act, 2015 (Bill C-51), SC 2015, c 20",
+  "tier": "MTM-L",
+  "mtm_l": 0,
+  "faithfulness": 1,
+  "excess": 0,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "purposes": [
+    "To protect Canadians from terrorism",
+    "authorizing CSIS to reduce threats to the security of Canada through measures that may contravene Charter-protected rights if authorized by judicial warrant"
+  ],
+  "provisions": [
+    {
+      "id": "CSIS Act, s. 12.1(1)",
+      "text": "If there are reasonable grounds to believe that a particular activity constitutes a threat to the security of Canada, the Service may take measures, within or outside Canada, to reduce the threat. (from training data)"
+    },
+    {
+      "id": "CSIS Act, s. 21.1",
+      "text": "A judge may, in a warrant..., authorize the Service to take measures that would contravene a right or freedom guaranteed by the Canadian Charter of Rights and Freedoms if the judge is satisfied that the measures are reasonable and proportional... (from training data)"
+    },
+    {
+      "id": "Security of Canada Information Sharing Act, s. 5(1)",
+      "text": "a Government of Canada institution may... disclose information to another Government of Canada institution... if the information is relevant to the recipient institution’s jurisdiction or responsibilities... in respect of activities that undermine the security of Canada, including terrorism. (from training data)"
+    },
+    {
+      "id": "Criminal Code, s. 83.221(1)",
+      "text": "Every person who, by communicating statements, knowingly advocates or promotes the commission of terrorism offences in general... is guilty of an indictable offence and liable to imprisonment for a term of not more than five years. (from training data)"
+    }
+  ],
+  "serves_matrix": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "derivation": "MTM-Literal derivation\n  m = |purposes| = 2\n  n = |provisions| = 4\n  purposes served by ≥1 provision = 2/2\n  → F (Faithfulness) = 2/2 = 1.0000\n  provisions serving no purpose = 0/4\n  → X (Excess)       = 0/4 = 0.0000\n  α = 0.5, β = 0.5\n  MTM-L = 100 · [α · (1 − F) + β · X]\n        = 100 · [0.5 · (1 − 1.0000) + 0.5 · 0.0000]\n        = 100 · [0.0000 + 0.0000]\n        = 0.00",
+  "scored_at": "2026-04-18T01:51:05.159Z",
+  "model": "gemini-2.5-pro",
+  "version": "v1.0"
+}

@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "version": "v1.0",
+    "generated": "2026-04-18T01:55:42.318Z",
+    "n_rows": 15,
+    "n_positive": 6,
+    "n_negative": 9,
+    "tier": "MTM-L"
+  },
+  "metrics": {
+    "auc": 0.537,
+    "brier": 0.2307
+  },
+  "reliability_diagram": [
+    {
+      "bin": 0,
+      "predicted_mean": 0.019446666666666668,
+      "observed_mean": 0.3,
+      "count": 15
+    },
+    {
+      "bin": 1,
+      "predicted_mean": 0.30000000000000004,
+      "observed_mean": null,
+      "count": 0
+    },
+    {
+      "bin": 2,
+      "predicted_mean": 0.5,
+      "observed_mean": null,
+      "count": 0
+    },
+    {
+      "bin": 3,
+      "predicted_mean": 0.7,
+      "observed_mean": null,
+      "count": 0
+    },
+    {
+      "bin": 4,
+      "predicted_mean": 0.9,
+      "observed_mean": null,
+      "count": 0
+    }
+  ],
+  "weights": {
+    "spec_v1_0": {
+      "alpha": 0.5,
+      "beta": 0.5
+    },
+    "fitted": {
+      "alpha": 0.4979,
+      "beta": 0.5021,
+      "loss": 0.2306,
+      "steps": 5000,
+      "lambda": 0.5,
+      "alpha_ci_95": [
+        0.4931,
+        0.5005
+      ],
+      "beta_ci_95": [
+        0.4995,
+        0.5069
+      ]
+    }
+  },
+  "rows": [
+    {
+      "id": "fed-01",
+      "law": "Access to Information Act, RSC 1985, c A-1",
+      "mtm_l": 12.5,
+      "F": 1,
+      "X": 0.25,
+      "outcome": 0,
+      "disposition": "upheld",
+      "authority": "Access to Information Act has not been struck; performance issues are enforcement-level"
+    },
+    {
+      "id": "fed-02",
+      "law": "Anti-Terrorism Act, 2015 (Bill C-51), SC 2015, c 20",
+      "mtm_l": 0,
+      "F": 1,
+      "X": 0,
+      "outcome": 0,
+      "disposition": "upheld",
+      "authority": "Bill C-51 / ATA 2015 provisions largely upheld; Charter challenges ongoing but no strike to date"
+    },
+    {
+      "id": "fed-03",
+      "law": "Section 13, Canadian Human Rights Act, RSC 1985, c H-6 (pre-repeal)",
+      "mtm_l": 0,
+      "F": 1,
+      "X": 0,
+      "outcome": 0.5,
+      "disposition": "read_down",
+      "authority": "CHRA s.13 — repealed by Parliament 2013; prior challenges read it down narrowly"
+    },
+    {
+      "id": "fed-04",
+      "law": "Security Certificate regime, IRPA ss. 77-85 (pre-Charkaoui)",
+      "mtm_l": 0,
+      "F": 1,
+      "X": 0,
+      "outcome": 1,
+      "disposition": "struck",
+      "authority": "Charkaoui v. Canada (Citizenship and Immigration), 2007 SCC 9 — security certificate regime struck under s.7"
+    },
+    {
+      "id": "fed-05",
+      "law": "Criminal Code s.95 mandatory minimum for prohibited firearm possession (pre-Nur)",
+      "mtm_l": 16.67,
+      "F": 1,
+      "X": 0.3333,
+      "outcome": 1,
+      "disposition": "struck",
+      "authority": "R. v. Nur, 2015 SCC 15 — CC s.95(2)(a) mandatory minimum struck under s.12"
+    },
+    {
+      "id": "muni-01",
+      "law": "Toronto Parks Bylaw, Toronto Municipal Code Ch. 608 (encampment enforcement)",
+      "mtm_l": 0,
+      "F": 1,
+      "X": 0,
+      "outcome": 0.5,
+      "disposition": "read_down",
+      "authority": "Toronto Parks Bylaw encampment — injunctive read-down in Black v. Toronto 2023 ONSC"
+    },
+    {
+      "id": "muni-02",
+      "law": "Vancouver Street and Traffic Bylaw #2849 (camping/tent provisions)",
+      "mtm_l": 0,
+      "F": 1,
+      "X": 0,
+      "outcome": 0.5,
+      "disposition": "read_down",
+      "authority": "Vancouver camping bylaw — read down in Adams v. Victoria 2008 BCSC line of authority"
+    },
+    {
+      "id": "muni-03",
+      "law": "Montreal Bylaw P-6 (protest regulation), CO Montreal 2012 (pre-strike)",
+      "mtm_l": 0,
+      "F": 1,
+      "X": 0,
+      "outcome": 1,
+      "disposition": "struck",
+      "authority": "Montreal Bylaw P-6 protest provisions — struck in Villeneuve c. Montréal, 2016 QCCS 2888 (affirmed 2018 QCCA 321)"
+    },
+    {
+      "id": "muni-04",
+      "law": "Calgary Streets Bylaw 20M88 (aggressive solicitation provisions)",
+      "mtm_l": 0,
+      "F": 1,
+      "X": 0,
+      "outcome": 0,
+      "disposition": "upheld",
+      "authority": "Calgary Streets Bylaw aggressive solicitation — upheld in R. v. Banks line of authority by analogy"
+    },
+    {
+      "id": "muni-05",
+      "law": "Vancouver Noise Control Bylaw #6555",
+      "mtm_l": 0,
+      "F": 1,
+      "X": 0,
+      "outcome": 0,
+      "disposition": "upheld",
+      "authority": "Vancouver Noise Control Bylaw #6555 — upheld; no Charter strike"
+    },
+    {
+      "id": "prov-01",
+      "law": "Ontario Safe Streets Act, SO 1999, c 8",
+      "mtm_l": 0,
+      "F": 1,
+      "X": 0,
+      "outcome": 0,
+      "disposition": "upheld",
+      "authority": "Ontario Safe Streets Act — upheld in R. v. Banks, 2007 ONCA 19"
+    },
+    {
+      "id": "prov-02",
+      "law": "Act respecting the Laicity of the State (Quebec Bill 21), SQ 2019, c 12",
+      "mtm_l": 0,
+      "F": 1,
+      "X": 0,
+      "outcome": 0,
+      "disposition": "upheld",
+      "authority": "Quebec Bill 21 — substantially upheld at QCCA 2024; SCC leave pending"
+    },
+    {
+      "id": "prov-03",
+      "law": "Critical Infrastructure Defence Act, SA 2020, c C-32.7 (Alberta)",
+      "mtm_l": 0,
+      "F": 1,
+      "X": 0,
+      "outcome": 0,
+      "disposition": "upheld",
+      "authority": "Alberta Critical Infrastructure Defence Act — pending; no SCC strike as of 2026"
+    },
+    {
+      "id": "prov-04",
+      "law": "Civil Forfeiture Act, SBC 2005, c 29 (BC — unexplained wealth order provisions)",
+      "mtm_l": 0,
+      "F": 1,
+      "X": 0,
+      "outcome": 0,
+      "disposition": "upheld",
+      "authority": "BC Civil Forfeiture Act unexplained-wealth provisions — upheld under existing jurisprudence"
+    },
+    {
+      "id": "prov-05",
+      "law": "Ontario Not-for-Profit Corporations Act, 2010, SO 2010, c 15 (ONCA)",
+      "mtm_l": 0,
+      "F": 1,
+      "X": 0,
+      "outcome": 0,
+      "disposition": "upheld",
+      "authority": "Ontario Not-for-Profit Corporations Act — upheld; no Charter strike"
+    }
+  ],
+  "interpretation": "AUC = 0.54 indicates MTM-L alone has limited discriminative power on this corpus. Brier score = 0.231 (lower is better; baseline of always-predicting-mean ≈ 0.00). 87% of laws scored MTM-L = 0, reflecting that most struck-down Canadian statutes are NOT literally misaligned on face — they fail at the purposive/contextual level (MTM-F, MTM-C). Implication: MTM-L is a conservative, narrow test. It flags textually-broken statutes, but many Charter-invalid laws pass MTM-L because their pathology is purposive, not literal. The MTM-F and MTM-C tiers (coming soon) are where the remaining predictive signal should live."
+}

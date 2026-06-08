@@ -1,0 +1,54 @@
+{
+  "issue_id": "exceptional_circumstances_discrete",
+  "issue_label": "Discrete Exceptional Circumstances — General",
+  "issue_category": "deduction_exceptional",
+  "default_jurisdiction": "FED",
+  "default_authority": [
+    {
+      "citation": "R v Jordan, 2016 SCC 27",
+      "court": "SCC",
+      "jurisdiction": "FED",
+      "year": 2016,
+      "paragraph_refs": ["para 75", "para 76", "para 77", "para 78", "para 79", "para 80"],
+      "principle": "Discrete exceptional circumstances are reasonably unforeseen or unavoidable events outside the control of the Crown that caused delay. The Crown must establish: (a) the circumstance was reasonably unforeseeable or unavoidable; and (b) the Crown took reasonable steps to avoid and minimize the delay.",
+      "effective_date": "2016-07-08",
+      "superseded_by": null
+    },
+    {
+      "citation": "R v Jacques-Taylor, 2026 SCC 20",
+      "court": "SCC",
+      "jurisdiction": "FED",
+      "year": 2026,
+      "paragraph_refs": ["para 38", "para 72"],
+      "principle": "Delay caused by a co-accused in a joint trial can be a discrete exceptional circumstance, assessed on the four-part test from R v Tran, 2023 ONCA 532: (1) the joint trial is in the interests of justice; (2) the delay arose from the joint trial; (3) the delay was unforeseen or reasonably unavoidable; and (4) the Crown could not reasonably have ameliorated it. 'Exceptional' does not mean 'rare' — exceptional circumstances can and do arise frequently (para 38); what matters is that they lie outside the Crown's control. Joint trials are presumed to be in the interests of justice (para 72).",
+      "effective_date": "2026-05-29",
+      "superseded_by": null
+    }
+  ],
+  "default_confidence_tier": 3,
+  "jurisdiction_variants": [],
+  "pending_authority": [
+    {
+      "case_name": "R v Vrbanic",
+      "scc_file": "41741",
+      "issue": "Scope of the complexity exceptional circumstance; whether case complexity should be evaluated 'within the context of the case as a whole'",
+      "hearing_date": "2025-12-04",
+      "status": "decided",
+      "potential_impact": "Decided 2026-05-29 (R v Vrbanic, 2026 SCC 19): the complexity exceptional circumstance was expanded via a two-stage test; see complexity_exception for the controlling treatment.",
+      "impact_direction": "expand_deduction",
+      "added_date": "2026-03-21",
+      "last_checked": "2026-06-08",
+      "resolved_date": "2026-05-29",
+      "resolution_note": "Decided as R v Vrbanic, 2026 SCC 19; primary treatment recorded in complexity_exception. Pending Michael review.",
+      "verified": true
+    }
+  ],
+  "computed_stability_score": 0.6,
+  "last_reviewed_date": "2026-06-08",
+  "reviewed_by": "PAI",
+  "created_date": "2026-03-21",
+  "version": 2,
+  "requires_counsel_review": false,
+  "liberty_interest_sensitive": true,
+  "notes": "Co-accused delay in a joint trial is now a recognised discrete exceptional circumstance (R v Jacques-Taylor, 2026 SCC 20, adopting the R v Tran four-part test) — relevant to multi-accused matters, which the engine still does not auto-compute. COVID delay is a sub-type of discrete exceptional circumstances — see covid_deductibility_ontario and covid_deductibility_alberta. Do NOT implement COVID as a parallel deduction stream; it lives inside this category to prevent double-counting."
+}

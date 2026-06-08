@@ -1,0 +1,74 @@
+{
+  "issue_id": "defence_delay_attribution",
+  "issue_label": "Defence Delay Attribution — Hanan Contextual Framework",
+  "issue_category": "attribution",
+  "default_jurisdiction": "FED",
+  "default_authority": [
+    {
+      "citation": "R v Hanan, 2023 SCC 12",
+      "court": "SCC",
+      "jurisdiction": "FED",
+      "year": 2023,
+      "paragraph_refs": ["para 63", "para 64", "para 65", "para 66", "para 67", "para 68", "para 69", "para 70", "para 71", "para 72", "para 73", "para 74", "para 75", "para 76", "para 77", "para 78", "para 79"],
+      "principle": "Defence delay attribution is contextual, not governed by a bright-line rule. Courts assess whether the accused's conduct was consistent with the proactive scheduling culture demanded by Jordan and Cody. Attribution requires contextual apportionment; a single period may be split between parties.",
+      "effective_date": "2023-05-26",
+      "superseded_by": null
+    },
+    {
+      "citation": "R v Cody, 2017 SCC 31",
+      "court": "SCC",
+      "jurisdiction": "FED",
+      "year": 2017,
+      "paragraph_refs": ["para 27", "para 28", "para 29", "para 30", "para 31", "para 32"],
+      "principle": "Defence delay includes conduct that lacks a legitimate forensic purpose or demonstrates marked inefficiency or marked indifference to delay (para 32). This is a distinct finding from ordinary defence delay attribution.",
+      "effective_date": "2017-07-21",
+      "superseded_by": null
+    }
+  ],
+  "default_confidence_tier": 3,
+  "jurisdiction_variants": [
+    {
+      "jurisdiction": "AB",
+      "variance_description": "Alberta courts have historically applied a more bright-line approach to defence delay attribution, holding that any period where prosecution and court are ready to proceed but defence is unavailable is attributed to defence. The AG of Alberta is intervening in Jacques-Taylor (SCC File 41430) to urge the SCC to constrain Hanan's contextual approach.",
+      "controlling_authority": [
+        {
+          "citation": "R v Jeha, 2020 ABCA 453",
+          "court": "CA",
+          "jurisdiction": "AB",
+          "year": 2020,
+          "paragraph_refs": [],
+          "principle": "Treating defence unavailability as anything other than a bright-line rule would have the ironic result of increasing litigation delay.",
+          "effective_date": "2020-11-17",
+          "superseded_by": null
+        }
+      ],
+      "confidence_tier": 3,
+      "stability_score": 0.4,
+      "notes": "Jacques-Taylor (now R v Jacques-Taylor, 2026 SCC 20, 2026-05-29) did NOT adopt the Alberta bright-line approach or constrain Hanan's contextual framework; it decided the separate co-accused-delay question. Alberta remains Tier 3 under the Hanan contextual approach. (Whether the Court expressly declined the Hanan initial-date-setting question is per gc.ai, to be confirmed against the reasons.)"
+    }
+  ],
+  "pending_authority": [
+    {
+      "case_name": "R v Jacques-Taylor",
+      "scc_file": "41430",
+      "issue": "Whether Hanan's contextual approach to defence delay applies to initial setting of trial dates, or whether bright-line attribution applies when prosecution and court are ready to proceed",
+      "hearing_date": "2026-02-02",
+      "status": "decided",
+      "potential_impact": "Decided 2026-05-29 (R v Jacques-Taylor, 2026 SCC 20). The feared restriction did NOT occur: the Court decided the co-accused-delay (exceptional circumstance) question and did not constrain the Hanan contextual approach. Hanan apportionment framework UNCHANGED; the Low/Mid/High scenarios stand. NOTE: that the Court expressly declined to decide the Hanan initial-date-setting question is from gc.ai and not yet confirmed against the reasons.",
+      "impact_direction": "restrict_deduction",
+      "added_date": "2026-03-21",
+      "last_checked": "2026-06-08",
+      "resolved_date": "2026-05-29",
+      "resolution_note": "Decided as R v Jacques-Taylor, 2026 SCC 20. Hanan defence-delay framework remains controlling; no restriction adopted. Co-accused-delay holding folded into exceptional_circumstances_discrete. Confirm the Hanan-question point against the reasons — pending Michael review.",
+      "verified": true
+    }
+  ],
+  "computed_stability_score": 0.55,
+  "last_reviewed_date": "2026-06-08",
+  "reviewed_by": "PAI",
+  "created_date": "2026-03-21",
+  "version": 2,
+  "requires_counsel_review": false,
+  "liberty_interest_sensitive": true,
+  "notes": "Engine must produce three scenarios (Low/Mid/High) for all defence delay attribution. Single deterministic output is prohibited (APP-ISC-A4). Hanan paras 63-79 govern apportionment methodology. Note: R v Boulanger 2022 SCC 2 is ministerial misconduct — do NOT cite for delay apportionment."
+}

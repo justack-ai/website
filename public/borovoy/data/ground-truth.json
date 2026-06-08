@@ -1,0 +1,317 @@
+{
+  "metadata": {
+    "version": "v1.0",
+    "compiled": "2026-04-18",
+    "total": 34,
+    "included_in_calibration": 33,
+    "note": "23 Perplexity-verified Charter cases 2000-2025 + 11 upheld/reversed for class balance. Bykovets excluded from calibration (s.8 remedy, not s.52). All citations verified against SCC/ONCA/FC reporters."
+  },
+  "records": [
+    {
+      "case_name": "R. v. Sharpe",
+      "citation": "2001 SCC 2",
+      "statute": "Criminal Code",
+      "provision": "s.163.1(4)",
+      "disposition": "read_down",
+      "year": 2001,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "Sauvé v. Canada (Chief Electoral Officer)",
+      "citation": "2002 SCC 68",
+      "statute": "Canada Elections Act",
+      "provision": "s.51(e)",
+      "disposition": "struck",
+      "year": 2002,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "Figueroa v. Canada (AG)",
+      "citation": "2003 SCC 37",
+      "statute": "Canada Elections Act",
+      "provision": "s.370 (50-candidate rule)",
+      "disposition": "struck",
+      "year": 2003,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "Canadian Foundation for Children v. Canada (AG)",
+      "citation": "2004 SCC 4",
+      "statute": "Criminal Code",
+      "provision": "s.43",
+      "disposition": "read_down",
+      "year": 2004,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "Chaoulli v. Quebec (AG)",
+      "citation": "2005 SCC 35",
+      "statute": "Health Insurance Act (QC)",
+      "provision": "s.15",
+      "disposition": "struck",
+      "year": 2005,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "Charkaoui v. Canada (Citizenship and Immigration)",
+      "citation": "2007 SCC 9",
+      "statute": "Immigration and Refugee Protection Act",
+      "provision": "ss.33, 77-85 (security certificate)",
+      "disposition": "struck",
+      "year": 2007,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. D.B.",
+      "citation": "2008 SCC 25",
+      "statute": "Youth Criminal Justice Act",
+      "provision": "ss.62-75 (presumptive adult sentencing)",
+      "disposition": "struck",
+      "year": 2008,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "Greater Vancouver Transportation Authority v. CFS",
+      "citation": "2009 SCC 31",
+      "statute": "GVTA/BC Transit advertising policies",
+      "provision": "Policies 1 & 2",
+      "disposition": "struck",
+      "year": 2009,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "Canada (AG) v. PHS Community Services Society",
+      "citation": "2011 SCC 44",
+      "statute": "Controlled Drugs and Substances Act",
+      "provision": "ss.4(1), 5(1) as applied to Insite",
+      "disposition": "declared_invalid",
+      "year": 2011,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Tse",
+      "citation": "2012 SCC 16",
+      "statute": "Criminal Code",
+      "provision": "s.184.4",
+      "disposition": "struck",
+      "year": 2012,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Bedford",
+      "citation": "2013 SCC 72",
+      "statute": "Criminal Code",
+      "provision": "ss.210, 212(1)(j), 213(1)(c)",
+      "disposition": "struck",
+      "year": 2013,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "Canada (AG) v. Whaling",
+      "citation": "2014 SCC 20",
+      "statute": "Abolition of Early Parole Act",
+      "provision": "s.10(1)",
+      "disposition": "struck",
+      "year": 2014,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "Carter v. Canada (AG)",
+      "citation": "2015 SCC 5",
+      "statute": "Criminal Code",
+      "provision": "ss.14, 241(b)",
+      "disposition": "struck",
+      "year": 2015,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Nur",
+      "citation": "2015 SCC 15",
+      "statute": "Criminal Code",
+      "provision": "s.95(2)(a)",
+      "disposition": "struck",
+      "year": 2015,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Smith",
+      "citation": "2015 SCC 34",
+      "statute": "Controlled Drugs and Substances Act",
+      "provision": "ss.4, 5 (medical cannabis dried-only restriction)",
+      "disposition": "struck",
+      "year": 2015,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Safarzadeh-Markhali",
+      "citation": "2016 SCC 14",
+      "statute": "Criminal Code",
+      "provision": "s.719(3.1)",
+      "disposition": "struck",
+      "year": 2016,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Lloyd",
+      "citation": "2016 SCC 13",
+      "statute": "Controlled Drugs and Substances Act",
+      "provision": "s.5(3)(a)(i)(D)",
+      "disposition": "struck",
+      "year": 2016,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Boudreault",
+      "citation": "2018 SCC 58",
+      "statute": "Criminal Code",
+      "provision": "s.737 (victim surcharge)",
+      "disposition": "struck",
+      "year": 2018,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Morrison",
+      "citation": "2019 SCC 15",
+      "statute": "Criminal Code",
+      "provision": "s.172.1(3)",
+      "disposition": "struck",
+      "year": 2019,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Bissonnette",
+      "citation": "2022 SCC 23",
+      "statute": "Criminal Code",
+      "provision": "s.745.51",
+      "disposition": "struck",
+      "year": 2022,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Hills",
+      "citation": "2023 SCC 2",
+      "statute": "Criminal Code",
+      "provision": "s.244.2(3)(b)",
+      "disposition": "struck",
+      "year": 2023,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Bykovets",
+      "citation": "2024 SCC 6",
+      "statute": "(Charter s.8 remedy, not s.52 strike)",
+      "provision": "N/A",
+      "disposition": "declared_invalid",
+      "year": 2024,
+      "include_in_calibration": false
+    },
+    {
+      "case_name": "R. v. Sharma",
+      "citation": "2022 SCC 39",
+      "statute": "Criminal Code",
+      "provision": "ss.742.1(c), 742.1(e)(ii)",
+      "disposition": "upheld_on_appeal",
+      "year": 2022,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Keegstra",
+      "citation": "[1990] 3 SCR 697",
+      "statute": "Criminal Code",
+      "provision": "s.319(2) (wilful promotion of hatred)",
+      "disposition": "upheld",
+      "year": 1990,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Butler",
+      "citation": "[1992] 1 SCR 452",
+      "statute": "Criminal Code",
+      "provision": "s.163 (obscenity)",
+      "disposition": "upheld",
+      "year": 1992,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Mills",
+      "citation": "[1999] 3 SCR 668",
+      "statute": "Criminal Code",
+      "provision": "ss.278.1-278.91 (sexual-history records regime)",
+      "disposition": "upheld",
+      "year": 1999,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Labaye",
+      "citation": "2005 SCC 80",
+      "statute": "Criminal Code",
+      "provision": "s.210 (bawdy-house — common law 'harm' test)",
+      "disposition": "upheld",
+      "year": 2005,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Khawaja",
+      "citation": "2012 SCC 69",
+      "statute": "Criminal Code",
+      "provision": "s.83.01 (terrorism activity definition)",
+      "disposition": "upheld",
+      "year": 2012,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "Canadian Doctors for Refugee Care v. Canada",
+      "citation": "2014 FC 651",
+      "statute": "Interim Federal Health Program (OIC)",
+      "provision": "2012 OIC cuts",
+      "disposition": "struck",
+      "year": 2014,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. K.R.J.",
+      "citation": "2016 SCC 31",
+      "statute": "Criminal Code",
+      "provision": "s.161(1)(c)-(d) (retrospective application)",
+      "disposition": "read_down",
+      "year": 2016,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "Reference re Genetic Non-Discrimination Act",
+      "citation": "2020 SCC 17",
+      "statute": "Genetic Non-Discrimination Act",
+      "provision": "ss.1-7",
+      "disposition": "upheld",
+      "year": 2020,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Fearon",
+      "citation": "2014 SCC 77",
+      "statute": "Common-law search incident to arrest",
+      "provision": "search of cellphones",
+      "disposition": "upheld",
+      "year": 2014,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Comeau",
+      "citation": "2018 SCC 15",
+      "statute": "Liquor Control Act (NB)",
+      "provision": "s.134(b)",
+      "disposition": "upheld",
+      "year": 2018,
+      "include_in_calibration": true
+    },
+    {
+      "case_name": "R. v. Michaud",
+      "citation": "2015 ONCA 585",
+      "statute": "Highway Traffic Act (ON)",
+      "provision": "s.68.1 (speed limiter)",
+      "disposition": "upheld",
+      "year": 2015,
+      "include_in_calibration": true
+    }
+  ]
+}

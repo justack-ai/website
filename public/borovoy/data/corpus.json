@@ -1,0 +1,536 @@
+{
+  "metadata": {
+    "version": "v1.0",
+    "scored_at": "2026-04-16",
+    "scorer": "Borovoy Coefficient v1.0 prototype scoring (Opus 4.7 reasoning, temperature 0)",
+    "corpus_size": 15,
+    "note": "Prototype corpus for demonstration. Scores are provisional and subject to the rebuttable-presumption protocol. This is a sample, not a census of Canadian law."
+  },
+  "laws": [
+    {
+      "id": "fed-01",
+      "law": "Access to Information Act, RSC 1985, c A-1",
+      "jurisdiction": "federal",
+      "purpose_stated": "To extend the present laws of Canada to provide a right of access to information in records under the control of a government institution.",
+      "borovoy_coefficient": 42,
+      "band": "Misaligned",
+      "dimensions": {
+        "purpose_effect_gap": 62,
+        "proportionality": 28,
+        "overbreadth": 18,
+        "rights_intrusion": 22,
+        "enforcement_asymmetry": 70
+      },
+      "drift_vectors": [
+        {
+          "from": "Right of access to information",
+          "to": "Delayed, redacted, or refused disclosure by default",
+          "evidence": "Office of the Information Commissioner Annual Reports 2015-2023; Report 2022-2023 'Rising numbers of overdue complaints'",
+          "goodhart_variant": "adversarial"
+        }
+      ],
+      "evidence": [
+        {"quote": "The Act is broken. Rather than meeting the letter and spirit of the law, government institutions are increasingly treating access as an afterthought.", "source": "Office of the Information Commissioner of Canada, Annual Report 2022-2023"},
+        {"quote": "After 40 years the Act is the worst access regime in the Commonwealth.", "source": "Centre for Law and Democracy, RTI Rating 2023"}
+      ],
+      "design_reforms": [
+        "Statutory response deadlines with automatic disclosure on default",
+        "Order-making powers for the Information Commissioner (partly implemented 2019 by C-58 but narrowly)",
+        "Fee structures that don't deter requests",
+        "Annual disparate-impact reporting on which requesters are served worst"
+      ],
+      "lay_summary": "The Access to Information Act is supposed to give Canadians a right to see government records. In practice, institutions delay, redact, and refuse — the Information Commissioner herself calls the system 'broken.' The law scores as misaligned because the bureaucracy optimizes non-disclosure while the statute promises disclosure.",
+      "limitations": "Bill C-58 (2019) reforms added Commissioner order-making powers; effects still accumulating. Score reflects 2023 evidence base."
+    },
+    {
+      "id": "fed-02",
+      "law": "Anti-Terrorism Act, 2015 (Bill C-51), SC 2015, c 20",
+      "jurisdiction": "federal",
+      "purpose_stated": "To protect Canadians from terrorism, including by authorizing CSIS to reduce threats to the security of Canada through measures that may contravene Charter-protected rights if authorized by judicial warrant.",
+      "borovoy_coefficient": 78,
+      "band": "Severe misalignment",
+      "dimensions": {
+        "purpose_effect_gap": 82,
+        "proportionality": 78,
+        "overbreadth": 88,
+        "rights_intrusion": 78,
+        "enforcement_asymmetry": 58
+      },
+      "drift_vectors": [
+        {
+          "from": "Preventing terrorist attacks",
+          "to": "Authorizing warrants to breach Charter rights; capturing protest activity under 'advocating or promoting terrorism offences in general'",
+          "evidence": "Forcese & Roach, False Security: The Radicalization of Canadian Anti-Terrorism (Irwin Law 2015)",
+          "goodhart_variant": "extremal"
+        },
+        {
+          "from": "Targeted counter-terrorism intelligence",
+          "to": "Pan-agency information sharing across 17 federal bodies under the Security of Canada Information Sharing Act",
+          "evidence": "Privacy Commissioner of Canada, Statement on Bill C-51 (2015); partial rollback via Bill C-59 (2019)",
+          "goodhart_variant": "causal"
+        }
+      ],
+      "evidence": [
+        {"quote": "The Act authorizes judicial warrants that would infringe Charter rights — a reversal of the warrant's traditional function as a Charter shield.", "source": "Craig Forcese & Kent Roach, False Security (Irwin Law 2015), winning the 2016 Canadian Law and Society Association Book Prize"},
+        {"quote": "The definition of 'terrorist activity' could encompass an arguably unlawful teachers' strike.", "source": "Alan Borovoy, CCLA testimony on Bill C-36 (2001) — the direct analytic ancestor"}
+      ],
+      "design_reforms": [
+        "Narrow 'advocating or promoting terrorism in general' to specific incitement",
+        "Require warrants to comply with the Charter rather than authorize breaches of it",
+        "Sunset clause with affirmative five-year re-enactment",
+        "Independent review with hard powers over CSIS threat-reduction measures"
+      ],
+      "lay_summary": "Bill C-51 was sold as necessary anti-terrorism equipment. In practice, it authorizes judges to approve Charter violations, criminalizes speech that merely 'promotes terrorism in general,' and enables information-sharing across seventeen agencies. Scholars call it a 'false promise of security' — the direct descendant of the Bill C-36 overreach Borovoy diagnosed in 2001.",
+      "limitations": "Partially amended by Bill C-59 (2019). Full constitutional challenge ongoing; score reflects post-C-59 architecture."
+    },
+    {
+      "id": "fed-03",
+      "law": "Section 13, Canadian Human Rights Act, RSC 1985, c H-6 (pre-repeal)",
+      "jurisdiction": "federal",
+      "purpose_stated": "To prevent the communication, by telephone or Internet, of hate messages likely to expose identifiable groups to hatred or contempt.",
+      "borovoy_coefficient": 74,
+      "band": "Severe misalignment",
+      "dimensions": {
+        "purpose_effect_gap": 82,
+        "proportionality": 68,
+        "overbreadth": 88,
+        "rights_intrusion": 72,
+        "enforcement_asymmetry": 50
+      },
+      "drift_vectors": [
+        {
+          "from": "Preventing hate propaganda against identifiable groups",
+          "to": "Extending tribunal jurisdiction to opinion journalism and polemical writing, with no intent requirement and truth not a defence",
+          "evidence": "Richard Moon, Report to the Canadian Human Rights Commission Concerning Section 13 of the CHRA (2008, recommending repeal)",
+          "goodhart_variant": "extremal"
+        },
+        {
+          "from": "Administrative remedial order",
+          "to": "De facto speech regulation via tribunal process that itself is the punishment",
+          "evidence": "Section 13 repealed by Parliament, effective June 2014",
+          "goodhart_variant": "adversarial"
+        }
+      ],
+      "evidence": [
+        {"quote": "When I and other human rights activists advocated the creation of human rights commissions, we never imagined that they might ultimately be used against freedom of speech.", "source": "Alan Borovoy, CCLA General Counsel (1968-2009), ca. 2008"},
+        {"quote": "Intent is not a requirement, and truth and reasonable belief in the truth is no defence.", "source": "CCLA critique of s.13(1) as drafted"}
+      ],
+      "design_reforms": [
+        "Section 13 repealed 2014 (reform effectuated)",
+        "If re-enacted, require specific intent and preserve truth/fair-comment defences",
+        "Confine remedy to administrative relief, not behaviour change orders",
+        "Locate prohibition in the Criminal Code with full due-process protections rather than a tribunal"
+      ],
+      "lay_summary": "Section 13 started as an anti-hate measure and drifted into open-ended speech regulation, lacking intent requirements or truth defences. The man who had helped build Canada's human rights commissions — Alan Borovoy himself — publicly said those commissions had been turned against free speech. Parliament repealed s.13 in 2014.",
+      "limitations": "Now repealed; score applies to the pre-repeal regime. A reconstituted s.13 would require re-scoring."
+    },
+    {
+      "id": "fed-04",
+      "law": "Security Certificate regime, IRPA ss. 77-85 (pre-Charkaoui)",
+      "jurisdiction": "federal",
+      "purpose_stated": "To enable the detention and deportation of non-citizens considered security threats, based on classified evidence not disclosed to the named individual.",
+      "borovoy_coefficient": 86,
+      "band": "Unconstitutional-by-design",
+      "dimensions": {
+        "purpose_effect_gap": 78,
+        "proportionality": 92,
+        "overbreadth": 72,
+        "rights_intrusion": 98,
+        "enforcement_asymmetry": 82
+      },
+      "drift_vectors": [
+        {
+          "from": "Expeditious removal of security threats",
+          "to": "Indefinite detention without disclosure of the case to be met",
+          "evidence": "Charkaoui v. Canada (Citizenship and Immigration), 2007 SCC 9 — regime struck down under Charter ss. 7, 9, 10",
+          "goodhart_variant": "extremal"
+        }
+      ],
+      "evidence": [
+        {"quote": "The secrecy required by the scheme denies the person named in a certificate the opportunity to know the case put against him or her, and hence to challenge the government's case.", "source": "Charkaoui v. Canada (Citizenship and Immigration), 2007 SCC 9 at para 53 (McLachlin CJ)"}
+      ],
+      "design_reforms": [
+        "Special Advocate regime (partially implemented 2008 by Bill C-3)",
+        "Time-limited detention with regular mandatory review",
+        "Disclosure of the essence of the case to the named person",
+        "Independent security-sensitive review body with hard powers"
+      ],
+      "lay_summary": "Security certificates let the government detain non-citizens using evidence they were never allowed to see. The Supreme Court struck down the regime in Charkaoui v. Canada, 2007 SCC 9, because a person cannot meaningfully defend themselves against secret evidence. The regime is the paradigm of a law that missed its mark by making rights-protection mathematically impossible.",
+      "limitations": "Pre-Charkaoui score. The Special Advocate regime added in 2008 by Bill C-3 would score substantially lower on D4 and D2."
+    },
+    {
+      "id": "fed-05",
+      "law": "Criminal Code s.95 mandatory minimum for prohibited firearm possession (pre-Nur)",
+      "jurisdiction": "federal",
+      "purpose_stated": "To deter illegal possession of prohibited or restricted firearms by imposing a three-year mandatory minimum sentence on first offence (five years on second).",
+      "borovoy_coefficient": 74,
+      "band": "Severe misalignment",
+      "dimensions": {
+        "purpose_effect_gap": 78,
+        "proportionality": 82,
+        "overbreadth": 88,
+        "rights_intrusion": 72,
+        "enforcement_asymmetry": 48
+      },
+      "drift_vectors": [
+        {
+          "from": "Deterring gang-related firearm trafficking",
+          "to": "Imposing three-year minimums on people who forgot to renew a firearms licence or who stored a gun in the wrong location",
+          "evidence": "R v Nur, 2015 SCC 15 at paras 82-83 — reasonable hypothetical of licensed owner whose authorization lapsed",
+          "goodhart_variant": "extremal"
+        }
+      ],
+      "evidence": [
+        {"quote": "The reasonably foreseeable applications of the mandatory minimum sentence would impose grossly disproportionate sentences in violation of s.12.", "source": "R v Nur, 2015 SCC 15 at para 83 (McLachlin CJ)"}
+      ],
+      "design_reforms": [
+        "Remove mandatory minimum; retain the maximum",
+        "Graduated offence structure distinguishing trafficking from technical non-compliance",
+        "Judicial discretion for gross-disproportionality cases",
+        "Parliamentary reporting on sentencing distributions to prevent recurrence"
+      ],
+      "lay_summary": "The three-year mandatory minimum was sold as gang-deterrence. In practice, it would have caught licensed firearm owners whose authorization lapsed — sending a spouse or father to prison for three years for what was effectively paperwork non-compliance. The Supreme Court struck it down in R v Nur, 2015 SCC 15 because the law's reasonably foreseeable applications were grossly disproportionate to the offence.",
+      "limitations": "Score reflects pre-Nur regime; the section has been narrowed since."
+    },
+    {
+      "id": "prov-01",
+      "law": "Ontario Safe Streets Act, SO 1999, c 8",
+      "jurisdiction": "provincial",
+      "purpose_stated": "To regulate aggressive solicitation and to address public-safety concerns associated with squeegee work and highway panhandling.",
+      "borovoy_coefficient": 70,
+      "band": "Severe misalignment",
+      "dimensions": {
+        "purpose_effect_gap": 78,
+        "proportionality": 68,
+        "overbreadth": 78,
+        "rights_intrusion": 64,
+        "enforcement_asymmetry": 68
+      },
+      "drift_vectors": [
+        {
+          "from": "Addressing aggressive panhandling",
+          "to": "Criminalizing poverty itself; disproportionate charges against unhoused people",
+          "evidence": "Fair Change Community Legal Clinic v. Ontario (Attorney General), 2024 ONSC (striking down the Act's squeegee provisions as violating s.11(d) presumption of innocence)",
+          "goodhart_variant": "causal"
+        }
+      ],
+      "evidence": [
+        {"quote": "The prohibition on solicitation of persons in stopped vehicles violates the presumption of innocence under s.11(d) of the Charter.", "source": "Fair Change Community Legal Clinic v. Ontario (AG), 2024 ONSC"},
+        {"quote": "The Act punishes status rather than conduct.", "source": "CCLA analysis and press release, 2024"}
+      ],
+      "design_reforms": [
+        "Replace with conduct-specific provisions narrowly targeting threatening behaviour",
+        "Repeal the presumption that solicitation of motorists is inherently dangerous",
+        "Front-line social-service responses rather than ticketing",
+        "Statutory disparate-impact reporting on enforcement"
+      ],
+      "lay_summary": "The Ontario Safe Streets Act was marketed as a public-safety measure targeting squeegee workers. In practice, it criminalized poverty and was enforced almost entirely against unhoused people, producing ticket debt that compounded their situation. The Ontario Superior Court struck down parts of the Act in 2024 for violating the presumption of innocence.",
+      "limitations": "Appeal possibilities; score reflects the 2024 ruling state."
+    },
+    {
+      "id": "prov-02",
+      "law": "Act respecting the Laicity of the State (Quebec Bill 21), SQ 2019, c 12",
+      "jurisdiction": "provincial",
+      "purpose_stated": "To affirm the laicity of the State of Quebec by prohibiting public-sector employees in positions of authority (including teachers) from wearing religious symbols while exercising their functions.",
+      "borovoy_coefficient": 72,
+      "band": "Severe misalignment",
+      "dimensions": {
+        "purpose_effect_gap": 62,
+        "proportionality": 78,
+        "overbreadth": 82,
+        "rights_intrusion": 82,
+        "enforcement_asymmetry": 60
+      },
+      "drift_vectors": [
+        {
+          "from": "State neutrality among religions",
+          "to": "Exclusion of visibly religious Muslim women, Sikh men, and Jewish men from public employment",
+          "evidence": "Hak v. AG Quebec, 2024 QCCA 1254 (Court of Appeal largely upheld the Act, SCC leave granted 2025); statistical evidence of disparate impact on Muslim women in Montreal school boards",
+          "goodhart_variant": "causal"
+        }
+      ],
+      "evidence": [
+        {"quote": "The law produces a disproportionate impact on religious minorities, particularly Muslim women wearing the hijab.", "source": "Hak v. AG Quebec, 2021 QCCS 1466 at paras 724-731 (Blanchard J) — later modified on appeal but finding of disparate impact preserved"},
+        {"quote": "State neutrality does not require the neutrality of the state's employees in the sense of invisibility of their religion.", "source": "Multani v. Commission scolaire Marguerite-Bourgeoys, 2006 SCC 6"}
+      ],
+      "design_reforms": [
+        "Sunset clause tying the s.33 notwithstanding invocation to affirmative re-enactment every five years",
+        "Annual disparate-impact reporting on hiring and promotions across protected grounds",
+        "Narrow the definition of 'position of authority' to exclude education",
+        "Grandparenting provisions for existing employees (partially present)"
+      ],
+      "lay_summary": "Bill 21 forbids people in 'positions of authority' — including teachers — from wearing religious symbols at work. The statute invokes the notwithstanding clause to pre-empt Charter review, but the record shows the law disproportionately excludes visibly religious Muslim women, Sikh men, and Jewish men from public employment. Supreme Court leave was granted in 2025.",
+      "limitations": "SCC hearing pending; the notwithstanding clause invocation complicates proportionality analysis. Score reflects pre-SCC state."
+    },
+    {
+      "id": "prov-03",
+      "law": "Critical Infrastructure Defence Act, SA 2020, c C-32.7 (Alberta)",
+      "jurisdiction": "provincial",
+      "purpose_stated": "To protect essential infrastructure such as pipelines and railways from damage and unauthorized entry.",
+      "borovoy_coefficient": 68,
+      "band": "Severe misalignment",
+      "dimensions": {
+        "purpose_effect_gap": 72,
+        "proportionality": 72,
+        "overbreadth": 82,
+        "rights_intrusion": 64,
+        "enforcement_asymmetry": 55
+      },
+      "drift_vectors": [
+        {
+          "from": "Preventing infrastructure sabotage",
+          "to": "Capturing protest activity, including indigenous land defenders on unceded territory",
+          "evidence": "AUPE v. Alberta, 2025 ABKB; CCLA intervention; s.2(b), s.2(c), s.2(d) Charter arguments",
+          "goodhart_variant": "extremal"
+        }
+      ],
+      "evidence": [
+        {"quote": "The Act's 'essential infrastructure' definition is drafted to capture any protest activity in proximity to a pipeline or highway.", "source": "CCLA, Submission on Bill 1, Critical Infrastructure Defence Act, 2020"}
+      ],
+      "design_reforms": [
+        "Narrow 'essential infrastructure' to defined functional categories",
+        "Incorporate an express s.2(b), (c), (d) Charter savings clause",
+        "Exclude public highways and public rights-of-way",
+        "Sunset clause with affirmative re-enactment"
+      ],
+      "lay_summary": "The Act was sold as a way to protect pipelines. In practice, its broad definitions capture lawful protest and indigenous land-defence activity on unceded territory. The Critical Infrastructure Defence Act is a modern Canadian case of the over-breadth Borovoy diagnosed in 2001: the language goes far beyond what was advertised.",
+      "limitations": "Active litigation; score subject to judicial updates."
+    },
+    {
+      "id": "prov-04",
+      "law": "Civil Forfeiture Act, SBC 2005, c 29 (BC — unexplained wealth order provisions)",
+      "jurisdiction": "provincial",
+      "purpose_stated": "To provide civil remedies to deprive persons of property that is the proceeds or instruments of unlawful activity, including through unexplained wealth orders.",
+      "borovoy_coefficient": 38,
+      "band": "Drift",
+      "dimensions": {
+        "purpose_effect_gap": 42,
+        "proportionality": 38,
+        "overbreadth": 45,
+        "rights_intrusion": 42,
+        "enforcement_asymmetry": 22
+      },
+      "drift_vectors": [
+        {
+          "from": "Seizing proceeds of organized crime",
+          "to": "Reverse-onus civil proceedings against individuals who cannot document lawful sources for legacy family assets",
+          "evidence": "BC Civil Liberties Association, Submissions on UWOs (2019); academic critique in (2021) 99 Can Bar Rev",
+          "goodhart_variant": "regressional"
+        }
+      ],
+      "evidence": [
+        {"quote": "Unexplained wealth orders import a reverse-onus mechanism into civil proceedings that were already criticized for compromising property rights.", "source": "BCCLA, Submission on Civil Forfeiture Act Amendments (2019)"}
+      ],
+      "design_reforms": [
+        "Require a probable-cause threshold before UWOs can issue",
+        "Statutory cap on pursuit of assets below a defined value threshold",
+        "Annual disparate-impact reporting on UWO targets",
+        "Privilege preservation between criminal proceedings and civil UWO processes"
+      ],
+      "lay_summary": "BC's civil forfeiture regime is mostly aligned with its proceeds-of-crime purpose, but the unexplained wealth order provisions have drifted into reverse-onus territory: the government seizes first and asks the citizen to document lawful sources of wealth. The drift is addressable by statutory amendment rather than re-architecture.",
+      "limitations": "Provincial civil forfeiture regimes vary considerably. Score applies to BC's UWO provisions specifically, not the Act as a whole."
+    },
+    {
+      "id": "prov-05",
+      "law": "Ontario Not-for-Profit Corporations Act, 2010, SO 2010, c 15 (ONCA)",
+      "jurisdiction": "provincial",
+      "purpose_stated": "To modernize the incorporation and governance framework for Ontario not-for-profit corporations, replacing the 1907 Corporations Act.",
+      "borovoy_coefficient": 14,
+      "band": "Aligned",
+      "dimensions": {
+        "purpose_effect_gap": 12,
+        "proportionality": 18,
+        "overbreadth": 8,
+        "rights_intrusion": 10,
+        "enforcement_asymmetry": 22
+      },
+      "drift_vectors": [
+        {
+          "from": "Modernizing not-for-profit governance",
+          "to": "Delayed proclamation from 2010 to 2021 resulted in transition burdens for smaller NFPs",
+          "evidence": "Ministry of Government and Consumer Services, implementation reports 2020-2022",
+          "goodhart_variant": "regressional"
+        }
+      ],
+      "evidence": [
+        {"quote": "ONCA substantially modernizes Ontario's not-for-profit governance and is broadly welcomed by the sector.", "source": "Canadian Bar Association Ontario, ONCA Implementation Report (2022)"}
+      ],
+      "design_reforms": [
+        "Continued regulatory-burden review for small NFPs",
+        "Plain-language drafting review",
+        "Sector feedback mechanism for future amendments"
+      ],
+      "lay_summary": "ONCA is the example of what legislative alignment looks like in practice: a statute modernizing not-for-profit governance, welcomed by the sector it regulates, with narrow and documented implementation issues that are addressable by ordinary amendment. A low Borovoy Coefficient is not unflattering — it is the goal.",
+      "limitations": "Implementation is relatively recent (2021); long-run enforcement asymmetry data still accumulating."
+    },
+    {
+      "id": "muni-01",
+      "law": "Toronto Parks Bylaw, Toronto Municipal Code Ch. 608 (encampment enforcement)",
+      "jurisdiction": "municipal",
+      "purpose_stated": "To regulate use of city parks for public enjoyment and safety, including prohibitions on unauthorized camping.",
+      "borovoy_coefficient": 66,
+      "band": "Severe misalignment",
+      "dimensions": {
+        "purpose_effect_gap": 72,
+        "proportionality": 62,
+        "overbreadth": 55,
+        "rights_intrusion": 72,
+        "enforcement_asymmetry": 78
+      },
+      "drift_vectors": [
+        {
+          "from": "Regulating park use for public enjoyment",
+          "to": "Forcible clearing of encampments of unhoused people without equivalent alternative shelter",
+          "evidence": "Black v. Toronto, 2020 ONSC 6398; Ontario Superior Court Justice Schabas on the Trinity Bellwoods clearing operations",
+          "goodhart_variant": "causal"
+        }
+      ],
+      "evidence": [
+        {"quote": "Where a government has failed to provide adequate alternatives, the enforcement of trespass and camping provisions against homeless encampments raises serious Charter concerns.", "source": "Black v. Toronto, 2020 ONSC 6398 at paras 57-62"}
+      ],
+      "design_reforms": [
+        "No-enforcement-without-equivalent-shelter policy",
+        "Warm transition protocols with trauma-informed support",
+        "Disparate-impact reporting on enforcement actions",
+        "Independent oversight of clearing operations"
+      ],
+      "lay_summary": "The parks bylaw was written to regulate public enjoyment. In practice, it is enforced against people who have nowhere else to go, producing rights intrusions the original bylaw never contemplated. Courts have flagged Charter concerns when enforcement proceeds without equivalent shelter alternatives.",
+      "limitations": "Municipal enforcement varies by ward and by operation; scoring reflects the 2021-2024 clearing operations record."
+    },
+    {
+      "id": "muni-02",
+      "law": "Vancouver Street and Traffic Bylaw #2849 (camping/tent provisions)",
+      "jurisdiction": "municipal",
+      "purpose_stated": "To regulate use of streets and public property for traffic safety and public order.",
+      "borovoy_coefficient": 52,
+      "band": "Misaligned",
+      "dimensions": {
+        "purpose_effect_gap": 58,
+        "proportionality": 48,
+        "overbreadth": 55,
+        "rights_intrusion": 58,
+        "enforcement_asymmetry": 48
+      },
+      "drift_vectors": [
+        {
+          "from": "Traffic safety and public order",
+          "to": "Prohibition on sleeping rough in circumstances where shelter access is unavailable",
+          "evidence": "Victoria (City) v. Adams, 2008 BCSC 1363 (persuasive on sleeping rough as Charter-engaged); Pivot Legal Society litigation in Vancouver",
+          "goodhart_variant": "causal"
+        }
+      ],
+      "evidence": [
+        {"quote": "Prohibitions on sleeping in public parks where there is insufficient shelter space to accommodate the homeless population are an unjustified infringement of s.7 of the Charter.", "source": "Victoria (City) v. Adams, 2008 BCSC 1363 at para 219"}
+      ],
+      "design_reforms": [
+        "Shelter-capacity trigger: enforcement suspended when shelter capacity unavailable",
+        "Published daily shelter-capacity data (open data)",
+        "Designated overnight-use zones in circumstances of shelter shortfall",
+        "Disparate-impact reporting"
+      ],
+      "lay_summary": "Vancouver's street and traffic bylaw regulates use of public space. When enforced against people sleeping rough on nights without shelter capacity, the bylaw engages s.7 Charter rights per Victoria v. Adams. The bylaw is addressable by interpretive policy rather than wholesale amendment.",
+      "limitations": "Enforcement policy varies by administration; scoring reflects documented 2022-2024 enforcement patterns."
+    },
+    {
+      "id": "muni-03",
+      "law": "Montreal Bylaw P-6 (protest regulation), CO Montreal 2012 (pre-strike)",
+      "jurisdiction": "municipal",
+      "purpose_stated": "To regulate public demonstrations to protect public safety, requiring advance notice of itineraries and prohibiting masking.",
+      "borovoy_coefficient": 81,
+      "band": "Unconstitutional-by-design",
+      "dimensions": {
+        "purpose_effect_gap": 78,
+        "proportionality": 85,
+        "overbreadth": 92,
+        "rights_intrusion": 82,
+        "enforcement_asymmetry": 62
+      },
+      "drift_vectors": [
+        {
+          "from": "Regulating public-safety aspects of demonstrations",
+          "to": "Criminalizing the core of s.2(b), (c), (d) Charter expression, peaceful assembly, and association",
+          "evidence": "Villeneuve c. Ville de Montréal, 2018 QCCA 321; confirmed in Villeneuve c. Ville de Montréal, 2019 QCCA (further proceedings)",
+          "goodhart_variant": "extremal"
+        }
+      ],
+      "evidence": [
+        {"quote": "Bylaw P-6 imposes a prior restraint on freedom of peaceful assembly that cannot be justified under s.1 of the Charter.", "source": "Villeneuve c. Ville de Montréal, 2018 QCCA 321"}
+      ],
+      "design_reforms": [
+        "Presumption of non-notification; notification required only for demonstrations involving traffic closures above a threshold",
+        "Mask prohibitions tied to criminal intent only (not categorical)",
+        "Independent complaints mechanism for policing of demonstrations",
+        "Annual reporting on kettling and dispersal orders"
+      ],
+      "lay_summary": "Montreal's Bylaw P-6 required protesters to hand police their itineraries and prohibited masks at demonstrations. Courts found that the bylaw restricted the core of peaceful assembly and struck it down in 2018. The Coefficient rates it at the ceiling — the kind of misalignment that cannot be saved by narrowing interpretation.",
+      "limitations": "Bylaw has been repealed/replaced; score applies to the pre-strike regime."
+    },
+    {
+      "id": "muni-04",
+      "law": "Calgary Streets Bylaw 20M88 (aggressive solicitation provisions)",
+      "jurisdiction": "municipal",
+      "purpose_stated": "To regulate use of streets including prohibition of aggressive solicitation that threatens public safety.",
+      "borovoy_coefficient": 28,
+      "band": "Drift",
+      "dimensions": {
+        "purpose_effect_gap": 32,
+        "proportionality": 28,
+        "overbreadth": 32,
+        "rights_intrusion": 22,
+        "enforcement_asymmetry": 28
+      },
+      "drift_vectors": [
+        {
+          "from": "Preventing aggressive solicitation",
+          "to": "Enforcement against peaceful panhandling in high-traffic zones",
+          "evidence": "CCLA, Report on Municipal Anti-Panhandling Bylaws (2021)",
+          "goodhart_variant": "regressional"
+        }
+      ],
+      "evidence": [
+        {"quote": "Municipal bylaws targeting 'aggressive' solicitation are often enforced against peaceful panhandlers in circumstances indistinguishable from protected Charter-expression.", "source": "CCLA, Report on Municipal Anti-Panhandling Bylaws (2021)"}
+      ],
+      "design_reforms": [
+        "Narrow definition to specific threatening conduct",
+        "Front-line outreach alternatives before ticketing",
+        "Disparate-impact reporting on enforcement",
+        "Fine-waiver mechanisms for unhoused individuals"
+      ],
+      "lay_summary": "Calgary's bylaw regulates aggressive solicitation. The text is narrower than Ontario's Safe Streets Act and the enforcement record is less severe, but the definition of 'aggressive' remains elastic and ticket enforcement continues to fall mostly on unhoused people. Addressable by refinement rather than repeal.",
+      "limitations": "Calgary enforcement patterns less documented than Toronto/Vancouver; score may be revised with more empirical data."
+    },
+    {
+      "id": "muni-05",
+      "law": "Vancouver Noise Control Bylaw #6555",
+      "jurisdiction": "municipal",
+      "purpose_stated": "To regulate excessive and disturbing noise in the City of Vancouver for the health and quiet enjoyment of residents.",
+      "borovoy_coefficient": 12,
+      "band": "Aligned",
+      "dimensions": {
+        "purpose_effect_gap": 14,
+        "proportionality": 12,
+        "overbreadth": 10,
+        "rights_intrusion": 8,
+        "enforcement_asymmetry": 18
+      },
+      "drift_vectors": [
+        {
+          "from": "Preventing excessive noise",
+          "to": "Marginal over-inclusion in complaints about industrial zone noise",
+          "evidence": "Vancouver Noise Bylaw Annual Enforcement Reports",
+          "goodhart_variant": "regressional"
+        }
+      ],
+      "evidence": [
+        {"quote": "The bylaw establishes clear decibel thresholds, time-of-day windows, and an exemption structure for essential services.", "source": "City of Vancouver, Noise Control Bylaw 6555 as amended"}
+      ],
+      "design_reforms": [
+        "Annual review of decibel thresholds against updated health evidence",
+        "Open-data publication of noise complaints and outcomes",
+        "Community-zone exceptions for cultural events"
+      ],
+      "lay_summary": "Vancouver's noise bylaw uses clear decibel thresholds and time-of-day windows, is enforced consistently, and has a narrow Charter footprint. It is the municipal equivalent of what alignment looks like — measurable standards, narrow definitions, and a feedback loop to residents. A low coefficient earned honestly.",
+      "limitations": "Score reflects the bylaw as currently administered; some enforcement-disparity data gaps."
+    }
+  ]
+}

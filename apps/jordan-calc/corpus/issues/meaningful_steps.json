@@ -1,0 +1,29 @@
+{
+  "issue_id": "meaningful_steps",
+  "issue_label": "Meaningful Steps — Defence Obligation to Address Delay",
+  "issue_category": "procedure",
+  "default_jurisdiction": "FED",
+  "default_authority": [
+    {
+      "citation": "R v Jordan, 2016 SCC 27",
+      "court": "SCC",
+      "jurisdiction": "FED",
+      "year": 2016,
+      "paragraph_refs": ["para 48"],
+      "principle": "Even below the ceiling, a s. 11(b) application may fail if the defence did not take meaningful steps to address delay. Above the ceiling, meaningful steps are still relevant to whether the defence has standing and whether the application reflects genuine prejudice rather than tactical use of delay the defence allowed to accumulate.",
+      "effective_date": "2016-07-08",
+      "superseded_by": null
+    }
+  ],
+  "default_confidence_tier": 3,
+  "jurisdiction_variants": [],
+  "pending_authority": [],
+  "computed_stability_score": 0.65,
+  "last_reviewed_date": "2026-03-21",
+  "reviewed_by": "PAI",
+  "created_date": "2026-03-21",
+  "version": 1,
+  "requires_counsel_review": true,
+  "liberty_interest_sensitive": true,
+  "notes": "Meaningful steps gate: if no steps recorded and dominant status is Red, app suppresses Red result and shows Tier 5 checklist panel. Michael must write the Tier 5 checklist items for this issue before launch. Meaningful steps types: requested early dates; cooperated with Crown scheduling; raised delay concerns on record; opposed unnecessary adjournments."
+}

@@ -1,0 +1,42 @@
+{
+  "law_id": "fed-03",
+  "law": "Section 13, Canadian Human Rights Act, RSC 1985, c H-6 (pre-repeal)",
+  "tier": "MTM-L",
+  "mtm_l": 0,
+  "faithfulness": 1,
+  "excess": 0,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "purposes": [
+    "To prevent the communication, by telephone or Internet, of hate messages likely to expose identifiable groups to hatred or contempt."
+  ],
+  "provisions": [
+    {
+      "id": "s. 13(1)",
+      "text": "It is a discriminatory practice for a person or a group of persons acting in concert to communicate telephonically or to cause to be so communicated, repeatedly, in whole or in part by means of the facilities of a telecommunication undertaking within the legislative authority of Parliament, any matter that is likely to expose a person or persons to hatred or contempt by reason of the fact that that person or those persons are identifiable on the basis of a prohibited ground of discrimination. (from training data)"
+    },
+    {
+      "id": "s. 53(2)",
+      "text": "If the member or panel assigned to inquire into a complaint is satisfied that the complaint is substantiated, the member or panel may make an order against the person found to be engaging or to have engaged in the discriminatory practice... (from training data)"
+    },
+    {
+      "id": "s. 54(1)",
+      "text": "If, at the conclusion of its inquiry, a panel finds that the complaint is substantiated, it may... make an order against the person found to be engaging or to have engaged in the discriminatory practice and include in the order any of the following terms that it considers appropriate: (a) that the person cease the discriminatory practice... (c) that the person pay a penalty... (from training data)"
+    }
+  ],
+  "serves_matrix": [
+    [
+      1
+    ],
+    [
+      1
+    ],
+    [
+      1
+    ]
+  ],
+  "derivation": "MTM-Literal derivation\n  m = |purposes| = 1\n  n = |provisions| = 3\n  purposes served by ≥1 provision = 1/1\n  → F (Faithfulness) = 1/1 = 1.0000\n  provisions serving no purpose = 0/3\n  → X (Excess)       = 0/3 = 0.0000\n  α = 0.5, β = 0.5\n  MTM-L = 100 · [α · (1 − F) + β · X]\n        = 100 · [0.5 · (1 − 1.0000) + 0.5 · 0.0000]\n        = 100 · [0.0000 + 0.0000]\n        = 0.00",
+  "scored_at": "2026-04-18T01:51:18.131Z",
+  "model": "gemini-2.5-pro",
+  "version": "v1.0"
+}

@@ -1,0 +1,46 @@
+{
+  "law_id": "muni-04",
+  "law": "Calgary Streets Bylaw 20M88 (aggressive solicitation provisions)",
+  "tier": "MTM-L",
+  "mtm_l": 0,
+  "faithfulness": 1,
+  "excess": 0,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "purposes": [
+    "To regulate use of streets",
+    "prohibition of aggressive solicitation that threatens public safety"
+  ],
+  "provisions": [
+    {
+      "id": "s. 11.1(1)",
+      "text": "No person shall solicit in an aggressive manner in any public place. (from training data)"
+    },
+    {
+      "id": "s. 11.1(2)(b)",
+      "text": "A person solicits in an aggressive manner if they obstruct the path of the person being solicited. (from training data)"
+    },
+    {
+      "id": "s. 11.1(2)(c)",
+      "text": "A person solicits in an aggressive manner if they use abusive or profane language. (from training data)"
+    }
+  ],
+  "serves_matrix": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "derivation": "MTM-Literal derivation\n  m = |purposes| = 2\n  n = |provisions| = 3\n  purposes served by ≥1 provision = 2/2\n  → F (Faithfulness) = 2/2 = 1.0000\n  provisions serving no purpose = 0/3\n  → X (Excess)       = 0/3 = 0.0000\n  α = 0.5, β = 0.5\n  MTM-L = 100 · [α · (1 − F) + β · X]\n        = 100 · [0.5 · (1 − 1.0000) + 0.5 · 0.0000]\n        = 100 · [0.0000 + 0.0000]\n        = 0.00",
+  "scored_at": "2026-04-18T01:53:49.743Z",
+  "model": "gemini-2.5-pro",
+  "version": "v1.0"
+}

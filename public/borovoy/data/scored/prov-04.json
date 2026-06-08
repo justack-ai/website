@@ -1,0 +1,42 @@
+{
+  "law_id": "prov-04",
+  "law": "Civil Forfeiture Act, SBC 2005, c 29 (BC — unexplained wealth order provisions)",
+  "tier": "MTM-L",
+  "mtm_l": 0,
+  "faithfulness": 1,
+  "excess": 0,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "purposes": [
+    "To provide civil remedies to deprive persons of property that is the proceeds or instruments of unlawful activity"
+  ],
+  "provisions": [
+    {
+      "id": "s. 22.02(1)",
+      "text": "The director may apply to the Supreme Court for an unexplained wealth order against property if the director has reason to believe that the total value of the property is greater than $75 000 and there are reasonable grounds to suspect that the owner's known authorized income is insufficient to have acquired the property. (from training data)"
+    },
+    {
+      "id": "s. 22.04(1)",
+      "text": "An unexplained wealth order must require the respondent to provide to the director, within the time specified in the order, information respecting the respondent's interest in the specified property, how the respondent acquired the specified property, and any other information or record specified by the court. (from training data)"
+    },
+    {
+      "id": "s. 22.07(1)",
+      "text": "If a respondent fails to comply with an unexplained wealth order respecting specified property, the court may, in a forfeiture proceeding respecting the specified property, draw an adverse inference against the respondent. (from training data)"
+    }
+  ],
+  "serves_matrix": [
+    [
+      1
+    ],
+    [
+      1
+    ],
+    [
+      1
+    ]
+  ],
+  "derivation": "MTM-Literal derivation\n  m = |purposes| = 1\n  n = |provisions| = 3\n  purposes served by ≥1 provision = 1/1\n  → F (Faithfulness) = 1/1 = 1.0000\n  provisions serving no purpose = 0/3\n  → X (Excess)       = 0/3 = 0.0000\n  α = 0.5, β = 0.5\n  MTM-L = 100 · [α · (1 − F) + β · X]\n        = 100 · [0.5 · (1 − 1.0000) + 0.5 · 0.0000]\n        = 100 · [0.0000 + 0.0000]\n        = 0.00",
+  "scored_at": "2026-04-18T01:52:44.790Z",
+  "model": "gemini-2.5-pro",
+  "version": "v1.0"
+}

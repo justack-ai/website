@@ -1,0 +1,93 @@
+{
+  "issue_id": "remedy_framework",
+  "issue_label": "Remedy for Above-Ceiling Delay — Stay of Proceedings",
+  "issue_category": "procedure",
+  "default_jurisdiction": "FED",
+  "default_authority": [
+    {
+      "citation": "R v Jordan, 2016 SCC 27",
+      "court": "SCC",
+      "jurisdiction": "FED",
+      "year": 2016,
+      "paragraph_refs": ["para 46", "para 47", "para 48"],
+      "principle": "Where net delay exceeds the presumptive ceiling and the Crown cannot rebut the presumption of unreasonable delay, a stay of proceedings is the remedy. The stay is the sole remedy for pre-verdict above-ceiling delay under current law.",
+      "effective_date": "2016-07-08",
+      "superseded_by": null
+    }
+  ],
+  "default_confidence_tier": 4,
+  "jurisdiction_variants": [
+    {
+      "jurisdiction": "ON",
+      "variance_description": "The ONCA in R v R.B.-C. (2024 ONCA 930) applied a sentence reduction rather than a stay for post-verdict sentencing delay (Charley framework). This is now at the SCC (File 41677). This variant applies only to post-verdict delay; pre-verdict above-ceiling delay remains stay-only in Ontario.",
+      "controlling_authority": [
+        {
+          "citation": "R v R.B.-C., 2024 ONCA 930",
+          "court": "CA",
+          "jurisdiction": "ON",
+          "year": 2024,
+          "paragraph_refs": [],
+          "principle": "For post-verdict sentencing delay, a sentence reduction may be an appropriate remedy in lieu of a stay (Charley framework). Does not apply to pre-verdict above-ceiling delay.",
+          "effective_date": "2024-01-01",
+          "superseded_by": null
+        }
+      ],
+      "confidence_tier": 4,
+      "stability_score": 0.35,
+      "notes": "R.B.-C. is now at the SCC (File 41677). If SCC endorses sentence reduction for post-verdict delay, this creates a precedent for remedial flexibility that may pressure the pre-verdict stay-only rule."
+    }
+  ],
+  "pending_authority": [
+    {
+      "case_name": "R v Vrbanic",
+      "scc_file": "41741",
+      "issue": "Whether the complexity exception scope should be expanded; AG BC argues Jordan framework is 'an anomaly' and urges 'greater remedial flexibility'",
+      "hearing_date": "2025-12-04",
+      "status": "decided",
+      "potential_impact": "Decided 2026-05-29 (R v Vrbanic, 2026 SCC 19). The Court REFUSED to create a residual remedial discretion ('would resurrect the Morin balancing Jordan was meant to bury'); the stay REMAINS the automatic remedy for a proven pre-verdict breach. It did signal that Rahey may be revisited in a future case (para 81), so remedial flexibility remains a live forward question.",
+      "impact_direction": "expand_remedy",
+      "added_date": "2026-03-21",
+      "last_checked": "2026-06-08",
+      "resolved_date": "2026-05-29",
+      "resolution_note": "Decided as R v Vrbanic, 2026 SCC 19. Outcome REINFORCED the stay-only rule for now (residual discretion refused), with a forward signal (Rahey may be revisited). Pending Michael review.",
+      "verified": true
+    },
+    {
+      "case_name": "R v R.B.-C.",
+      "scc_file": "41677",
+      "issue": "Whether sentence reduction is a valid remedy for post-verdict delay in lieu of a stay",
+      "hearing_date": "2026-01-16",
+      "status": "heard_under_reserve",
+      "potential_impact": "Heard 2026-01-16; judgment reserved as of 2026-06-08. The case to watch for whether the SCC will endorse a non-stay remedy (the thread Vrbanic left open re Rahey). If affirmed, remedial-flexibility precedent that may pressure the pre-verdict stay-only rule.",
+      "impact_direction": "expand_remedy",
+      "added_date": "2026-03-21",
+      "last_checked": "2026-06-08",
+      "resolved_date": null,
+      "resolution_note": null,
+      "verified": true
+    },
+    {
+      "case_name": "Bill C-16 (Protecting Victims Act)",
+      "scc_file": null,
+      "legislation_id": "Bill C-16 (2025)",
+      "issue": "Would legislate that a stay should not be ordered unless the court is satisfied no other remedy would be appropriate",
+      "hearing_date": null,
+      "status": "report_stage",
+      "potential_impact": "If proclaimed in force: courts would be required to consider alternatives to a stay before ordering one. Advanced to report stage (committee reported with amendments 2026-05-25; report-stage debate began 2026-06-03; time-allocation motion carried 2026-06-04). Still NOT law: no third reading, no Senate passage, no Royal Assent, no proclamation.",
+      "impact_direction": "restrict_remedy",
+      "added_date": "2026-03-21",
+      "last_checked": "2026-06-08",
+      "resolved_date": null,
+      "resolution_note": null,
+      "verified": true
+    }
+  ],
+  "computed_stability_score": 0.45,
+  "last_reviewed_date": "2026-06-08",
+  "reviewed_by": "PAI",
+  "created_date": "2026-03-21",
+  "version": 2,
+  "requires_counsel_review": false,
+  "liberty_interest_sensitive": true,
+  "notes": "Vrbanic (2026 SCC 19) RESOLVED and reinforced the pre-verdict stay-only rule today (residual discretion refused). Tier 4 retained because two forward pressures remain: R.B.-C. (SCC 41677, reserved) on a non-stay remedy for post-verdict delay, and the Court's own signal that Rahey may be revisited; plus Bill C-16 (report stage, not yet law). App remedy output should keep a third-category placeholder for possible future remedial flexibility. The Vrbanic amber banner can be retired; a Bill C-16 / R.B.-C. watch banner remains appropriate."
+}

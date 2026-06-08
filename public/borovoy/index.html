@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Borovoy Coefficient — A Civil-Liberties Measure of Legislative Alignment</title>
+<meta name="description" content="A 0-to-100 measure of the gap between what a Canadian law promises and what it actually does. In honour of Alan Borovoy." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="/borovoy/corpus-embed.js"></script>
+
+<style>
+:root {
+  --cream: #F5F1E8;
+  --paper: #FEFBF5;
+  --sage: #7A8471;
+  --sage-light: #9CA986;
+  --sage-pale: #D8DCCC;
+  --forest: #2C3A2C;
+  --rust: #A66B4A;
+  --terracotta: #C97B52;
+  --olive: #9CA986;
+  --ink: #2A2824;
+  --ink-soft: #5A544C;
+  --mist: #E8E2D3;
+  --band-aligned: #7A8471;
+  --band-drift: #B5A16B;
+  --band-misaligned: #C9955F;
+  --band-severe: #B86A4A;
+  --band-uncon: #8E3F2B;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.65;
+  font-size: 17px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+.container-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+
+/* ==== Top bar ==== */
+.topbar {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--mist);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.topbar-inner { display: flex; justify-content: space-between; align-items: center; }
+.topbar-logo { font-family: 'Fraunces', serif; font-size: 18px; letter-spacing: 0; text-transform: none; color: var(--forest); font-weight: 500; }
+.topbar-logo em { font-style: italic; color: var(--sage); }
+.topbar-nav a { color: var(--ink-soft); text-decoration: none; margin-left: 28px; font-weight: 500; }
+.topbar-nav a:hover { color: var(--forest); }
+
+/* ==== Hero ==== */
+.hero { padding: 96px 0 80px; }
+.hero-kicker { font-family: 'Inter'; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage); margin-bottom: 28px; font-weight: 600; }
+.hero-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: var(--forest);
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+.hero-title em { font-style: italic; color: var(--rust); font-weight: 400; }
+.hero-dek {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(20px, 2.2vw, 24px);
+  line-height: 1.5;
+  color: var(--ink);
+  font-weight: 300;
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+.hero-meta {
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-style: italic;
+  padding-top: 24px;
+  border-top: 1px solid var(--mist);
+  max-width: 640px;
+}
+
+/* ==== Section headers ==== */
+section { padding: 72px 0; }
+section.alt { background: var(--paper); }
+.sec-kicker {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.sec-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--forest);
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+.sec-title em { font-style: italic; color: var(--rust); }
+.sec-body p { margin-bottom: 20px; }
+.sec-body p:last-child { margin-bottom: 0; }
+
+/* ==== Formula breakdown ==== */
+.formula-box {
+  background: var(--paper);
+  border: 1px solid var(--mist);
+  padding: 40px;
+  margin: 48px 0;
+  border-left: 3px solid var(--sage);
+}
+.formula-line {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--forest);
+  text-align: center;
+}
+.formula-caption { font-size: 14px; color: var(--ink-soft); text-align: center; margin-top: 16px; font-style: italic; }
+.dim-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 40px; }
+.dim-card {
+  background: var(--paper);
+  border: 1px solid var(--mist);
+  padding: 24px;
+}
+.dim-num { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--sage); font-weight: 500; letter-spacing: 0.05em; }
+.dim-name { font-family: 'Fraunces', serif; font-size: 22px; color: var(--forest); margin-top: 6px; margin-bottom: 12px; font-weight: 500; }
+.dim-desc { font-size: 15px; color: var(--ink-soft); line-height: 1.55; }
+.dim-anchor { font-size: 12px; color: var(--sage); margin-top: 14px; font-style: italic; border-top: 1px solid var(--mist); padding-top: 12px; }
+
+/* ==== Corpus dashboard ==== */
+.corpus-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--mist);
+}
+.filter-btn {
+  background: none;
+  border: 1px solid var(--mist);
+  padding: 10px 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: all 0.15s ease;
+}
+.filter-btn:hover { border-color: var(--sage); color: var(--forest); }
+.filter-btn.active { background: var(--forest); color: var(--cream); border-color: var(--forest); }
+
+/* Leaderboard */
+.leaderboard { background: var(--paper); border: 1px solid var(--mist); }
+.leaderboard-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 120px 140px;
+  gap: 20px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--mist);
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.leaderboard-row:hover { background: var(--mist); }
+.leaderboard-row:last-child { border-bottom: none; }
+.leaderboard-header {
+  background: var(--forest);
+  color: var(--cream);
+  font-family: 'Inter';
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: default;
+}
+.leaderboard-header:hover { background: var(--forest); }
+.coef-cell {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--forest);
+  display: flex; align-items: center; gap: 10px;
+}
+.coef-bar {
+  flex: 1; max-width: 70px; height: 8px; background: var(--mist); position: relative;
+}
+.coef-bar-fill { position: absolute; left: 0; top: 0; height: 100%; background: var(--sage); }
+.law-name { font-family: 'Fraunces', serif; color: var(--forest); font-size: 16px; font-weight: 500; }
+.law-sub { font-size: 12px; color: var(--ink-soft); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+.band-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  border-radius: 0;
+}
+.band-pill.aligned { background: var(--band-aligned); }
+.band-pill.drift { background: var(--band-drift); }
+.band-pill.misaligned { background: var(--band-misaligned); }
+.band-pill.severe { background: var(--band-severe); }
+.band-pill.unconstitutional { background: var(--band-uncon); }
+
+/* Detail card */
+.detail-card {
+  background: var(--paper);
+  border: 1px solid var(--mist);
+  padding: 40px;
+  margin-top: 16px;
+  display: none;
+}
+.detail-card.open { display: block; }
+.detail-grid { display: grid; grid-template-columns: 1fr 320px; gap: 48px; margin-top: 24px; }
+@media (max-width: 768px) { .detail-grid { grid-template-columns: 1fr; } }
+.detail-title { font-family: 'Fraunces', serif; font-size: 24px; color: var(--forest); font-weight: 500; margin-bottom: 8px; line-height: 1.2; }
+.detail-jurisdiction { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); font-weight: 600; }
+.detail-sec { margin-bottom: 28px; }
+.detail-sec h4 {
+  font-family: 'Inter';
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--sage);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.detail-sec p, .detail-sec li { font-size: 15px; line-height: 1.6; color: var(--ink); }
+.detail-sec ul { padding-left: 20px; }
+.detail-sec ul li { margin-bottom: 6px; }
+.quote-block {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 16px;
+  border-left: 2px solid var(--rust);
+  padding-left: 16px;
+  margin: 12px 0;
+  color: var(--ink);
+}
+.quote-source { font-size: 12px; color: var(--ink-soft); margin-top: 6px; font-style: normal; }
+.drift-vector {
+  background: var(--cream);
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-left: 2px solid var(--sage);
+  font-size: 14px;
+}
+.drift-vector .gh-var {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--rust);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.radar-container {
+  background: var(--cream);
+  padding: 20px;
+  border: 1px solid var(--mist);
+  position: sticky;
+  top: 20px;
+}
+.radar-title { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--sage); font-weight: 600; margin-bottom: 14px; text-align: center; }
+.big-score {
+  text-align: center;
+  font-family: 'Fraunces', serif;
+  font-size: 72px;
+  line-height: 1;
+  color: var(--forest);
+  font-weight: 400;
+  margin: 14px 0 6px;
+}
+.big-score-caption { text-align: center; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
+.detail-close {
+  background: none;
+  border: 1px solid var(--mist);
+  padding: 8px 18px;
+  font-family: 'Inter';
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Heatmap */
+.heatmap { background: var(--paper); border: 1px solid var(--mist); padding: 32px; margin-top: 48px; }
+.heatmap-title { font-family: 'Fraunces', serif; font-size: 22px; color: var(--forest); margin-bottom: 20px; }
+.heatmap-legend { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; font-size: 12px; color: var(--ink-soft); }
+.legend-sw { width: 18px; height: 10px; display: inline-block; margin-right: 6px; vertical-align: middle; }
+.heatmap-grid { display: grid; grid-template-columns: 120px repeat(5, 1fr); gap: 6px; align-items: center; }
+.hm-header { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sage); font-weight: 600; padding: 8px; text-align: center; }
+.hm-row-label { font-size: 13px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.06em; padding: 8px 0; font-weight: 500; }
+.hm-cell { padding: 10px; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: white; font-weight: 500; }
+
+/* Borovoy tribute */
+.tribute { padding: 96px 0; background: var(--forest); color: var(--cream); }
+.tribute .sec-kicker { color: var(--sage-pale); }
+.tribute .sec-title { color: var(--cream); }
+.tribute-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 48px; align-items: start; }
+@media (max-width: 800px) { .tribute-grid { grid-template-columns: 1fr; gap: 32px; } }
+.tribute-body { font-size: 17px; line-height: 1.75; color: var(--sage-pale); }
+.tribute-body p { margin-bottom: 18px; }
+.tribute-pull {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.45;
+  color: var(--cream);
+  border-left: 2px solid var(--rust);
+  padding-left: 24px;
+  margin: 0;
+}
+.tribute-pull-cite { font-size: 13px; color: var(--sage-pale); margin-top: 16px; font-style: normal; letter-spacing: 0.08em; text-transform: uppercase; }
+.borovoy-facts {
+  font-size: 14px;
+  color: var(--sage-pale);
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(216, 220, 204, 0.2);
+}
+.borovoy-facts dt { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage-pale); opacity: 0.7; margin-top: 12px; }
+.borovoy-facts dd { margin-bottom: 8px; color: var(--cream); }
+
+/* Principles */
+.principles { padding: 80px 0; }
+.principles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 48px; }
+.principle-card {
+  background: var(--paper);
+  border: 1px solid var(--mist);
+  padding: 28px;
+}
+.principle-num { font-family: 'Fraunces', serif; font-size: 40px; color: var(--sage); font-weight: 300; line-height: 1; }
+.principle-title { font-family: 'Fraunces', serif; font-size: 18px; color: var(--forest); font-weight: 500; margin: 12px 0 8px; }
+.principle-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.55; }
+
+/* Footer */
+.footer { padding: 48px 0 64px; border-top: 1px solid var(--mist); font-size: 13px; color: var(--ink-soft); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+.footer h5 { font-family: 'Inter'; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sage); margin-bottom: 14px; font-weight: 600; }
+.footer ul { list-style: none; }
+.footer ul li { margin-bottom: 8px; }
+.footer a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px dotted var(--mist); }
+.footer a:hover { color: var(--forest); border-bottom-color: var(--sage); }
+.footer-credit {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--ink-soft);
+  padding-top: 24px;
+  border-top: 1px solid var(--mist);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .leaderboard-row { grid-template-columns: 50px 1fr 90px; gap: 12px; padding: 14px 16px; font-size: 14px; }
+  .leaderboard-row .hide-mobile { display: none; }
+  .leaderboard-header { display: none; }
+  .hero { padding: 60px 0 40px; }
+  section { padding: 48px 0; }
+  .formula-box { padding: 24px; }
+  .formula-line { font-size: 14px; }
+  .detail-card { padding: 24px; }
+  .topbar-nav a { margin-left: 16px; font-size: 11px; }
+}
+</style>
+</head>
+<body>
+
+<!-- =========== JUSTACK.AI SUPER-BRAND =========== -->
+<div style="background: var(--forest); color: var(--paper); padding: 10px 0; font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;">
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+    <a href="https://justack.ai" style="color: var(--paper); text-decoration: none; font-weight: 600; letter-spacing: 0.02em; text-transform: none; font-size: 14px; font-family: 'Fraunces', serif;"><span style="color: var(--sage-pale);">just</span>ack<span style="color: var(--sage-pale);">.ai</span></a>
+    <span style="color: var(--sage-pale); font-weight: 500;">Research · Legislative Alignment</span>
+    <a href="https://justack.ai" style="color: var(--sage-pale); text-decoration: none; font-weight: 500;">← justack.ai</a>
+  </div>
+</div>
+
+<!-- =========== TOPBAR =========== -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-logo">The Borovoy <em>Coefficient</em></div>
+    <div class="topbar-nav">
+      <a href="/borovoy/paper/">Paper</a>
+      <a href="#tiers">Tiers</a>
+      <a href="#formula">Formula</a>
+      <a href="#corpus">Corpus</a>
+      <a href="/borovoy/calibration/index.html">Calibration</a>
+      <a href="#tribute">Borovoy</a>
+      <a href="#principles">Reforms</a>
+    </div>
+  </div>
+</div>
+
+<!-- =========== HERO =========== -->
+<section class="hero">
+  <div class="container-narrow">
+    <div class="hero-kicker">Legislative Alignment · Version 1.0 · 2026</div>
+    <h1 class="hero-title">A civil-liberties measure<br>of the gap between what<br>a law <em>promises</em> and what<br>it actually <em>does</em>.</h1>
+    <p class="hero-dek">The Borovoy Coefficient scores Canadian statutes, regulations, and bylaws from 0 to 100 across five dimensions of legislative alignment — each grounded in recognized constitutional doctrine and in the machine-learning alignment taxonomy.</p>
+    <p class="hero-meta">In honour of <strong>Alfred Alan Borovoy, O.C.</strong> (1932-2015), General Counsel of the Canadian Civil Liberties Association 1968-2009 — who spent forty years raising hell without breaking the law.<sup style="font-size: 11px; color: var(--rust); margin-left: 2px;"><a href="#fn-borovoy-luddite" style="color: var(--rust); text-decoration: none; border-bottom: 1px dotted var(--rust);">1</a></sup></p>
+
+    <figure style="margin: 44px 0 0; padding: 0;">
+      <img src="/borovoy/borovoy-office.jpg" alt="Alan Borovoy in his paper-strewn CCLA office, c. 1985" style="width: 100%; max-width: 720px; height: auto; display: block; margin: 0 auto; border-radius: 2px; filter: sepia(0.08);">
+      <figcaption style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--ink-soft); text-align: center; margin-top: 10px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.5;">
+        <strong style="color: var(--forest);">Image #1.</strong> Alan Borovoy, General Counsel, Canadian Civil Liberties Association, in his office, Toronto. Image reproduced for educational / research purposes per <a href="https://digitalarchiveontario.ca/objects/244381/alan-borovoy-general-counsel-to-canadian-civil-liberties-as" style="color: var(--rust); border-bottom: 1px dotted var(--rust); text-decoration: none;" target="_blank" rel="noopener">Digital Archive Ontario terms</a>.
+      </figcaption>
+    </figure>
+
+    <aside id="fn-borovoy-luddite" style="margin: 36px auto 0; max-width: 680px; padding: 18px 22px; border-left: 3px solid var(--rust); background: var(--paper); font-family: 'Fraunces', serif; font-size: 14.5px; line-height: 1.65; color: var(--ink-soft);">
+      <sup style="color: var(--rust); font-weight: 600; margin-right: 4px;">1.</sup>That Borovoy, a devoted luddite known for his paper-strewn offices <em>(see Image #1)</em>, would be rendered a coefficient is an absurdity that may amuse or enrage his many fans. Discussions with CCLA will follow, but for now, let's get to work. That he inspired this app is intended as a tribute.
+    </aside>
+
+  </div>
+</section>
+
+<!-- =========== FORMULA =========== -->
+<section id="formula" class="alt">
+  <div class="container-narrow">
+    <div class="sec-kicker">I · The Formula</div>
+    <h2 class="sec-title">Five dimensions. Each one <em>falsifiable</em>, each one anchored.</h2>
+    <div class="sec-body">
+      <p>The Coefficient does not ask whether a law is good. It asks, precisely: does the language do what the preamble says? Are the rights-affecting effects proportionate to the salutary objective? Is the conduct captured the conduct drafters targeted? Is the severity of intrusion survivable? Is the bureaucracy administering the law optimizing something different than what the statute chartered?</p>
+      <p>These are Borovoy's questions from five decades of civil-liberties practice. They are also — with no stretching required — the inner-alignment, outer-alignment, and Goodhart-variant questions that machine-learning researchers ask of learned systems.</p>
+    </div>
+    <div class="formula-box">
+      <div class="formula-line"><strong>BC = 0.25 · D₁ + 0.15 · D₂ + 0.20 · D₃ + 0.25 · D₄ + 0.15 · D₅</strong></div>
+      <p class="formula-caption">Purpose-Effect Gap · Proportionality · Overbreadth · Rights Intrusion · Enforcement Asymmetry</p>
+    </div>
+    <div class="dim-grid">
+      <div class="dim-card">
+        <div class="dim-num">D₁ · weight 0.25</div>
+        <div class="dim-name">Purpose-Effect Gap</div>
+        <div class="dim-desc">How far does observed effect diverge from stated purpose?</div>
+        <div class="dim-anchor">Vavilov, 2019 SCC 65 · Outer alignment</div>
+      </div>
+      <div class="dim-card">
+        <div class="dim-num">D₂ · weight 0.15</div>
+        <div class="dim-name">Proportionality</div>
+        <div class="dim-desc">Are rights-infringing effects proportionate to the salutary objective?</div>
+        <div class="dim-anchor">R v Oakes, [1986] 1 SCR 103 · Pareto multi-objective</div>
+      </div>
+      <div class="dim-card">
+        <div class="dim-num">D₃ · weight 0.20</div>
+        <div class="dim-name">Overbreadth</div>
+        <div class="dim-desc">Does the law capture substantially more conduct than drafters targeted?</div>
+        <div class="dim-anchor">Heywood · Bedford · Nova Scotia Pharmaceutical · Extremal Goodhart</div>
+      </div>
+      <div class="dim-card">
+        <div class="dim-num">D₄ · weight 0.25</div>
+        <div class="dim-name">Rights Intrusion</div>
+        <div class="dim-desc">How severe, durable, and reversible is the infringement of Charter-protected rights?</div>
+        <div class="dim-anchor">Charter ss 2, 7, 8, 9, 15 · Safety-critical severity</div>
+      </div>
+      <div class="dim-card">
+        <div class="dim-num">D₅ · weight 0.15</div>
+        <div class="dim-name">Enforcement Asymmetry</div>
+        <div class="dim-desc">Is the administering bureaucracy optimizing something different than the statute?</div>
+        <div class="dim-anchor">R v Le, 2019 SCC 34 · Mesa-optimization · Reward tampering</div>
+      </div>
+    </div>
+    <div style="margin-top: 48px; padding: 24px; background: var(--mist); border-left: 3px solid var(--rust);">
+      <div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); font-weight: 600; margin-bottom: 10px;">Interpretation bands</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 18px;">
+        <span><span class="band-pill aligned">0-19 Aligned</span></span>
+        <span><span class="band-pill drift">20-39 Drift</span></span>
+        <span><span class="band-pill misaligned">40-59 Misaligned</span></span>
+        <span><span class="band-pill severe">60-79 Severe</span></span>
+        <span><span class="band-pill unconstitutional">80-100 Unconstitutional-by-design</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== CORPUS =========== -->
+<section id="corpus">
+  <div class="container">
+    <div class="sec-kicker">II · The Prototype Corpus</div>
+    <h2 class="sec-title">Fifteen Canadian laws, scored.</h2>
+    <div class="sec-body" style="max-width: 760px;">
+      <p>A sample — not a census. The corpus demonstrates the Coefficient's range across federal, provincial, and municipal jurisdictions, from Vancouver's Noise Control Bylaw (BC = 12, aligned) to the pre-<em>Charkaoui</em> Security Certificate regime (BC = 86, unconstitutional-by-design). Click any row for the full reasoning, evidence, drift vectors, and proposed reforms.</p>
+    </div>
+
+    <div class="corpus-controls">
+      <button class="filter-btn active" data-filter="all">All 15</button>
+      <button class="filter-btn" data-filter="federal">Federal</button>
+      <button class="filter-btn" data-filter="provincial">Provincial</button>
+      <button class="filter-btn" data-filter="municipal">Municipal</button>
+      <button class="filter-btn" data-filter="high">Highest coefficients</button>
+      <button class="filter-btn" data-filter="low">Lowest coefficients</button>
+    </div>
+
+    <div class="leaderboard" id="leaderboard">
+      <div class="leaderboard-row leaderboard-header">
+        <div>Rank</div>
+        <div>Law</div>
+        <div class="hide-mobile">Jurisdiction</div>
+        <div>Coefficient</div>
+      </div>
+      <!-- rows injected by JS -->
+    </div>
+
+    <div id="detail" class="detail-card">
+      <!-- populated by JS -->
+    </div>
+
+    <div class="heatmap">
+      <div class="heatmap-title">Cross-jurisdiction dimension heat map</div>
+      <div class="heatmap-legend">
+        <div><span class="legend-sw" style="background: var(--band-aligned);"></span>0-19</div>
+        <div><span class="legend-sw" style="background: var(--band-drift);"></span>20-39</div>
+        <div><span class="legend-sw" style="background: var(--band-misaligned);"></span>40-59</div>
+        <div><span class="legend-sw" style="background: var(--band-severe);"></span>60-79</div>
+        <div><span class="legend-sw" style="background: var(--band-uncon);"></span>80-100</div>
+      </div>
+      <div class="heatmap-grid" id="heatmap">
+        <!-- rendered by JS -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== TRIBUTE =========== -->
+<section id="tribute" class="tribute">
+  <div class="container-narrow">
+    <div class="sec-kicker">III · In Memoriam</div>
+    <h2 class="sec-title">Alfred Alan Borovoy, <em>O.C.</em></h2>
+    <div class="tribute-grid">
+      <div class="tribute-body">
+        <p>Alan Borovoy served as General Counsel of the Canadian Civil Liberties Association for forty-one years, from 1968 to 2009. He was awarded the Order of Canada in 1982 and four honorary doctorates. He wrote five books — <em>When Freedoms Collide</em>, <em>Uncivil Obedience</em>, <em>The New Anti-Liberals</em>, <em>Categorically Incorrect</em>, and <em>At the Barricades</em>.</p>
+        <p>His diagnostic frame — the intent-effect gap, the power-hoarding fallacy, the mesa-institutional drift of regulatory regimes — carried him from the October Crisis of 1970 through the post-9/11 anti-terrorism statutes to the sustained critique of human rights commissions that he himself had helped establish. He believed governments miss the mark when they legislate broadly in moments of shock and trust judicial review to clean up afterwards. History keeps vindicating him.</p>
+        <p>The Borovoy Coefficient is an attempt to translate that diagnosis into measurement. It is not a replacement for Borovoy. It is an instrument that he might, I hope, have used.</p>
+      </div>
+      <div>
+        <blockquote class="tribute-pull">There is an important distinction between intent and effect. The question we must ask is whether the language, regardless of the intent, is broad enough to cover that activity.</blockquote>
+        <div class="tribute-pull-cite">— Testimony on Bill C-36, Standing Committee on Justice, October 2001</div>
+
+        <dl class="borovoy-facts">
+          <dt>Born</dt><dd>17 March 1932, Hamilton, Ontario</dd>
+          <dt>Died</dt><dd>11 May 2015, Toronto</dd>
+          <dt>CCLA General Counsel</dt><dd>1968 – 1 July 2009</dd>
+          <dt>Order of Canada</dt><dd>Officer, 1982</dd>
+          <dt>Retirement line</dt><dd><em>"Forty years of raising hell without breaking the law."</em></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== PRINCIPLES =========== -->
+<section id="principles" class="principles">
+  <div class="container-narrow">
+    <div class="sec-kicker">IV · The Borovoy Drafting Principles</div>
+    <h2 class="sec-title">Five prospective reforms that would <em>reduce Coefficients at source</em>.</h2>
+    <div class="sec-body">
+      <p>Measurement without reform is a tribute essay. The full methodology is prospective: drafters can embed these five principles at the specification stage to close the outer- and inner-alignment loops before a statute reaches a bureaucracy.</p>
+    </div>
+    <div class="principles-grid">
+      <div class="principle-card">
+        <div class="principle-num">1</div>
+        <div class="principle-title">Sunset clauses</div>
+        <div class="principle-desc">Affirmative re-enactment on a 5- or 10-year cycle. The legislative analogue of a retraining interval — forcing drafters to re-specify the objective in light of observed effects.</div>
+      </div>
+      <div class="principle-card">
+        <div class="principle-num">2</div>
+        <div class="principle-title">Purpose-effect reporting</div>
+        <div class="principle-desc">Statutory obligation on responsible ministers to publish annual data on whether the law is achieving its stated purpose — a legislative alignment benchmark.</div>
+      </div>
+      <div class="principle-card">
+        <div class="principle-num">3</div>
+        <div class="principle-title">Disparate-impact dashboards</div>
+        <div class="principle-desc">Mandatory publication of enforcement data disaggregated by geography, income, and, where constitutionally required, protected grounds. D₅ is unmeasurable without this.</div>
+      </div>
+      <div class="principle-card">
+        <div class="principle-num">4</div>
+        <div class="principle-title">Narrowing presumption</div>
+        <div class="principle-desc">Courts should read statutory language narrowly in Charter-adjacent fields unless drafters used plain expansive language. Prices the drafting choice rather than burying it.</div>
+      </div>
+      <div class="principle-card">
+        <div class="principle-num">5</div>
+        <div class="principle-title">Hard-powered oversight</div>
+        <div class="principle-desc">Not advisory review à la SIRC, but bodies with order-making authority on a statutory footing — closing the mesa-optimization loop Borovoy flagged from 1984 onward.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== THE BOROVOY COEFFICIENT — THREE TIERS =========== -->
+<section id="tiers" style="padding: 72px 0 64px; background: var(--paper); border-top: 1px solid var(--mist); border-bottom: 1px solid var(--mist);">
+  <div class="container">
+    <div style="font-family: 'Inter'; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage); margin-bottom: 16px; font-weight: 600; text-align: center;">Tiered Methodology</div>
+    <h2 style="font-family: 'Fraunces', serif; font-size: clamp(28px, 3.5vw, 40px); line-height: 1.15; color: var(--forest); font-weight: 400; text-align: center; margin-bottom: 16px;">The Borovoy Coefficient</h2>
+    <p style="text-align: center; font-family: 'Fraunces', serif; font-size: 17px; color: var(--ink-soft); max-width: 780px; margin: 0 auto 44px; line-height: 1.55;">Three published formulas, three depths of legal analysis, one transparent method. Each tier answers a sharper question than the last; each publishes its own math so readers can verify the arithmetic rather than argue with a composite.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; max-width: 1120px; margin: 0 auto;">
+
+      <div style="background: var(--cream); border: 2px solid var(--sage); border-radius: 4px; padding: 26px;">
+        <div style="display: inline-block; background: var(--sage); color: var(--paper); font-family: 'Inter'; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 3px 10px; border-radius: 10px; margin-bottom: 14px;">Live · v1.0</div>
+        <div style="font-family: 'Inter'; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); font-weight: 700; margin-bottom: 6px;">Tier I</div>
+        <h3 style="font-family: 'Fraunces', serif; font-size: 24px; color: var(--forest); font-weight: 500; margin-bottom: 12px;">Missing the Mark, <em>Literally</em></h3>
+        <p style="font-family: 'Fraunces', serif; font-size: 15px; color: var(--ink-soft); line-height: 1.55; margin-bottom: 12px;"><strong>Prima facie natural-language inference</strong> over preamble–provision pairs. A bipartite entailment matrix is computed between the statute's stated purposes and its operative provisions, then reduced to two scalar features — faithfulness and excess — under a published linear objective. No case law, no adjudicative facts, no doctrinal grounding: only structured textual entailment on the face of the statute.</p>
+        <p style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--ink); background: var(--paper); padding: 10px 14px; border-radius: 3px; line-height: 1.5;">MTM-L = 100·[α·(1−F) + β·X]</p>
+        <p style="font-family: 'Inter'; font-size: 12px; color: var(--ink-soft); margin-top: 12px;"><a href="/borovoy/spec/MTM_FORMULAS.md" style="color: var(--rust); border-bottom: 1px dotted var(--rust); text-decoration: none;">Formula, inputs, worked example →</a></p>
+      </div>
+
+      <div style="background: var(--paper); border: 2px solid var(--band-drift); border-radius: 4px; padding: 26px; opacity: 0.95;">
+        <div style="display: inline-block; background: var(--band-drift); color: var(--ink); font-family: 'Inter'; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 3px 10px; border-radius: 10px; margin-bottom: 14px;">Coming soon · v1.1</div>
+        <div style="font-family: 'Inter'; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--band-drift); font-weight: 700; margin-bottom: 6px;">Tier II</div>
+        <h3 style="font-family: 'Fraunces', serif; font-size: 24px; color: var(--forest); font-weight: 500; margin-bottom: 12px;">Missing the Mark, <em>Figuratively</em></h3>
+        <p style="font-family: 'Fraunces', serif; font-size: 15px; color: var(--ink-soft); line-height: 1.55; margin-bottom: 12px;"><strong>The Charter-violation layer, in two sequential stages.</strong> Stage 1 asks whether the statute's purpose, constructed per <em>R v Big M Drug Mart</em>, is itself Charter-offside — a finding that resolves the case without reaching effects. Stage 2 asks, purpose notwithstanding, how likely the statute's effects on face are to violate a Charter right (overbreadth, arbitrariness, gross disproportionality, rights-intrusion severity). Oakes is not engaged at this tier: Oakes presupposes an established violation. Tier II asks whether one exists.</p>
+        <p style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--ink); background: var(--cream); padding: 10px 14px; border-radius: 3px; line-height: 1.5;">MTM-F = 100·[PV + (1−PV)·EL]</p>
+        <p style="font-family: 'Inter'; font-size: 12px; color: var(--ink-soft); margin-top: 12px;"><a href="/borovoy/spec/MTM_FORMULAS.md#tier-2--mtm-figurative-coming-soon-v11" style="color: var(--rust); border-bottom: 1px dotted var(--rust); text-decoration: none;">Formula, inputs, Big M stages →</a></p>
+      </div>
+
+      <div style="background: var(--paper); border: 2px solid var(--band-drift); border-radius: 4px; padding: 26px; opacity: 0.85;">
+        <div style="display: inline-block; background: var(--band-drift); color: var(--ink); font-family: 'Inter'; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 3px 10px; border-radius: 10px; margin-bottom: 14px;">Coming soon · v1.2+</div>
+        <div style="font-family: 'Inter'; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--band-drift); font-weight: 700; margin-bottom: 6px;">Tier III</div>
+        <h3 style="font-family: 'Fraunces', serif; font-size: 24px; color: var(--forest); font-weight: 500; margin-bottom: 12px;">Missing the Mark, <em>Circumstantially</em></h3>
+        <p style="font-family: 'Fraunces', serif; font-size: 15px; color: var(--ink-soft); line-height: 1.55; margin-bottom: 12px;"><strong>The Oakes justification layer, with facts.</strong> Presupposing a Tier II violation, Tier III asks whether the government can justify it under s.1 — pressing-and-substantial objective, rational connection, minimal impairment, balance of effects — with adjudicative and legislative facts, disparate-impact evidence, and enforcement data entered. This is the tier most closely aligned with actual judicial-outcome prediction, but it is the most fact-intensive and therefore the last to automate.</p>
+        <p style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--ink); background: var(--cream); padding: 10px 14px; border-radius: 3px; line-height: 1.5;">MTM-C = 100·[γ₁·MTM-F/100 + γ₂·DI + γ₃·EF]</p>
+        <p style="font-family: 'Inter'; font-size: 12px; color: var(--ink-soft); margin-top: 12px;"><a href="/borovoy/spec/MTM_FORMULAS.md#tier-3--mtm-circumstantial-coming-later-v12" style="color: var(--rust); border-bottom: 1px dotted var(--rust); text-decoration: none;">Formula, inputs, Oakes mapping →</a></p>
+      </div>
+
+    </div>
+
+    <p style="text-align: center; margin-top: 36px; font-family: 'Fraunces', serif; font-size: 14px; color: var(--ink-soft); max-width: 760px; margin-left: auto; margin-right: auto; line-height: 1.6;">Every tier publishes its math. No black box. Licensed <strong>Mozilla Public License 2.0</strong>. Free regardless of future ownership outcome. Calibration report at <a href="/borovoy/calibration/index.html" style="color: var(--rust); border-bottom: 1px dotted var(--rust); text-decoration: none;">calibration/index.html</a>.</p>
+  </div>
+</section>
+
+<!-- =========== FOOTER =========== -->
+<div class="container">
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h5>The Borovoy Coefficient</h5>
+        <p>A civil-liberties measure of legislative alignment. Version 1.0, released under MPL-2.0. A research publication of <a href="https://justack.ai" style="color: var(--rust); border-bottom: 1px dotted var(--rust); text-decoration: none;">justack.ai</a>.</p>
+      </div>
+      <div>
+        <h5>Documents</h5>
+        <ul>
+          <li><a href="/borovoy/spec/MTM_FORMULAS.md">Missing-the-Mark formulas</a></li>
+          <li><a href="/borovoy/spec/BOROVOY_COEFFICIENT_SPEC.md">Five-dimension spec</a></li>
+          <li><a href="/borovoy/data/corpus.json">Corpus (JSON)</a></li>
+          <li><a href="/borovoy/calibration/index.html">Calibration report</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Doctrine</h5>
+        <ul>
+          <li>Vavilov (2019)</li>
+          <li>Oakes (1986)</li>
+          <li>Bedford (2013)</li>
+          <li>Charkaoui (2007)</li>
+        </ul>
+      </div>
+      <div>
+        <h5>ML foundations</h5>
+        <ul>
+          <li>Wiener 1960</li>
+          <li>Amodei et al. 2016</li>
+          <li>Hubinger et al. 2019</li>
+          <li>Hennessy &amp; Goodhart 2023</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-credit">In honour of Alfred Alan Borovoy, O.C. (1932–2015). Processor-powered civil-liberties research. Permissionless. MPL-2.0.</p>
+  </footer>
+</div>
+
+<script>
+async function loadCorpus() {
+  // Prefer embedded corpus for file:// compatibility
+  if (window.__EMBEDDED_CORPUS__ && window.__EMBEDDED_CORPUS__.laws) {
+    return window.__EMBEDDED_CORPUS__.laws;
+  }
+  try {
+    const res = await fetch('/borovoy/data/corpus.json');
+    if (res.ok) return (await res.json()).laws;
+  } catch (e) { /* fall through */ }
+  return [];
+}
+
+function bandClass(band) {
+  if (band === 'Aligned') return 'aligned';
+  if (band === 'Drift') return 'drift';
+  if (band === 'Misaligned') return 'misaligned';
+  if (band === 'Severe misalignment') return 'severe';
+  if (band === 'Unconstitutional-by-design') return 'unconstitutional';
+  return 'drift';
+}
+function bandColor(score) {
+  if (score <= 19) return 'var(--band-aligned)';
+  if (score <= 39) return 'var(--band-drift)';
+  if (score <= 59) return 'var(--band-misaligned)';
+  if (score <= 79) return 'var(--band-severe)';
+  return 'var(--band-uncon)';
+}
+
+let CURRENT_LAWS = [];
+let CURRENT_FILTER = 'all';
+let OPEN_DETAIL = null;
+let RADAR_CHART = null;
+
+function applyFilter(laws, filter) {
+  let f = [...laws];
+  if (filter === 'federal' || filter === 'provincial' || filter === 'municipal') {
+    f = f.filter(l => l.jurisdiction === filter);
+  }
+  if (filter === 'high') {
+    f = [...laws].sort((a,b) => b.borovoy_coefficient - a.borovoy_coefficient).slice(0,5);
+  }
+  if (filter === 'low') {
+    f = [...laws].sort((a,b) => a.borovoy_coefficient - b.borovoy_coefficient).slice(0,5);
+  }
+  return f.sort((a,b) => b.borovoy_coefficient - a.borovoy_coefficient);
+}
+
+function renderLeaderboard(laws) {
+  const lb = document.getElementById('leaderboard');
+  // keep header
+  const header = lb.querySelector('.leaderboard-header');
+  lb.innerHTML = '';
+  lb.appendChild(header);
+  const sorted = laws;
+  sorted.forEach((law, i) => {
+    const row = document.createElement('div');
+    row.className = 'leaderboard-row';
+    row.dataset.id = law.id;
+    row.innerHTML = `
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink-soft);">${String(i + 1).padStart(2, '0')}</div>
+      <div>
+        <div class="law-name">${law.law}</div>
+        <div class="law-sub">${law.jurisdiction}</div>
+      </div>
+      <div class="hide-mobile"><span class="band-pill ${bandClass(law.band)}">${law.band}</span></div>
+      <div class="coef-cell">
+        <div class="coef-bar"><div class="coef-bar-fill" style="width: ${law.borovoy_coefficient}%; background: ${bandColor(law.borovoy_coefficient)};"></div></div>
+        <span>${law.borovoy_coefficient}</span>
+      </div>
+    `;
+    row.setAttribute('role', 'button');
+    row.setAttribute('tabindex', '0');
+    row.setAttribute('aria-label', `View details for ${law.law}, Borovoy Coefficient ${law.borovoy_coefficient}`);
+    row.addEventListener('click', () => openDetail(law));
+    row.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(law); }
+    });
+    lb.appendChild(row);
+  });
+}
+
+function renderHeatmap(laws) {
+  const hm = document.getElementById('heatmap');
+  const dimNames = [
+    ['purpose_effect_gap', 'D₁ Purpose'],
+    ['proportionality', 'D₂ Prop.'],
+    ['overbreadth', 'D₃ Over.'],
+    ['rights_intrusion', 'D₄ Rights'],
+    ['enforcement_asymmetry', 'D₅ Enforce']
+  ];
+  // header row
+  let html = '<div class="hm-row-label"></div>';
+  dimNames.forEach(([_, name]) => { html += `<div class="hm-header">${name}</div>`; });
+  // sort by BC desc
+  const sorted = [...laws].sort((a,b) => b.borovoy_coefficient - a.borovoy_coefficient);
+  sorted.forEach(law => {
+    html += `<div class="hm-row-label" title="${law.law}">${law.id}</div>`;
+    dimNames.forEach(([key]) => {
+      const val = law.dimensions[key];
+      html += `<div class="hm-cell" style="background: ${bandColor(val)};">${val}</div>`;
+    });
+  });
+  hm.innerHTML = html;
+}
+
+function openDetail(law) {
+  const d = document.getElementById('detail');
+  OPEN_DETAIL = law.id;
+  d.innerHTML = `
+    <div>
+      <div class="detail-jurisdiction">${law.jurisdiction} · ${law.id}</div>
+      <h3 class="detail-title">${law.law}</h3>
+    </div>
+    <div class="detail-grid">
+      <div>
+        <div class="detail-sec">
+          <h4>Stated purpose</h4>
+          <p>${law.purpose_stated}</p>
+        </div>
+        <div class="detail-sec">
+          <h4>Plain-English summary</h4>
+          <p style="font-family: 'Fraunces', serif; font-style: italic; font-size: 17px; color: var(--ink);">${law.lay_summary}</p>
+        </div>
+        <div class="detail-sec">
+          <h4>Drift vectors</h4>
+          ${law.drift_vectors.map(v => `
+            <div class="drift-vector">
+              <div><strong>From:</strong> ${v.from}</div>
+              <div><strong>To:</strong> ${v.to}</div>
+              <div style="margin-top: 6px;"><strong>Evidence:</strong> ${v.evidence}</div>
+              <div class="gh-var" style="margin-top: 4px;">Goodhart variant · ${v.goodhart_variant}</div>
+            </div>
+          `).join('')}
+        </div>
+        <div class="detail-sec">
+          <h4>Evidence</h4>
+          ${law.evidence.map(e => `
+            <blockquote class="quote-block">
+              "${e.quote}"
+              <div class="quote-source">— ${e.source}</div>
+            </blockquote>
+          `).join('')}
+        </div>
+        <div class="detail-sec">
+          <h4>Proposed design reforms</h4>
+          <ul>${law.design_reforms.map(r => `<li>${r}</li>`).join('')}</ul>
+        </div>
+        <div class="detail-sec">
+          <h4>Limitations &amp; caveats</h4>
+          <p style="font-size: 13px; color: var(--ink-soft); font-style: italic;">${law.limitations}</p>
+        </div>
+        <button class="detail-close" onclick="closeDetail()">Close</button>
+      </div>
+      <div>
+        <div class="radar-container">
+          <div class="radar-title">Five-dimension profile</div>
+          <canvas id="radar" width="260" height="260"></canvas>
+          <div class="big-score" style="color: ${bandColor(law.borovoy_coefficient)};">${law.borovoy_coefficient}</div>
+          <div class="big-score-caption">Borovoy Coefficient</div>
+          <div style="margin-top: 14px; text-align: center;">
+            <span class="band-pill ${bandClass(law.band)}">${law.band}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  d.classList.add('open');
+
+  // draw radar
+  if (RADAR_CHART) RADAR_CHART.destroy();
+  const ctx = document.getElementById('radar').getContext('2d');
+  RADAR_CHART = new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ['D₁\nPurpose', 'D₂\nProp.', 'D₃\nOver.', 'D₄\nRights', 'D₅\nEnforce'],
+      datasets: [{
+        label: law.law,
+        data: [
+          law.dimensions.purpose_effect_gap,
+          law.dimensions.proportionality,
+          law.dimensions.overbreadth,
+          law.dimensions.rights_intrusion,
+          law.dimensions.enforcement_asymmetry
+        ],
+        backgroundColor: 'rgba(166, 107, 74, 0.25)',
+        borderColor: '#A66B4A',
+        borderWidth: 2,
+        pointBackgroundColor: '#A66B4A',
+        pointBorderColor: '#2C3A2C',
+        pointRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        r: {
+          beginAtZero: true,
+          max: 100,
+          ticks: { stepSize: 25, font: { size: 9 }, color: '#5A544C', backdropColor: 'transparent' },
+          grid: { color: '#D8DCCC' },
+          angleLines: { color: '#D8DCCC' },
+          pointLabels: { font: { size: 11, weight: '500' }, color: '#2C3A2C' }
+        }
+      }
+    }
+  });
+  d.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function closeDetail() {
+  const d = document.getElementById('detail');
+  d.classList.remove('open');
+  OPEN_DETAIL = null;
+  if (RADAR_CHART) { RADAR_CHART.destroy(); RADAR_CHART = null; }
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    closeDetail();
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    CURRENT_FILTER = btn.dataset.filter;
+    const filtered = applyFilter(CURRENT_LAWS, CURRENT_FILTER);
+    renderLeaderboard(filtered);
+  });
+});
+
+// ================== boot ==================
+(async () => {
+  const laws = await loadCorpus();
+  CURRENT_LAWS = laws;
+  renderLeaderboard(applyFilter(laws, 'all'));
+  renderHeatmap(laws);
+})();
+</script>
+
+
+</body>
+</html>

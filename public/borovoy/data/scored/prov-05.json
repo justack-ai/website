@@ -1,0 +1,46 @@
+{
+  "law_id": "prov-05",
+  "law": "Ontario Not-for-Profit Corporations Act, 2010, SO 2010, c 15 (ONCA)",
+  "tier": "MTM-L",
+  "mtm_l": 0,
+  "faithfulness": 1,
+  "excess": 0,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "purposes": [
+    "To modernize the incorporation and governance framework for Ontario not-for-profit corporations",
+    "replacing the 1907 Corporations Act"
+  ],
+  "provisions": [
+    {
+      "id": "s. 23(1)",
+      "text": "Every director and officer of a corporation in exercising their powers and discharging their duties shall (a) act honestly and in good faith with a view to the best interests of the corporation; and (b) exercise the care, diligence and skill that a reasonably prudent person would exercise in comparable circumstances. (from training data)"
+    },
+    {
+      "id": "s. 55(1)",
+      "text": "Unless the articles or by-laws otherwise provide, each member is entitled to one vote on each matter voted on at a meeting of members. (from training data)"
+    },
+    {
+      "id": "s. 84(1)",
+      "text": "The members of a corporation shall, by ordinary resolution, at each annual meeting, appoint one or more auditors to hold office until the close of the next annual meeting. (from training data)"
+    }
+  ],
+  "serves_matrix": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "derivation": "MTM-Literal derivation\n  m = |purposes| = 2\n  n = |provisions| = 3\n  purposes served by ≥1 provision = 2/2\n  → F (Faithfulness) = 2/2 = 1.0000\n  provisions serving no purpose = 0/3\n  → X (Excess)       = 0/3 = 0.0000\n  α = 0.5, β = 0.5\n  MTM-L = 100 · [α · (1 − F) + β · X]\n        = 100 · [0.5 · (1 − 1.0000) + 0.5 · 0.0000]\n        = 100 · [0.0000 + 0.0000]\n        = 0.00",
+  "scored_at": "2026-04-18T01:52:55.617Z",
+  "model": "gemini-2.5-pro",
+  "version": "v1.0"
+}

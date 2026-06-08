@@ -1,0 +1,50 @@
+{
+  "law_id": "muni-03",
+  "law": "Montreal Bylaw P-6 (protest regulation), CO Montreal 2012 (pre-strike)",
+  "tier": "MTM-L",
+  "mtm_l": 0,
+  "faithfulness": 1,
+  "excess": 0,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "purposes": [
+    "To regulate public demonstrations to protect public safety",
+    "requiring advance notice of itineraries",
+    "prohibiting masking"
+  ],
+  "provisions": [
+    {
+      "id": "s. 2.1",
+      "text": "The organizer of a public assembly must, beforehand, provide the director of the police department or the person designated by the director with the itinerary of the assembly. (from training data)"
+    },
+    {
+      "id": "s. 3.2",
+      "text": "It is prohibited, during a public assembly, to have one’s face covered without a reasonable motive. (from training data)"
+    },
+    {
+      "id": "s. 6",
+      "text": "A peace officer may order the participants in a public assembly to disperse forthwith where the assembly is held in contravention of a provision of this by-law or where acts of violence, breaches of the peace or other illegal acts are committed. (from training data)"
+    }
+  ],
+  "serves_matrix": [
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0
+    ]
+  ],
+  "derivation": "MTM-Literal derivation\n  m = |purposes| = 3\n  n = |provisions| = 3\n  purposes served by ≥1 provision = 3/3\n  → F (Faithfulness) = 3/3 = 1.0000\n  provisions serving no purpose = 0/3\n  → X (Excess)       = 0/3 = 0.0000\n  α = 0.5, β = 0.5\n  MTM-L = 100 · [α · (1 − F) + β · X]\n        = 100 · [0.5 · (1 − 1.0000) + 0.5 · 0.0000]\n        = 100 · [0.0000 + 0.0000]\n        = 0.00",
+  "scored_at": "2026-04-18T01:53:36.653Z",
+  "model": "gemini-2.5-pro",
+  "version": "v1.0"
+}

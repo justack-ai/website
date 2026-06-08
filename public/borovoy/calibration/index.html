@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Borovoy Coefficient — MTM-L Calibration Report v1.0</title>
+<style>
+  body { font-family: Georgia, "Iowan Old Style", serif; background: #faf7f2; color: #1a1a2e; margin: 0; padding: 32px 24px 80px; line-height: 1.55; }
+  .wrap { max-width: 940px; margin: 0 auto; }
+  header { border-bottom: 2px solid #1a1a2e; padding-bottom: 16px; margin-bottom: 28px; }
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  .date { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 12px; color: #555; text-transform: uppercase; letter-spacing: 0.1em; }
+  h2 { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; margin: 28px 0 10px; border-bottom: 1px solid #e5ddd0; padding-bottom: 6px; }
+  .metrics { display: flex; gap: 20px; flex-wrap: wrap; }
+  .metric { background: #fff; border-left: 4px solid #2a6b4a; padding: 12px 18px; min-width: 140px; }
+  .metric .label { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 11px; color: #555; text-transform: uppercase; letter-spacing: 0.08em; }
+  .metric .value { font-size: 22px; font-weight: 700; color: #1a1a2e; font-family: "SF Mono", Menlo, Consolas, monospace; }
+  .metric.gold { border-left-color: #b08a3e; }
+  table { width: 100%; border-collapse: collapse; background: #fff; margin-top: 10px; font-size: 13px; }
+  th, td { padding: 8px 10px; border-bottom: 1px solid #e5ddd0; text-align: left; vertical-align: top; }
+  th { background: #e5ddd0; font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; }
+  td.num, th.num { text-align: right; font-family: "SF Mono", Menlo, Consolas, monospace; }
+  td.mono { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; color: #555; }
+  td.authority { font-size: 12px; color: #555; }
+  .interpretation { background: #fff; border-left: 4px solid #b08a3e; padding: 16px 20px; font-size: 14px; line-height: 1.6; }
+  .weights-table { max-width: 520px; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5ddd0; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 12px; color: #555; text-align: center; }
+  .svg-box { background: #fff; padding: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="date">Calibration Report v1.0 · generated 2026-04-18</div>
+  <h1>Borovoy Coefficient — MTM-Literal retrospective calibration</h1>
+</header>
+
+<h2>Key metrics</h2>
+<div class="metrics">
+  <div class="metric"><div class="label">AUC</div><div class="value">0.537</div></div>
+  <div class="metric"><div class="label">Brier score</div><div class="value">0.2307</div></div>
+  <div class="metric"><div class="label">n (corpus)</div><div class="value">15</div></div>
+  <div class="metric gold"><div class="label">positives</div><div class="value">6</div></div>
+  <div class="metric"><div class="label">negatives</div><div class="value">9</div></div>
+</div>
+
+<h2>Interpretation</h2>
+<div class="interpretation">AUC = 0.54 indicates MTM-L alone has limited discriminative power on this corpus. Brier score = 0.231 (lower is better; baseline of always-predicting-mean ≈ 0.00). 87% of laws scored MTM-L = 0, reflecting that most struck-down Canadian statutes are NOT literally misaligned on face — they fail at the purposive/contextual level (MTM-F, MTM-C). Implication: MTM-L is a conservative, narrow test. It flags textually-broken statutes, but many Charter-invalid laws pass MTM-L because their pathology is purposive, not literal. The MTM-F and MTM-C tiers (coming soon) are where the remaining predictive signal should live.</div>
+
+<h2>Reliability diagram — predicted vs observed (5 bins)</h2>
+<div class="svg-box"><svg width="640" height="320" viewBox="0 0 640 320">
+  <rect x="50" y="50" width="540" height="220" fill="#fcfaf5" stroke="#1a1a2e" stroke-width="1"/>
+  <line x1="50" y1="270" x2="50" y2="50" stroke="#e5ddd0" stroke-width="1"/>
+      <line x1="50" y1="270" x2="590" y2="270" stroke="#e5ddd0" stroke-width="1"/>
+      <text x="50" y="286" font-family="Helvetica Neue" font-size="11" fill="#555" text-anchor="middle">0</text>
+      <text x="42" y="274" font-family="Helvetica Neue" font-size="11" fill="#555" text-anchor="end">0</text>
+<line x1="158" y1="270" x2="158" y2="50" stroke="#e5ddd0" stroke-width="1"/>
+      <line x1="50" y1="226" x2="590" y2="226" stroke="#e5ddd0" stroke-width="1"/>
+      <text x="158" y="286" font-family="Helvetica Neue" font-size="11" fill="#555" text-anchor="middle">0.2</text>
+      <text x="42" y="230" font-family="Helvetica Neue" font-size="11" fill="#555" text-anchor="end">0.2</text>
+<line x1="266" y1="270" x2="266" y2="50" stroke="#e5ddd0" stroke-width="1"/>
+      <line x1="50" y1="182" x2="590" y2="182" stroke="#e5ddd0" stroke-width="1"/>
+      <text x="266" y="286" font-family="Helvetica Neue" font-size="11" fill="#555" text-anchor="middle">0.4</text>
+      <text x="42" y="186" font-family="Helvetica Neue" font-size="11" fill="#555" text-anchor="end">0.4</text>
+<line x1="374" y1="270" x2="374" y2="50" stroke="#e5ddd0" stroke-width="1"/>
+      <line x1="50" y1="138" x2="590" y2="138" stroke="#e5ddd0" stroke-width="1"/>
+      <text x="374" y="286" font-family="Helvetica Neue" font-size="11" fill="#555" text-anchor="middle">0.6</text>
+      <text x="42" y="142" font-family="Helvetica Neue" font-size="11" fill="#555" text-anchor="end">0.6</text>
+<line x1="482" y1="270" x2="482" y2="50" stroke="#e5ddd0" stroke-width="1"/>
+      <line x1="50" y1="94" x2="590" y2="94" stroke="#e5ddd0" stroke-width="1"/>
+      <text x="482" y="286" font-family="Helvetica Neue" font-size="11" fill="#555" text-anchor="middle">0.8</text>
+      <text x="42" y="98" font-family="Helvetica Neue" font-size="11" fill="#555" text-anchor="end">0.8</text>
+<line x1="590" y1="270" x2="590" y2="50" stroke="#e5ddd0" stroke-width="1"/>
+      <line x1="50" y1="50" x2="590" y2="50" stroke="#e5ddd0" stroke-width="1"/>
+      <text x="590" y="286" font-family="Helvetica Neue" font-size="11" fill="#555" text-anchor="middle">1</text>
+      <text x="42" y="54" font-family="Helvetica Neue" font-size="11" fill="#555" text-anchor="end">1</text>
+  <line x1="50" y1="270" x2="590" y2="50" stroke="#b08a3e" stroke-width="1" stroke-dasharray="4 4"/>
+  <circle cx="60.5012" cy="204" r="12.745966692414834" fill="#2a6b4a" fill-opacity="0.75" stroke="#1a1a2e" stroke-width="1"/>
+  <text x="320" y="312" font-family="Helvetica Neue" font-size="12" fill="#1a1a2e" text-anchor="middle">Predicted MTM-L (normalized to [0,1])</text>
+  <text x="14" y="160" font-family="Helvetica Neue" font-size="12" fill="#1a1a2e" text-anchor="middle" transform="rotate(-90 14 160)">Observed outcome mean</text>
+</svg></div>
+
+<h2>Weights — spec v1.0 prior vs data-fitted</h2>
+<table class="weights-table">
+  <thead><tr><th>Parameter</th><th class="num">Spec v1.0</th><th class="num">Fitted</th><th class="num">95% CI</th></tr></thead>
+  <tbody>
+    <tr><td>α (weight on 1 − F)</td><td class="num">0.5</td><td class="num">0.4979</td><td class="num">[0.4931, 0.5005]</td></tr>
+    <tr><td>β (weight on X)</td><td class="num">0.5</td><td class="num">0.5021</td><td class="num">[0.4995, 0.5069]</td></tr>
+  </tbody>
+</table>
+
+<h2>Row-level results</h2>
+<table>
+  <thead>
+    <tr><th>ID</th><th>Law</th><th class="num">MTM-L</th><th class="num">F</th><th class="num">X</th><th>Disposition</th><th>Authority</th></tr>
+  </thead>
+  <tbody>
+<tr>
+    <td class="mono">fed-01</td>
+    <td>Access to Information Act, RSC 1985, c A-1</td>
+    <td class="num">12.50</td>
+    <td class="num">1.000</td>
+    <td class="num">0.250</td>
+    <td style="color:#555;font-weight:600">upheld</td>
+    <td class="authority">Access to Information Act has not been struck; performance issues are enforcement-level</td>
+  </tr>
+<tr>
+    <td class="mono">fed-02</td>
+    <td>Anti-Terrorism Act, 2015 (Bill C-51), SC 2015, c 20</td>
+    <td class="num">0.00</td>
+    <td class="num">1.000</td>
+    <td class="num">0.000</td>
+    <td style="color:#555;font-weight:600">upheld</td>
+    <td class="authority">Bill C-51 / ATA 2015 provisions largely upheld; Charter challenges ongoing but no strike to date</td>
+  </tr>
+<tr>
+    <td class="mono">fed-03</td>
+    <td>Section 13, Canadian Human Rights Act, RSC 1985, c H-6 (pre-repeal)</td>
+    <td class="num">0.00</td>
+    <td class="num">1.000</td>
+    <td class="num">0.000</td>
+    <td style="color:#b08a3e;font-weight:600">read_down</td>
+    <td class="authority">CHRA s.13 — repealed by Parliament 2013; prior challenges read it down narrowly</td>
+  </tr>
+<tr>
+    <td class="mono">fed-04</td>
+    <td>Security Certificate regime, IRPA ss. 77-85 (pre-Charkaoui)</td>
+    <td class="num">0.00</td>
+    <td class="num">1.000</td>
+    <td class="num">0.000</td>
+    <td style="color:#2a6b4a;font-weight:600">struck</td>
+    <td class="authority">Charkaoui v. Canada (Citizenship and Immigration), 2007 SCC 9 — security certificate regime struck under s.7</td>
+  </tr>
+<tr>
+    <td class="mono">fed-05</td>
+    <td>Criminal Code s.95 mandatory minimum for prohibited firearm possession (pre-Nur)</td>
+    <td class="num">16.67</td>
+    <td class="num">1.000</td>
+    <td class="num">0.333</td>
+    <td style="color:#2a6b4a;font-weight:600">struck</td>
+    <td class="authority">R. v. Nur, 2015 SCC 15 — CC s.95(2)(a) mandatory minimum struck under s.12</td>
+  </tr>
+<tr>
+    <td class="mono">muni-01</td>
+    <td>Toronto Parks Bylaw, Toronto Municipal Code Ch. 608 (encampment enforcement)</td>
+    <td class="num">0.00</td>
+    <td class="num">1.000</td>
+    <td class="num">0.000</td>
+    <td style="color:#b08a3e;font-weight:600">read_down</td>
+    <td class="authority">Toronto Parks Bylaw encampment — injunctive read-down in Black v. Toronto 2023 ONSC</td>
+  </tr>
+<tr>
+    <td class="mono">muni-02</td>
+    <td>Vancouver Street and Traffic Bylaw #2849 (camping/tent provisions)</td>
+    <td class="num">0.00</td>
+    <td class="num">1.000</td>
+    <td class="num">0.000</td>
+    <td style="color:#b08a3e;font-weight:600">read_down</td>
+    <td class="authority">Vancouver camping bylaw — read down in Adams v. Victoria 2008 BCSC line of authority</td>
+  </tr>
+<tr>
+    <td class="mono">muni-03</td>
+    <td>Montreal Bylaw P-6 (protest regulation), CO Montreal 2012 (pre-strike)</td>
+    <td class="num">0.00</td>
+    <td class="num">1.000</td>
+    <td class="num">0.000</td>
+    <td style="color:#2a6b4a;font-weight:600">struck</td>
+    <td class="authority">Montreal Bylaw P-6 protest provisions — struck in Villeneuve c. Montréal, 2016 QCCS 2888 (affirmed 2018 QCCA 321)</td>
+  </tr>
+<tr>
+    <td class="mono">muni-04</td>
+    <td>Calgary Streets Bylaw 20M88 (aggressive solicitation provisions)</td>
+    <td class="num">0.00</td>
+    <td class="num">1.000</td>
+    <td class="num">0.000</td>
+    <td style="color:#555;font-weight:600">upheld</td>
+    <td class="authority">Calgary Streets Bylaw aggressive solicitation — upheld in R. v. Banks line of authority by analogy</td>
+  </tr>
+<tr>
+    <td class="mono">muni-05</td>
+    <td>Vancouver Noise Control Bylaw #6555</td>
+    <td class="num">0.00</td>
+    <td class="num">1.000</td>
+    <td class="num">0.000</td>
+    <td style="color:#555;font-weight:600">upheld</td>
+    <td class="authority">Vancouver Noise Control Bylaw #6555 — upheld; no Charter strike</td>
+  </tr>
+<tr>
+    <td class="mono">prov-01</td>
+    <td>Ontario Safe Streets Act, SO 1999, c 8</td>
+    <td class="num">0.00</td>
+    <td class="num">1.000</td>
+    <td class="num">0.000</td>
+    <td style="color:#555;font-weight:600">upheld</td>
+    <td class="authority">Ontario Safe Streets Act — upheld in R. v. Banks, 2007 ONCA 19</td>
+  </tr>
+<tr>
+    <td class="mono">prov-02</td>
+    <td>Act respecting the Laicity of the State (Quebec Bill 21), SQ 2019, c 12</td>
+    <td class="num">0.00</td>
+    <td class="num">1.000</td>
+    <td class="num">0.000</td>
+    <td style="color:#555;font-weight:600">upheld</td>
+    <td class="authority">Quebec Bill 21 — substantially upheld at QCCA 2024; SCC leave pending</td>
+  </tr>
+<tr>
+    <td class="mono">prov-03</td>
+    <td>Critical Infrastructure Defence Act, SA 2020, c C-32.7 (Alberta)</td>
+    <td class="num">0.00</td>
+    <td class="num">1.000</td>
+    <td class="num">0.000</td>
+    <td style="color:#555;font-weight:600">upheld</td>
+    <td class="authority">Alberta Critical Infrastructure Defence Act — pending; no SCC strike as of 2026</td>
+  </tr>
+<tr>
+    <td class="mono">prov-04</td>
+    <td>Civil Forfeiture Act, SBC 2005, c 29 (BC — unexplained wealth order provisions)</td>
+    <td class="num">0.00</td>
+    <td class="num">1.000</td>
+    <td class="num">0.000</td>
+    <td style="color:#555;font-weight:600">upheld</td>
+    <td class="authority">BC Civil Forfeiture Act unexplained-wealth provisions — upheld under existing jurisprudence</td>
+  </tr>
+<tr>
+    <td class="mono">prov-05</td>
+    <td>Ontario Not-for-Profit Corporations Act, 2010, SO 2010, c 15 (ONCA)</td>
+    <td class="num">0.00</td>
+    <td class="num">1.000</td>
+    <td class="num">0.000</td>
+    <td style="color:#555;font-weight:600">upheld</td>
+    <td class="authority">Ontario Not-for-Profit Corporations Act — upheld; no Charter strike</td>
+  </tr>
+  </tbody>
+</table>
+
+<footer>
+  MTM-Literal is Tier 1 of the Borovoy Coefficient trilogy. MTM-Figurative and MTM-Circumstantial — coming soon. Formulas published in <code>spec/MTM_FORMULAS.md</code>. Licensed MPL-2.0.
+</footer>
+
+</div>
+</body>
+</html>

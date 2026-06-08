@@ -1,0 +1,42 @@
+{
+  "law_id": "muni-05",
+  "law": "Vancouver Noise Control Bylaw #6555",
+  "tier": "MTM-L",
+  "mtm_l": 0,
+  "faithfulness": 1,
+  "excess": 0,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "purposes": [
+    "To regulate excessive and disturbing noise in the City of Vancouver for the health and quiet enjoyment of residents."
+  ],
+  "provisions": [
+    {
+      "id": "s.3(a)",
+      "text": "No person shall make or cause any noise or sound in or on a highway or public place which disturbs or tends to disturb the quiet, peace, rest, enjoyment, comfort or convenience of the neighbourhood, or of persons in the vicinity. (from training data)"
+    },
+    {
+      "id": "s.4(c)",
+      "text": "No person shall carry on any construction, which includes erection, alteration, repair, dismantling, demolition, structural or subsurface work, between the hours of 8:00 p.m. of one day and 7:00 a.m. of the next day on weekdays or 8:00 p.m. of one day and 10:00 a.m. of the next day on Saturdays, or at any time on Sundays or statutory holidays. (from training data)"
+    },
+    {
+      "id": "s.5(b)",
+      "text": "The owner or occupier of any premises shall not permit any animal kept on the premises to make any noise that disturbs the quiet, peace, rest, enjoyment, comfort or convenience of the neighbourhood or of persons in the vicinity. (from training data)"
+    }
+  ],
+  "serves_matrix": [
+    [
+      1
+    ],
+    [
+      1
+    ],
+    [
+      1
+    ]
+  ],
+  "derivation": "MTM-Literal derivation\n  m = |purposes| = 1\n  n = |provisions| = 3\n  purposes served by ≥1 provision = 1/1\n  → F (Faithfulness) = 1/1 = 1.0000\n  provisions serving no purpose = 0/3\n  → X (Excess)       = 0/3 = 0.0000\n  α = 0.5, β = 0.5\n  MTM-L = 100 · [α · (1 − F) + β · X]\n        = 100 · [0.5 · (1 − 1.0000) + 0.5 · 0.0000]\n        = 100 · [0.0000 + 0.0000]\n        = 0.00",
+  "scored_at": "2026-04-18T01:54:01.830Z",
+  "model": "gemini-2.5-pro",
+  "version": "v1.0"
+}

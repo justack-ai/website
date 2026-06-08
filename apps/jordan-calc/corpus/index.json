@@ -1,0 +1,56 @@
+{
+  "version": "1.1.0",
+  "effective_date": "2026-06-08",
+  "issues": [
+    { "issue_id": "ceiling_ocj", "file": "issues/ceiling_ocj.json", "label": "Presumptive Ceiling — OCJ (18 months)", "tier": 2 },
+    { "issue_id": "ceiling_oscj", "file": "issues/ceiling_oscj.json", "label": "Presumptive Ceiling — OSCJ (30 months)", "tier": 2 },
+    { "issue_id": "re_election_ceiling", "file": "issues/re_election_ceiling.json", "label": "Ceiling Change on Re-Election", "tier": 2 },
+    { "issue_id": "retrial_clock", "file": "issues/retrial_clock.json", "label": "Clock Reset on Retrial (J.F.)", "tier": 2 },
+    { "issue_id": "direct_indictment_clock", "file": "issues/direct_indictment_clock.json", "label": "Direct Indictment — Clock Effect", "tier": 2 },
+    { "issue_id": "defence_delay_attribution", "file": "issues/defence_delay_attribution.json", "label": "Defence Delay Attribution — Hanan", "tier": 3 },
+    { "issue_id": "change_of_counsel", "file": "issues/change_of_counsel.json", "label": "Change of Counsel", "tier": 2 },
+    { "issue_id": "exceptional_circumstances_discrete", "file": "issues/exceptional_circumstances_discrete.json", "label": "Discrete Exceptional Circumstances", "tier": 3 },
+    { "issue_id": "complexity_exception", "file": "issues/complexity_exception.json", "label": "Complexity Exception (R v Vrbanic 2026 SCC 19)", "tier": 3 },
+    { "issue_id": "covid_deductibility_ontario", "file": "issues/covid_deductibility_ontario.json", "label": "COVID Deductibility — Ontario", "tier": 3 },
+    { "issue_id": "covid_deductibility_alberta", "file": "issues/covid_deductibility_alberta.json", "label": "COVID Deductibility — Alberta", "tier": 3 },
+    { "issue_id": "remedy_framework", "file": "issues/remedy_framework.json", "label": "Remedy — Stay of Proceedings (R.B.-C. / Bill C-16 pending)", "tier": 4 },
+    { "issue_id": "meaningful_steps", "file": "issues/meaningful_steps.json", "label": "Meaningful Steps — Jordan para 48", "tier": 3 },
+    { "issue_id": "disclosure_delay", "file": "issues/disclosure_delay.json", "label": "Disclosure Delay — Stinchcombe Interaction", "tier": 3 }
+  ],
+  "global_pending_watch": [
+    {
+      "case_name": "R v R.B.-C.",
+      "scc_file": "41677",
+      "issue": "Sentence reduction as alternative to stay for post-verdict delay",
+      "hearing_date": "2026-01-16",
+      "status": "heard_under_reserve",
+      "potential_impact": "Heard 2026-01-16; reserved as of 2026-06-08. The case to watch for whether the SCC will endorse a non-stay remedy (the thread Vrbanic 2026 SCC 19 left open re Rahey).",
+      "impact_direction": "expand_remedy",
+      "affects_issues": ["remedy_framework"],
+      "added_date": "2026-03-21",
+      "last_checked": "2026-06-08",
+      "verified": true
+    },
+    {
+      "case_name": "Bill C-16 (Protecting Victims Act)",
+      "scc_file": null,
+      "legislation_id": "Bill C-16 (2025)",
+      "issue": "Statutory requirement to consider alternatives to stay before ordering one",
+      "hearing_date": null,
+      "status": "report_stage",
+      "potential_impact": "If proclaimed: stay no longer automatic remedy; app needs third-category output. At report stage (committee report w/ amendments 2026-05-25; time allocation 2026-06-04) — still not law.",
+      "impact_direction": "restrict_remedy",
+      "affects_issues": ["remedy_framework"],
+      "added_date": "2026-03-21",
+      "last_checked": "2026-06-08",
+      "verified": true
+    }
+  ],
+  "resolved_since_last_review": [
+    { "case_name": "R v Vrbanic", "scc_file": "41741", "resolved_as": "2026 SCC 19", "resolved_date": "2026-05-29", "effect": "Complexity exception expanded (two-stage test; not 'rare'); stay remains automatic remedy (residual discretion refused; Rahey may be revisited). Folded into complexity_exception, exceptional_circumstances_discrete, remedy_framework." },
+    { "case_name": "R v Jacques-Taylor", "scc_file": "41430", "resolved_as": "2026 SCC 20", "resolved_date": "2026-05-29", "effect": "Co-accused delay can be a discrete exceptional circumstance (Tran four-part test); 'exceptional' not 'rare'. Hanan contextual framework NOT restricted. Folded into exceptional_circumstances_discrete; defence_delay_attribution unchanged." }
+  ],
+  "last_full_review_date": "2026-06-08",
+  "last_full_review_by": "PAI re-check (CanLII-verified citations + case comment + gc.ai) — pending Michael review and approval",
+  "next_scheduled_review": "2026-09-21"
+}

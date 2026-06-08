@@ -1,0 +1,46 @@
+{
+  "law_id": "prov-02",
+  "law": "Act respecting the Laicity of the State (Quebec Bill 21), SQ 2019, c 12",
+  "tier": "MTM-L",
+  "mtm_l": 0,
+  "faithfulness": 1,
+  "excess": 0,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "purposes": [
+    "To affirm the laicity of the State of Quebec",
+    "prohibiting public-sector employees in positions of authority (including teachers) from wearing religious symbols while exercising their functions."
+  ],
+  "provisions": [
+    {
+      "id": "s.6",
+      "text": "A person to whom this Chapter applies must not, in the performance of their functions, wear a religious symbol. This prohibition applies to, among others, peace officers, prosecutors, government lawyers, judges, presidents and vice-presidents of the National Assembly, school principals, vice-principals and teachers. (from training data)"
+    },
+    {
+      "id": "s.8",
+      "text": "An organ of the civil administration or another employer, as the case may be, must take the necessary measures to ensure that this Chapter is complied with. Such measures may include disciplinary action. (from training data)"
+    },
+    {
+      "id": "s.10",
+      "text": "A person must have their face uncovered when receiving a service from a personnel member of an organ of the civil administration. (from training data)"
+    }
+  ],
+  "serves_matrix": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "derivation": "MTM-Literal derivation\n  m = |purposes| = 2\n  n = |provisions| = 3\n  purposes served by ≥1 provision = 2/2\n  → F (Faithfulness) = 2/2 = 1.0000\n  provisions serving no purpose = 0/3\n  → X (Excess)       = 0/3 = 0.0000\n  α = 0.5, β = 0.5\n  MTM-L = 100 · [α · (1 − F) + β · X]\n        = 100 · [0.5 · (1 − 1.0000) + 0.5 · 0.0000]\n        = 100 · [0.0000 + 0.0000]\n        = 0.00",
+  "scored_at": "2026-04-18T01:52:20.212Z",
+  "model": "gemini-2.5-pro",
+  "version": "v1.0"
+}

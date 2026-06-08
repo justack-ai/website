@@ -1,0 +1,29 @@
+{
+  "issue_id": "retrial_clock",
+  "issue_label": "Clock Reset on Retrial",
+  "issue_category": "clock",
+  "default_jurisdiction": "FED",
+  "default_authority": [
+    {
+      "citation": "R v J.F., 2022 SCC 17",
+      "court": "SCC",
+      "jurisdiction": "FED",
+      "year": 2022,
+      "paragraph_refs": ["para 1", "para 45"],
+      "principle": "On retrial, the Jordan clock resets to the date the retrial begins. Delay from the original proceedings is not carried forward.",
+      "effective_date": "2022-05-06",
+      "superseded_by": null
+    }
+  ],
+  "default_confidence_tier": 2,
+  "jurisdiction_variants": [],
+  "pending_authority": [],
+  "computed_stability_score": 0.9,
+  "last_reviewed_date": "2026-03-21",
+  "reviewed_by": "PAI",
+  "created_date": "2026-03-21",
+  "version": 1,
+  "requires_counsel_review": false,
+  "liberty_interest_sensitive": true,
+  "notes": "Where re-election preceded the mistrial and retrial, the applicable ceiling at retrial is unresolved. This intersection must be flagged Tier 5 and referred to counsel. Michael to confirm."
+}

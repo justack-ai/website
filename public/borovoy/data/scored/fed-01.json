@@ -1,0 +1,49 @@
+{
+  "law_id": "fed-01",
+  "law": "Access to Information Act, RSC 1985, c A-1",
+  "tier": "MTM-L",
+  "mtm_l": 12.5,
+  "faithfulness": 1,
+  "excess": 0.25,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "purposes": [
+    "To extend the present laws of Canada to provide a right of access to information in records under the control of a government institution."
+  ],
+  "provisions": [
+    {
+      "id": "s. 4(1)",
+      "text": "Subject to this Act, but notwithstanding any other Act of Parliament, every citizen of Canada and every permanent resident... has a right to and shall, on request, be given access to any record under the control of a government institution. (from training data)"
+    },
+    {
+      "id": "s. 13(1)",
+      "text": "Subject to subsection (2), the head of a government institution shall refuse to disclose any record requested under this Act that contains information that was obtained in confidence from the government of a foreign state or an institution thereof... (from training data)"
+    },
+    {
+      "id": "s. 30(1)",
+      "text": "Subject to this Act, a person who has been refused access to a record requested under this Part or a part thereof may... make a complaint to the Information Commissioner in respect of the refusal. (from training data)"
+    },
+    {
+      "id": "s. 41(1)",
+      "text": "Any person who has made a complaint to the Information Commissioner in respect of a refusal to disclose a record... may apply to the Court for a review of the matter... (from training data)"
+    }
+  ],
+  "serves_matrix": [
+    [
+      1
+    ],
+    [
+      0
+    ],
+    [
+      1
+    ],
+    [
+      1
+    ]
+  ],
+  "derivation": "MTM-Literal derivation\n  m = |purposes| = 1\n  n = |provisions| = 4\n  purposes served by ≥1 provision = 1/1\n  → F (Faithfulness) = 1/1 = 1.0000\n  provisions serving no purpose = 1/4\n  → X (Excess)       = 1/4 = 0.2500\n  α = 0.5, β = 0.5\n  MTM-L = 100 · [α · (1 − F) + β · X]\n        = 100 · [0.5 · (1 − 1.0000) + 0.5 · 0.2500]\n        = 100 · [0.0000 + 0.1250]\n        = 12.50",
+  "scored_at": "2026-04-18T01:50:50.361Z",
+  "model": "gemini-2.5-pro",
+  "version": "v1.0"
+}
