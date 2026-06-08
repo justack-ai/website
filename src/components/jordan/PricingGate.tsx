@@ -19,6 +19,11 @@ const PLANS = [
   { tier: "firm" as const, name: "Firm", price: "$19", features: ["All Solo features", "Multiple lawyers (Phase 2)", "Priority support"] },
 ];
 
+// Beta builds run free-tier-only: payments are not wired, so the subscribe
+// action is replaced with a "coming soon" state. Set NEXT_PUBLIC_BETA_FREE_ONLY
+// to "true" on the beta/preview environment; production leaves it unset.
+const BETA_FREE_ONLY = process.env.NEXT_PUBLIC_BETA_FREE_ONLY === "true";
+
 export default function PricingGate({ onSubscribe, onContinueFree }: PricingGateProps) {
   const [loading, setLoading] = useState<"solo" | "firm" | null>(null);
 
@@ -34,7 +39,7 @@ export default function PricingGate({ onSubscribe, onContinueFree }: PricingGate
           Free tier limit reached
         </div>
         <h2 className="text-2xl font-bold text-white">You&apos;ve used all 3 free calculations</h2>
-        <p className="mt-2 text-white/50">Subscribe to continue with unlimited access.</p>
+        <p className="mt-2 text-white/50">{BETA_FREE_ONLY ? "Paid plans are coming soon — thanks for testing the beta." : "Subscribe to continue with unlimited access."}</p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
@@ -45,9 +50,9 @@ export default function PricingGate({ onSubscribe, onContinueFree }: PricingGate
             <ul className="mt-4 space-y-2">
               {plan.features.map((f) => <li key={f} className="flex items-center gap-2 text-sm text-white/70"><span className="text-teal-400">&#10003;</span>{f}</li>)}
             </ul>
-            <button onClick={() => handleSubscribe(plan.tier)} disabled={loading !== null}
+            <button onClick={() => { if (!BETA_FREE_ONLY) handleSubscribe(plan.tier); }} disabled={BETA_FREE_ONLY || loading !== null}
               className="mt-6 w-full rounded-lg bg-violet py-2.5 text-sm font-medium text-white hover:bg-violet/80 disabled:opacity-50 transition-colors">
-              {loading === plan.tier ? "Redirecting..." : "Subscribe"}
+              {BETA_FREE_ONLY ? "Coming soon" : loading === plan.tier ? "Redirecting..." : "Subscribe"}
             </button>
           </div>
         ))}
