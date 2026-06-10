@@ -484,11 +484,11 @@ section.alt { background: var(--paper); }
     <div style="margin-top: 48px; padding: 24px; background: var(--mist); border-left: 3px solid var(--rust);">
       <div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); font-weight: 600; margin-bottom: 10px;">Interpretation bands</div>
       <div style="display: flex; flex-wrap: wrap; gap: 18px;">
-        <span><span class="band-pill aligned">0-19 Aligned</span></span>
-        <span><span class="band-pill drift">20-39 Drift</span></span>
-        <span><span class="band-pill misaligned">40-59 Misaligned</span></span>
-        <span><span class="band-pill severe">60-79 Severe</span></span>
-        <span><span class="band-pill unconstitutional">80-100 Unconstitutional-by-design</span></span>
+        <span><span class="band-pill aligned">0-19 Textually aligned</span></span>
+        <span><span class="band-pill drift">20-39 Low drift</span></span>
+        <span><span class="band-pill misaligned">40-59 Moderate drift</span></span>
+        <span><span class="band-pill severe">60-79 High drift</span></span>
+        <span><span class="band-pill unconstitutional">80-100 Severe specification failure</span></span>
       </div>
     </div>
   </div>
@@ -703,11 +703,11 @@ async function loadCorpus() {
 }
 
 function bandClass(band) {
-  if (band === 'Aligned') return 'aligned';
-  if (band === 'Drift') return 'drift';
-  if (band === 'Misaligned') return 'misaligned';
-  if (band === 'Severe misalignment') return 'severe';
-  if (band === 'Unconstitutional-by-design') return 'unconstitutional';
+  if (band === 'Textually aligned') return 'aligned';
+  if (band === 'Low drift') return 'drift';
+  if (band === 'Moderate drift') return 'misaligned';
+  if (band === 'High drift') return 'severe';
+  if (band === 'Severe specification failure') return 'unconstitutional';
   return 'drift';
 }
 function bandColor(score) {

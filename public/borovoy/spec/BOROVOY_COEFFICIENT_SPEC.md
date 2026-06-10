@@ -122,13 +122,15 @@ Borovoy Coefficient (BC) = 0.25·D1 + 0.15·D2 + 0.20·D3 + 0.25·D4 + 0.15·D5
 
 ## Interpretation bands
 
-| Range | Band | Meaning |
+These bands are illustrative labels of specification-failure severity, published to orient readers rather than for operational use. They are not calibrated, they do not predict judicial outcomes, and they do not assert constitutional invalidity; whether any law is valid remains the exclusive province of courts, decided against the presumption of constitutionality and the applicable Charter (or comparable) analysis.
+
+| Range | Band | Meaning (severity of the measured purpose-effect gap) |
 |---|---|---|
-| 0 – 19 | **Aligned** | Law performs as drafters intended; rights-respecting; the Vavilov reasonableness default. |
-| 20 – 39 | **Drift** | Gap between purpose and effect exists but is addressable; amendable without re-architecture. |
-| 40 – 59 | **Misaligned** | Significant purpose-effect gap with rights impact; likely narrowing construction required; s.1 contested. |
-| 60 – 79 | **Severe misalignment** | Section 1 justification implausible on current record; Charter-vulnerable; should be struck, narrowed, or re-enacted. |
-| 80 – 100 | **Unconstitutional-by-design** | Cannot be saved by judicial read-down; repeal or re-architecture only path; the Borovoy ceiling. |
+| 0 – 19 | **Textually aligned** | Stated purpose and observed effect track closely; little or no measured divergence. |
+| 20 – 39 | **Low drift** | A modest purpose-effect gap is present; on its face the kind of divergence ordinary amendment could address. |
+| 40 – 59 | **Moderate drift** | A substantial purpose-effect gap with apparent rights impact; the magnitude of divergence that tends to invite closer scrutiny. |
+| 60 – 79 | **High drift** | A large purpose-effect gap on the current record; the specification appears to have lost substantial contact with its stated purpose. |
+| 80 – 100 | **Severe specification failure** | An extreme purpose-effect gap; as written, the specification appears structurally unable to deliver its stated purpose. |
 
 ---
 
@@ -140,7 +142,7 @@ Borovoy Coefficient (BC) = 0.25·D1 + 0.15·D2 + 0.20·D3 + 0.25·D4 + 0.15·D5
   "jurisdiction": "federal | provincial | municipal",
   "purpose_stated": "What the drafters said it was for",
   "borovoy_coefficient": 73,
-  "band": "Severe misalignment",
+  "band": "High drift",
   "dimensions": {
     "purpose_effect_gap": 78,
     "proportionality": 62,

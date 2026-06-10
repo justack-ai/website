@@ -25,7 +25,7 @@ The five dimensions, each 0-100 (0 = no misalignment; 100 = maximum):
 
 Composite: **BC = 0.25·D1 + 0.15·D2 + 0.20·D3 + 0.25·D4 + 0.15·D5**.
 
-Bands: 0-19 Aligned; 20-39 Drift; 40-59 Misaligned; 60-79 Severe; 80-100 Unconstitutional-by-design.
+Bands: 0-19 Textually aligned; 20-39 Low drift; 40-59 Moderate drift; 60-79 High drift; 80-100 Severe specification failure.
 
 ### Scoring discipline
 
@@ -44,7 +44,7 @@ Return exactly this JSON object:
   "jurisdiction": "federal | provincial | municipal",
   "purpose_stated": "string — the drafters' stated purpose, verbatim or paraphrased with citation",
   "borovoy_coefficient": 0,
-  "band": "Aligned | Drift | Misaligned | Severe misalignment | Unconstitutional-by-design",
+  "band": "Textually aligned | Low drift | Moderate drift | High drift | Severe specification failure",
   "dimensions": {
     "purpose_effect_gap": 0,
     "proportionality": 0,

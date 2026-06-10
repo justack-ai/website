@@ -13,7 +13,7 @@
       "jurisdiction": "federal",
       "purpose_stated": "To extend the present laws of Canada to provide a right of access to information in records under the control of a government institution.",
       "borovoy_coefficient": 42,
-      "band": "Misaligned",
+      "band": "Moderate drift",
       "dimensions": {
         "purpose_effect_gap": 62,
         "proportionality": 28,
@@ -48,7 +48,7 @@
       "jurisdiction": "federal",
       "purpose_stated": "To protect Canadians from terrorism, including by authorizing CSIS to reduce threats to the security of Canada through measures that may contravene Charter-protected rights if authorized by judicial warrant.",
       "borovoy_coefficient": 78,
-      "band": "Severe misalignment",
+      "band": "High drift",
       "dimensions": {
         "purpose_effect_gap": 82,
         "proportionality": 78,
@@ -89,7 +89,7 @@
       "jurisdiction": "federal",
       "purpose_stated": "To prevent the communication, by telephone or Internet, of hate messages likely to expose identifiable groups to hatred or contempt.",
       "borovoy_coefficient": 74,
-      "band": "Severe misalignment",
+      "band": "High drift",
       "dimensions": {
         "purpose_effect_gap": 82,
         "proportionality": 68,
@@ -130,7 +130,7 @@
       "jurisdiction": "federal",
       "purpose_stated": "To enable the detention and deportation of non-citizens considered security threats, based on classified evidence not disclosed to the named individual.",
       "borovoy_coefficient": 86,
-      "band": "Unconstitutional-by-design",
+      "band": "Severe specification failure",
       "dimensions": {
         "purpose_effect_gap": 78,
         "proportionality": 92,
@@ -164,7 +164,7 @@
       "jurisdiction": "federal",
       "purpose_stated": "To deter illegal possession of prohibited or restricted firearms by imposing a three-year mandatory minimum sentence on first offence (five years on second).",
       "borovoy_coefficient": 74,
-      "band": "Severe misalignment",
+      "band": "High drift",
       "dimensions": {
         "purpose_effect_gap": 78,
         "proportionality": 82,
@@ -198,7 +198,7 @@
       "jurisdiction": "provincial",
       "purpose_stated": "To regulate aggressive solicitation and to address public-safety concerns associated with squeegee work and highway panhandling.",
       "borovoy_coefficient": 70,
-      "band": "Severe misalignment",
+      "band": "High drift",
       "dimensions": {
         "purpose_effect_gap": 78,
         "proportionality": 68,
@@ -233,7 +233,7 @@
       "jurisdiction": "provincial",
       "purpose_stated": "To affirm the laicity of the State of Quebec by prohibiting public-sector employees in positions of authority (including teachers) from wearing religious symbols while exercising their functions.",
       "borovoy_coefficient": 72,
-      "band": "Severe misalignment",
+      "band": "High drift",
       "dimensions": {
         "purpose_effect_gap": 62,
         "proportionality": 78,
@@ -268,7 +268,7 @@
       "jurisdiction": "provincial",
       "purpose_stated": "To protect essential infrastructure such as pipelines and railways from damage and unauthorized entry.",
       "borovoy_coefficient": 68,
-      "band": "Severe misalignment",
+      "band": "High drift",
       "dimensions": {
         "purpose_effect_gap": 72,
         "proportionality": 72,
@@ -302,7 +302,7 @@
       "jurisdiction": "provincial",
       "purpose_stated": "To provide civil remedies to deprive persons of property that is the proceeds or instruments of unlawful activity, including through unexplained wealth orders.",
       "borovoy_coefficient": 38,
-      "band": "Drift",
+      "band": "Low drift",
       "dimensions": {
         "purpose_effect_gap": 42,
         "proportionality": 38,
@@ -336,7 +336,7 @@
       "jurisdiction": "provincial",
       "purpose_stated": "To modernize the incorporation and governance framework for Ontario not-for-profit corporations, replacing the 1907 Corporations Act.",
       "borovoy_coefficient": 14,
-      "band": "Aligned",
+      "band": "Textually aligned",
       "dimensions": {
         "purpose_effect_gap": 12,
         "proportionality": 18,
@@ -369,7 +369,7 @@
       "jurisdiction": "municipal",
       "purpose_stated": "To regulate use of city parks for public enjoyment and safety, including prohibitions on unauthorized camping.",
       "borovoy_coefficient": 66,
-      "band": "Severe misalignment",
+      "band": "High drift",
       "dimensions": {
         "purpose_effect_gap": 72,
         "proportionality": 62,
@@ -403,7 +403,7 @@
       "jurisdiction": "municipal",
       "purpose_stated": "To regulate use of streets and public property for traffic safety and public order.",
       "borovoy_coefficient": 52,
-      "band": "Misaligned",
+      "band": "Moderate drift",
       "dimensions": {
         "purpose_effect_gap": 58,
         "proportionality": 48,
@@ -437,7 +437,7 @@
       "jurisdiction": "municipal",
       "purpose_stated": "To regulate public demonstrations to protect public safety, requiring advance notice of itineraries and prohibiting masking.",
       "borovoy_coefficient": 81,
-      "band": "Unconstitutional-by-design",
+      "band": "Severe specification failure",
       "dimensions": {
         "purpose_effect_gap": 78,
         "proportionality": 85,
@@ -471,7 +471,7 @@
       "jurisdiction": "municipal",
       "purpose_stated": "To regulate use of streets including prohibition of aggressive solicitation that threatens public safety.",
       "borovoy_coefficient": 28,
-      "band": "Drift",
+      "band": "Low drift",
       "dimensions": {
         "purpose_effect_gap": 32,
         "proportionality": 28,
@@ -505,7 +505,7 @@
       "jurisdiction": "municipal",
       "purpose_stated": "To regulate excessive and disturbing noise in the City of Vancouver for the health and quiet enjoyment of residents.",
       "borovoy_coefficient": 12,
-      "band": "Aligned",
+      "band": "Textually aligned",
       "dimensions": {
         "purpose_effect_gap": 14,
         "proportionality": 12,
