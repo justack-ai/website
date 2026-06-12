@@ -7,11 +7,8 @@
 
 "use client";
 
-import { useCallback, useState } from "react";
-import type {
-  JordanOutput,
-  RedAcknowledgment,
-} from "@/lib/jordan/types";
+import { useCallback } from "react";
+import type { JordanOutput } from "@/lib/jordan/types";
 import {
   DEFENCE_SUB_TYPE_LABELS,
   EC_SUB_TYPE_LABELS,
@@ -46,11 +43,7 @@ export default function JordanResultsDisplay({
   output,
   userId,
 }: JordanResultsDisplayProps) {
-  const [redAck, setRedAck] = useState<RedAcknowledgment | null>(null);
-
-  const handleRedAck = useCallback((ack: RedAcknowledgment) => {
-    setRedAck(ack);
-  }, []);
+  const handleRedAck = useCallback(() => undefined, []);
 
   const multiAccusedWarning = output.warnings.find(
     (w) => w.type === "multi_accused",

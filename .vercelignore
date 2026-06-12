@@ -1,11 +1,9 @@
 # Hold back unfinished features from Vercel deploy
 # (files exist locally but aren't ready for production)
 
-# Jordan Calculator — pending legal review
-src/app/(site)/jordan/
-src/app/(site)/api/jordan/
-src/components/jordan/
-src/lib/jordan/
+# Jordan Calculator — SHIPPED to beta 2026-06-08 (free-tier-only CLA beta).
+# Un-ignored so the calculator + its corpus (apps/jordan-calc/corpus) deploy.
+# Re-add the four src/.../jordan paths and the apps/ line to hold it back again.
 
 # InstructIT Phase 2 — workflow nodes not ready
 src/app/(site)/api/instructit/matters/[id]/nodes/
@@ -22,5 +20,7 @@ src/lib/casekeeper/
 # Plans and internal docs
 Plans/
 .agent/
-apps/
 scripts/
+
+# NOTE: apps/ is NOT ignored — apps/jordan-calc/corpus is a runtime dependency
+# of the Jordan calculator (imported by src/lib/jordan/corpus.ts).
