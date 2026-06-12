@@ -25,6 +25,12 @@ const nextConfig: NextConfig = {
         destination: "/centre",
         permanent: true,
       },
+      {
+        // Cover old sub-paths too (e.g. hot-linked /foundation/scene-*.jpg images)
+        source: "/foundation/:path*",
+        destination: "/centre/:path*",
+        permanent: true,
+      },
     ];
   },
 };
