@@ -226,11 +226,12 @@ export default function CentrePage() {
           expertise with practical deployment: tools, research, or partnerships
           that can help people understand and act on their legal rights.
         </p>
+        {/* Temporary contact address — foundation@ was never provisioned; swap to centre@ once that alias exists */}
         <a
-          href="mailto:foundation@justack.ai"
+          href="mailto:mjb@justack.ai"
           className="inline-block px-6 py-3 bg-gradient-to-br from-[#7c3aed] to-[#0d9488] text-white text-sm font-semibold rounded-xl hover:opacity-90 transition-opacity no-underline"
         >
-          foundation@justack.ai
+          mjb@justack.ai
         </a>
       </section>
     </main>
