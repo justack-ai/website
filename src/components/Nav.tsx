@@ -52,14 +52,14 @@ export default function Nav() {
             GitHub
           </a>
         </li>
-        {/* Visual separator — Foundation is a distinct entity from justack.ai */}
+        {/* Visual separator — the Centre is a distinct entity from justack.ai */}
         <li aria-hidden="true" className="h-4 w-px bg-white/20" />
         <li>
           <Link
-            href="/foundation"
+            href="/centre"
             className="text-[#a78bfa] no-underline text-sm font-semibold tracking-[1px] uppercase hover:text-white transition-colors"
           >
-            Foundation
+            Centre
           </Link>
         </li>
       </ul>
@@ -120,14 +120,14 @@ export default function Nav() {
             >
               GitHub
             </a>
-            {/* Horizontal separator for Foundation */}
+            {/* Horizontal separator for the Centre */}
             <div className="my-2 h-px bg-white/15" aria-hidden="true" />
             <Link
-              href="/foundation"
+              href="/centre"
               onClick={() => setOpen(false)}
               className="block py-3 px-2 text-[#a78bfa] no-underline text-base font-semibold tracking-[1px] uppercase hover:text-white transition-colors"
             >
-              Foundation
+              Centre
             </Link>
           </div>
         </div>

@@ -9,9 +9,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Justack Foundation | justack.ai",
+  title: "Justack Centre for Law & Technology | justack.ai",
   description:
-    "The Justack Foundation exists to improve access to justice through practical legal technology, public legal education, and applied research.",
+    "The Justack Centre for Law & Technology exists to improve access to justice through practical legal technology, public legal education, and applied research.",
 };
 
 const directors = [
@@ -20,7 +20,7 @@ const directors = [
     title: "Director",
     body: [
       "Alex Peel is a senior access-to-justice executive with nearly two decades of experience at Legal Aid BC. Her work has focused on public legal education, legal publications, service design, and the practical delivery of legal information to people who need it.",
-      "She brings a rare combination of institutional knowledge and user-centred judgment to the Foundation's work. Her career has been shaped by the operational realities of legal aid: how people actually seek help, where legal information breaks down, and what makes legal services usable for communities facing barriers to justice.",
+      "She brings a rare combination of institutional knowledge and user-centred judgment to the Centre's work. Her career has been shaped by the operational realities of legal aid: how people actually seek help, where legal information breaks down, and what makes legal services usable for communities facing barriers to justice.",
     ],
   },
   {
@@ -28,7 +28,7 @@ const directors = [
     title: "Director",
     body: [
       "Paul Brookes has worked in internet and e-commerce product development for more than 25 years. He is the founder of Metropolis Media and has built digital products, platforms, and online experiences across a period of major technological change.",
-      "His background gives the Foundation direct expertise in product strategy, digital execution, and user experience. He also served for three years on the Ontario Justice of the Peace Appointments Committee, bringing experience at the intersection of civic institutions, appointments, and public confidence in justice administration. He holds a degree from Toronto Metropolitan University.",
+      "His background gives the Centre direct expertise in product strategy, digital execution, and user experience. He also served for three years on the Ontario Justice of the Peace Appointments Committee, bringing experience at the intersection of civic institutions, appointments, and public confidence in justice administration. He holds a degree from Toronto Metropolitan University.",
     ],
   },
   {
@@ -36,12 +36,12 @@ const directors = [
     title: "Director",
     body: [
       "David Valentin is an award-winning activist, entrepreneur, and public-affairs strategist. He co-founded one of Canada's leading public sentiment, research, and political intelligence firms, helping organizations understand how people think, decide, and respond to public issues.",
-      "His work sits at the intersection of civic engagement, public opinion research, strategy, and democratic participation. He brings to the Foundation a sophisticated understanding of public trust, communications, and the ways legal and institutional systems are experienced by the people they are meant to serve.",
+      "His work sits at the intersection of civic engagement, public opinion research, strategy, and democratic participation. He brings to the Centre a sophisticated understanding of public trust, communications, and the ways legal and institutional systems are experienced by the people they are meant to serve.",
     ],
   },
 ];
 
-export default function FoundationPage() {
+export default function CentrePage() {
   return (
     <main className="max-w-[800px] mx-auto px-8 py-20">
       {/* Header */}
@@ -50,10 +50,11 @@ export default function FoundationPage() {
           Not-for-profit
         </p>
         <h1 className="text-5xl font-bold tracking-[-1.5px] mb-8">
-          Justack Foundation
+          Justack Centre for Law &amp; Technology
         </h1>
         <p className="text-lg font-light text-white/75 leading-[1.7] mb-6">
-          The Justack Foundation exists to improve access to justice through
+          The Justack Centre for Law &amp; Technology exists to improve access
+          to justice through
           practical legal technology, public legal education, and applied
           research.
         </p>
@@ -67,7 +68,7 @@ export default function FoundationPage() {
       {/* Hero illustration — arrival, walking into justice */}
       <div className="relative rounded-2xl overflow-hidden mb-16">
         <Image
-          src="/foundation/scene-courthouse-steps.jpg"
+          src="/centre/scene-courthouse-steps.jpg"
           alt="A woman in a sage trench coat carrying a folder walks up the stone steps of a small civic courthouse, one hand on the rail, toward a heavy door slightly open with warm light spilling out."
           width={1484}
           height={572}
@@ -85,7 +86,7 @@ export default function FoundationPage() {
           Our Work
         </h2>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
-          The Foundation supports initiatives that help people understand their
+          The Centre supports initiatives that help people understand their
           rights, navigate legal processes, and obtain practical assistance
           before legal problems become more serious.
         </p>
@@ -100,7 +101,7 @@ export default function FoundationPage() {
       {/* Our Work illustration — community workshop */}
       <div className="relative rounded-2xl overflow-hidden mb-16">
         <Image
-          src="/foundation/scene-workshop.jpg"
+          src="/centre/scene-workshop.jpg"
           alt="Five diverse adults sit around a wooden table in a sunlit community-centre library while a community legal worker leans in to point at a document — books, papers, and tea between them."
           width={1584}
           height={672}
@@ -133,7 +134,7 @@ export default function FoundationPage() {
           Our Approach
         </h2>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
-          The Foundation's approach is practical, evidence-informed, and
+          The Centre's approach is practical, evidence-informed, and
           collaborative.
         </p>
         <p className="text-base font-light text-white/60 leading-[1.8]">
@@ -148,7 +149,7 @@ export default function FoundationPage() {
       {/* Our Approach illustration — civic help desk */}
       <div className="relative rounded-2xl overflow-hidden mb-16">
         <Image
-          src="/foundation/scene-help-desk.jpg"
+          src="/centre/scene-help-desk.jpg"
           alt="A help-desk worker in a dusty-pink blouse leans across a wooden counter, pointing toward a stack of pamphlets, while a man holding a manila folder listens with relief."
           width={1484}
           height={572}
@@ -216,7 +217,7 @@ export default function FoundationPage() {
           Contact / Get Involved
         </h2>
         <p className="text-base font-light text-white/60 leading-[1.8] mb-4">
-          The Foundation welcomes conversations with legal organizations,
+          The Centre welcomes conversations with legal organizations,
           community groups, researchers, funders, and technologists interested
           in improving access to justice.
         </p>

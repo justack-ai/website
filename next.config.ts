@@ -17,7 +17,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        // The NFP was renamed: Justack Foundation → Justack Centre for Law & Technology
+        source: "/foundation",
+        destination: "/centre",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
